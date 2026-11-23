@@ -1,0 +1,668 @@
+[
+  {
+    "id": "MaskTitle",
+    "grupo": "Tipografía",
+    "resumen": "Titular cuyas líneas salen de una máscara",
+    "composicion": "Preset-MaskTitle-horizontal",
+    "segundos": 2.5,
+    "miniatura": "catalogo/miniaturas/Preset-MaskTitle.jpg",
+    "video": "catalogo/videos/Preset-MaskTitle.mp4"
+  },
+  {
+    "id": "CharCascade",
+    "grupo": "Tipografía",
+    "resumen": "Texto que entra letra por letra con spring",
+    "composicion": "Preset-CharCascade-horizontal",
+    "segundos": 2,
+    "miniatura": "catalogo/miniaturas/Preset-CharCascade.jpg",
+    "video": "catalogo/videos/Preset-CharCascade.mp4"
+  },
+  {
+    "id": "WordRotator",
+    "grupo": "Tipografía",
+    "resumen": "Una palabra de la frase que va cambiando",
+    "composicion": "Preset-WordRotator-horizontal",
+    "segundos": 4,
+    "miniatura": "catalogo/miniaturas/Preset-WordRotator.jpg",
+    "video": "catalogo/videos/Preset-WordRotator.mp4"
+  },
+  {
+    "id": "LineDraw",
+    "grupo": "Datos",
+    "resumen": "Línea o forma que se dibuja",
+    "composicion": "Preset-LineDraw-horizontal",
+    "segundos": 2,
+    "miniatura": "catalogo/miniaturas/Preset-LineDraw.jpg",
+    "video": "catalogo/videos/Preset-LineDraw.mp4"
+  },
+  {
+    "id": "CountUp",
+    "grupo": "Datos",
+    "resumen": "Cifra que cuenta hasta su valor",
+    "composicion": "Preset-CountUp-horizontal",
+    "segundos": 2.5,
+    "miniatura": "catalogo/miniaturas/Preset-CountUp.jpg",
+    "video": "catalogo/videos/Preset-CountUp.mp4"
+  },
+  {
+    "id": "MarkerHighlight",
+    "grupo": "Tipografía",
+    "resumen": "Resaltador a mano sobre una palabra",
+    "composicion": "Preset-MarkerHighlight-horizontal",
+    "segundos": 2,
+    "miniatura": "catalogo/miniaturas/Preset-MarkerHighlight.jpg",
+    "video": "catalogo/videos/Preset-MarkerHighlight.mp4"
+  },
+  {
+    "id": "LowerThird",
+    "grupo": "Retención y captions",
+    "resumen": "Rótulo de nombre y cargo",
+    "composicion": "Preset-LowerThird-horizontal",
+    "segundos": 3,
+    "miniatura": "catalogo/miniaturas/Preset-LowerThird.jpg",
+    "video": "catalogo/videos/Preset-LowerThird.mp4"
+  },
+  {
+    "id": "KaraokeCaption",
+    "grupo": "Retención y captions",
+    "resumen": "Subtítulo que se ilumina palabra a palabra",
+    "composicion": "Preset-KaraokeCaption-horizontal",
+    "segundos": 3,
+    "miniatura": "catalogo/miniaturas/Preset-KaraokeCaption.jpg",
+    "video": "catalogo/videos/Preset-KaraokeCaption.mp4"
+  },
+  {
+    "id": "CameraRig",
+    "grupo": "Forma, cámara y 3D",
+    "resumen": "Cámara viva: deriva, empuje y mano",
+    "composicion": "Preset-CameraRig-horizontal",
+    "segundos": 4,
+    "miniatura": "catalogo/miniaturas/Preset-CameraRig.jpg",
+    "video": "catalogo/videos/Preset-CameraRig.mp4"
+  },
+  {
+    "id": "Parallax",
+    "grupo": "Forma, cámara y 3D",
+    "resumen": "Planos que se mueven a distinta velocidad",
+    "composicion": "Preset-Parallax-horizontal",
+    "segundos": 4,
+    "miniatura": "catalogo/miniaturas/Preset-Parallax.jpg",
+    "video": "catalogo/videos/Preset-Parallax.mp4"
+  },
+  {
+    "id": "DepthCards",
+    "grupo": "Forma, cámara y 3D",
+    "resumen": "Tarjetas apiladas con profundidad",
+    "composicion": "Preset-DepthCards-horizontal",
+    "segundos": 2.5,
+    "miniatura": "catalogo/miniaturas/Preset-DepthCards.jpg",
+    "video": "catalogo/videos/Preset-DepthCards.mp4"
+  },
+  {
+    "id": "LogoSting",
+    "grupo": "Forma, cámara y 3D",
+    "resumen": "Cierre de logo",
+    "composicion": "Preset-LogoSting-horizontal",
+    "segundos": 3.5,
+    "miniatura": "catalogo/miniaturas/Preset-LogoSting.jpg",
+    "video": "catalogo/videos/Preset-LogoSting.mp4"
+  },
+  {
+    "id": "SplitReveal",
+    "grupo": "Transiciones",
+    "resumen": "La escena se abre en dos y revela la siguiente",
+    "composicion": "Preset-SplitReveal-horizontal",
+    "segundos": 2.5,
+    "miniatura": "catalogo/miniaturas/Preset-SplitReveal.jpg",
+    "video": "catalogo/videos/Preset-SplitReveal.mp4"
+  },
+  {
+    "id": "GlitchHit",
+    "grupo": "Texturas y estilos",
+    "resumen": "Glitch corto de acento",
+    "composicion": "Preset-GlitchHit-horizontal",
+    "segundos": 1.5,
+    "miniatura": "catalogo/miniaturas/Preset-GlitchHit.jpg",
+    "video": "catalogo/videos/Preset-GlitchHit.mp4"
+  },
+  {
+    "id": "BlenderLayer",
+    "grupo": "Forma, cámara y 3D",
+    "resumen": "Render 3D de Blender con alfa como capa",
+    "composicion": "Preset-BlenderLayer-horizontal",
+    "segundos": 2.5,
+    "miniatura": "catalogo/miniaturas/Preset-BlenderLayer.jpg",
+    "video": "catalogo/videos/Preset-BlenderLayer.mp4"
+  },
+  {
+    "id": "LottieLayer",
+    "grupo": "Texturas y estilos",
+    "resumen": "Animación de After Effects exportada con Bodymovin",
+    "composicion": "Preset-LottieLayer-horizontal",
+    "segundos": 2,
+    "miniatura": "catalogo/miniaturas/Preset-LottieLayer.jpg",
+    "video": "catalogo/videos/Preset-LottieLayer.mp4"
+  },
+  {
+    "id": "Whip",
+    "grupo": "Transiciones",
+    "resumen": "Barrido rápido de cámara",
+    "composicion": "Preset-Whip-horizontal",
+    "segundos": 2,
+    "miniatura": "catalogo/miniaturas/Preset-Whip.jpg",
+    "video": "catalogo/videos/Preset-Whip.mp4"
+  },
+  {
+    "id": "ZoomThrough",
+    "grupo": "Transiciones",
+    "resumen": "Zoom que atraviesa hacia la siguiente escena",
+    "composicion": "Preset-ZoomThrough-horizontal",
+    "segundos": 2,
+    "miniatura": "catalogo/miniaturas/Preset-ZoomThrough.jpg",
+    "video": "catalogo/videos/Preset-ZoomThrough.mp4"
+  },
+  {
+    "id": "MaskWipe",
+    "grupo": "Transiciones",
+    "resumen": "Barrido por máscara",
+    "composicion": "Preset-MaskWipe-horizontal",
+    "segundos": 2,
+    "miniatura": "catalogo/miniaturas/Preset-MaskWipe.jpg",
+    "video": "catalogo/videos/Preset-MaskWipe.mp4"
+  },
+  {
+    "id": "Look",
+    "grupo": "Texturas y estilos",
+    "resumen": "Acabado de la pieza: grano, viñeta, temperatura y tonos",
+    "composicion": "Preset-Look-horizontal",
+    "segundos": 1,
+    "miniatura": "catalogo/miniaturas/Preset-Look.jpg",
+    "video": "catalogo/videos/Preset-Look.mp4"
+  },
+  {
+    "id": "ScrambleResolve",
+    "grupo": "Tipografía",
+    "resumen": "Texto que se descifra hasta quedar legible",
+    "composicion": "Preset-ScrambleResolve-horizontal",
+    "segundos": 2,
+    "miniatura": "catalogo/miniaturas/Preset-ScrambleResolve.jpg",
+    "video": "catalogo/videos/Preset-ScrambleResolve.mp4"
+  },
+  {
+    "id": "StretchRepeater",
+    "grupo": "Tipografía",
+    "resumen": "Repetición suiza de una palabra estirada",
+    "composicion": "Preset-StretchRepeater-horizontal",
+    "segundos": 2,
+    "miniatura": "catalogo/miniaturas/Preset-StretchRepeater.jpg",
+    "video": "catalogo/videos/Preset-StretchRepeater.mp4"
+  },
+  {
+    "id": "VariableAxisType",
+    "grupo": "Tipografía",
+    "resumen": "Fuente variable con el peso en onda",
+    "composicion": "Preset-VariableAxisType-horizontal",
+    "segundos": 3,
+    "miniatura": "catalogo/miniaturas/Preset-VariableAxisType.jpg",
+    "video": "catalogo/videos/Preset-VariableAxisType.mp4"
+  },
+  {
+    "id": "BoilLine",
+    "grupo": "Texturas y estilos",
+    "resumen": "Trazo que hierve como dibujado a mano",
+    "composicion": "Preset-BoilLine-horizontal",
+    "segundos": 2,
+    "miniatura": "catalogo/miniaturas/Preset-BoilLine.jpg",
+    "video": "catalogo/videos/Preset-BoilLine.mp4"
+  },
+  {
+    "id": "RisoLayer",
+    "grupo": "Texturas y estilos",
+    "resumen": "Risografía con fuera de registro",
+    "composicion": "Preset-RisoLayer-horizontal",
+    "segundos": 2,
+    "miniatura": "catalogo/miniaturas/Preset-RisoLayer.jpg",
+    "video": "catalogo/videos/Preset-RisoLayer.mp4"
+  },
+  {
+    "id": "BayerDither",
+    "grupo": "Texturas y estilos",
+    "resumen": "Trama de un bit (dither)",
+    "composicion": "Preset-BayerDither-horizontal",
+    "segundos": 2,
+    "miniatura": "catalogo/miniaturas/Preset-BayerDither.jpg",
+    "video": "catalogo/videos/Preset-BayerDither.mp4"
+  },
+  {
+    "id": "MapTrace",
+    "grupo": "Datos",
+    "resumen": "Ruta que se traza sobre un mapa editorial",
+    "composicion": "Preset-MapTrace-horizontal",
+    "segundos": 4,
+    "miniatura": "catalogo/miniaturas/Preset-MapTrace.jpg",
+    "video": "catalogo/videos/Preset-MapTrace.mp4"
+  },
+  {
+    "id": "WordWindowCaption",
+    "grupo": "Retención y captions",
+    "resumen": "Subtítulo en ventanas de 1 a 3 palabras",
+    "composicion": "Preset-WordWindowCaption-horizontal",
+    "segundos": 3,
+    "miniatura": "catalogo/miniaturas/Preset-WordWindowCaption.jpg",
+    "video": "catalogo/videos/Preset-WordWindowCaption.mp4"
+  },
+  {
+    "id": "PunchIn",
+    "grupo": "Retención y captions",
+    "resumen": "Golpe de encuadre en cada evento",
+    "composicion": "Preset-PunchIn-horizontal",
+    "segundos": 3,
+    "miniatura": "catalogo/miniaturas/Preset-PunchIn.jpg",
+    "video": "catalogo/videos/Preset-PunchIn.mp4"
+  },
+  {
+    "id": "ShapeMorph",
+    "grupo": "Forma, cámara y 3D",
+    "resumen": "Una forma que se convierte en otra",
+    "composicion": "Preset-ShapeMorph-horizontal",
+    "segundos": 3.5,
+    "miniatura": "catalogo/miniaturas/Preset-ShapeMorph.jpg",
+    "video": "catalogo/videos/Preset-ShapeMorph.mp4"
+  },
+  {
+    "id": "GooeyMerge",
+    "grupo": "Forma, cámara y 3D",
+    "resumen": "Formas que se funden como gotas",
+    "composicion": "Preset-GooeyMerge-horizontal",
+    "segundos": 3,
+    "miniatura": "catalogo/miniaturas/Preset-GooeyMerge.jpg",
+    "video": "catalogo/videos/Preset-GooeyMerge.mp4"
+  },
+  {
+    "id": "IsoScene",
+    "grupo": "Forma, cámara y 3D",
+    "resumen": "Diagrama isométrico que se arma",
+    "composicion": "Preset-IsoScene-horizontal",
+    "segundos": 2.5,
+    "miniatura": "catalogo/miniaturas/Preset-IsoScene.jpg",
+    "video": "catalogo/videos/Preset-IsoScene.mp4"
+  },
+  {
+    "id": "BarRace",
+    "grupo": "Datos",
+    "resumen": "Barras que compiten y se adelantan",
+    "composicion": "Preset-BarRace-horizontal",
+    "segundos": 5,
+    "miniatura": "catalogo/miniaturas/Preset-BarRace.jpg",
+    "video": "catalogo/videos/Preset-BarRace.mp4"
+  },
+  {
+    "id": "UnitGrid",
+    "grupo": "Datos",
+    "resumen": "Proporción en una rejilla de unidades (37 de cada 100)",
+    "composicion": "Preset-UnitGrid-horizontal",
+    "segundos": 3,
+    "miniatura": "catalogo/miniaturas/Preset-UnitGrid.jpg",
+    "video": "catalogo/videos/Preset-UnitGrid.mp4"
+  },
+  {
+    "id": "NoiseBlocks",
+    "grupo": "Transiciones",
+    "resumen": "Bloques de ruido que tapan y destapan",
+    "composicion": "Preset-NoiseBlocks-horizontal",
+    "segundos": 1.8,
+    "miniatura": "catalogo/miniaturas/Preset-NoiseBlocks.jpg",
+    "video": "catalogo/videos/Preset-NoiseBlocks.mp4"
+  },
+  {
+    "id": "ClockWipe",
+    "grupo": "Transiciones",
+    "resumen": "Barrido de reloj con spring",
+    "composicion": "Preset-ClockWipe-horizontal",
+    "segundos": 1.5,
+    "miniatura": "catalogo/miniaturas/Preset-ClockWipe.jpg",
+    "video": "catalogo/videos/Preset-ClockWipe.mp4"
+  },
+  {
+    "id": "LightLeak",
+    "grupo": "Transiciones",
+    "resumen": "Fuga de luz entre escenas",
+    "composicion": "Preset-LightLeak-horizontal",
+    "segundos": 2,
+    "miniatura": "catalogo/miniaturas/Preset-LightLeak.jpg",
+    "video": "catalogo/videos/Preset-LightLeak.mp4"
+  },
+  {
+    "id": "PaperTear",
+    "grupo": "Texturas y estilos",
+    "resumen": "Papel que se arranca para revelar",
+    "composicion": "Preset-PaperTear-horizontal",
+    "segundos": 2,
+    "miniatura": "catalogo/miniaturas/Preset-PaperTear.jpg",
+    "video": "catalogo/videos/Preset-PaperTear.mp4"
+  },
+  {
+    "id": "SpeedLines",
+    "grupo": "Retención y captions",
+    "resumen": "Líneas de velocidad de anime",
+    "composicion": "Preset-SpeedLines-horizontal",
+    "segundos": 1.5,
+    "miniatura": "catalogo/miniaturas/Preset-SpeedLines.jpg",
+    "video": "catalogo/videos/Preset-SpeedLines.mp4"
+  },
+  {
+    "id": "ImpactFrame",
+    "grupo": "Retención y captions",
+    "resumen": "Cuadro de impacto: flash invertido y temblor",
+    "composicion": "Preset-ImpactFrame-horizontal",
+    "segundos": 2,
+    "miniatura": "catalogo/miniaturas/Preset-ImpactFrame.jpg",
+    "video": "catalogo/videos/Preset-ImpactFrame.mp4"
+  },
+  {
+    "id": "DeviceOrbit",
+    "grupo": "Renders de servidor",
+    "resumen": "Grabación real dentro de un teléfono 3D que orbita",
+    "composicion": "Preset-DeviceOrbit-horizontal",
+    "segundos": 4,
+    "miniatura": "catalogo/miniaturas/Preset-DeviceOrbit.jpg",
+    "video": "catalogo/videos/Preset-DeviceOrbit.mp4"
+  },
+  {
+    "id": "ClayRebote",
+    "grupo": "Renders de servidor",
+    "resumen": "Plastilina con squash & stretch",
+    "composicion": "Preset-ClayRebote-horizontal",
+    "segundos": 4,
+    "miniatura": "catalogo/miniaturas/Preset-ClayRebote.jpg",
+    "video": "catalogo/videos/Preset-ClayRebote.mp4"
+  },
+  {
+    "id": "Datamosh",
+    "grupo": "Renders de servidor",
+    "resumen": "Datamosh real entre dos tomas",
+    "composicion": "Preset-Datamosh-horizontal",
+    "segundos": 4,
+    "miniatura": "catalogo/miniaturas/Preset-Datamosh.jpg",
+    "video": "catalogo/videos/Preset-Datamosh.mp4"
+  },
+  {
+    "id": "TextOnPath",
+    "grupo": "Tipografía",
+    "resumen": "Texto que recorre un trayecto curvo",
+    "composicion": "Preset-TextOnPath-horizontal",
+    "segundos": 4,
+    "miniatura": "catalogo/miniaturas/Preset-TextOnPath.jpg",
+    "video": "catalogo/videos/Preset-TextOnPath.mp4"
+  },
+  {
+    "id": "TextWarp",
+    "grupo": "Tipografía",
+    "resumen": "Texto deformado en arco u onda",
+    "composicion": "Preset-TextWarp-horizontal",
+    "segundos": 4,
+    "miniatura": "catalogo/miniaturas/Preset-TextWarp.jpg",
+    "video": "catalogo/videos/Preset-TextWarp.mp4"
+  },
+  {
+    "id": "TextTunnel",
+    "grupo": "Tipografía",
+    "resumen": "Túnel de texto en profundidad",
+    "composicion": "Preset-TextTunnel-horizontal",
+    "segundos": 4.5,
+    "miniatura": "catalogo/miniaturas/Preset-TextTunnel.jpg",
+    "video": "catalogo/videos/Preset-TextTunnel.mp4"
+  },
+  {
+    "id": "SliceDisplace",
+    "grupo": "Texturas y estilos",
+    "resumen": "Imagen cortada en franjas que se desplazan",
+    "composicion": "Preset-SliceDisplace-horizontal",
+    "segundos": 3.3,
+    "miniatura": "catalogo/miniaturas/Preset-SliceDisplace.jpg",
+    "video": "catalogo/videos/Preset-SliceDisplace.mp4"
+  },
+  {
+    "id": "MarqueeRows",
+    "grupo": "Tipografía",
+    "resumen": "Filas de texto que corren en sentidos opuestos",
+    "composicion": "Preset-MarqueeRows-horizontal",
+    "segundos": 4,
+    "miniatura": "catalogo/miniaturas/Preset-MarqueeRows.jpg",
+    "video": "catalogo/videos/Preset-MarqueeRows.mp4"
+  },
+  {
+    "id": "ChipCaption",
+    "grupo": "Retención y captions",
+    "resumen": "Subtítulo con la palabra clave en un chip de color",
+    "composicion": "Preset-ChipCaption-horizontal",
+    "segundos": 4,
+    "miniatura": "catalogo/miniaturas/Preset-ChipCaption.jpg",
+    "video": "catalogo/videos/Preset-ChipCaption.mp4"
+  },
+  {
+    "id": "Pill",
+    "grupo": "Retención y captions",
+    "resumen": "Etiqueta fija en forma de pastilla",
+    "composicion": "Preset-Pill-horizontal",
+    "segundos": 4,
+    "miniatura": "catalogo/miniaturas/Preset-Pill.jpg",
+    "video": "catalogo/videos/Preset-Pill.mp4"
+  },
+  {
+    "id": "BlurStack",
+    "grupo": "Tipografía",
+    "resumen": "Pila de líneas donde solo una queda nítida",
+    "composicion": "Preset-BlurStack-horizontal",
+    "segundos": 4,
+    "miniatura": "catalogo/miniaturas/Preset-BlurStack.jpg",
+    "video": "catalogo/videos/Preset-BlurStack.mp4"
+  },
+  {
+    "id": "TypeSandwich",
+    "grupo": "Tipografía",
+    "resumen": "Un objeto metido entre dos capas de titular",
+    "composicion": "Preset-TypeSandwich-horizontal",
+    "segundos": 3.7,
+    "miniatura": "catalogo/miniaturas/Preset-TypeSandwich.jpg",
+    "video": "catalogo/videos/Preset-TypeSandwich.mp4"
+  },
+  {
+    "id": "Cursor",
+    "grupo": "Interfaz y producto",
+    "resumen": "Cursor que viaja y hace clic",
+    "composicion": "Preset-Cursor-horizontal",
+    "segundos": 4,
+    "miniatura": "catalogo/miniaturas/Preset-Cursor.jpg",
+    "video": "catalogo/videos/Preset-Cursor.mp4"
+  },
+  {
+    "id": "ScreenFrame",
+    "grupo": "Interfaz y producto",
+    "resumen": "Captura de pantalla con zoom a una región",
+    "composicion": "Preset-ScreenFrame-horizontal",
+    "segundos": 5,
+    "miniatura": "catalogo/miniaturas/Preset-ScreenFrame.jpg",
+    "video": "catalogo/videos/Preset-ScreenFrame.mp4"
+  },
+  {
+    "id": "BentoGrid",
+    "grupo": "Interfaz y producto",
+    "resumen": "Rejilla bento que se arma por celdas",
+    "composicion": "Preset-BentoGrid-horizontal",
+    "segundos": 7,
+    "miniatura": "catalogo/miniaturas/Preset-BentoGrid.jpg",
+    "video": "catalogo/videos/Preset-BentoGrid.mp4"
+  },
+  {
+    "id": "CardMorph",
+    "grupo": "Interfaz y producto",
+    "resumen": "Tarjeta que se transforma en otra",
+    "composicion": "Preset-CardMorph-horizontal",
+    "segundos": 4,
+    "miniatura": "catalogo/miniaturas/Preset-CardMorph.jpg",
+    "video": "catalogo/videos/Preset-CardMorph.mp4"
+  },
+  {
+    "id": "CardCarousel",
+    "grupo": "Interfaz y producto",
+    "resumen": "Carrusel de tarjetas",
+    "composicion": "Preset-CardCarousel-horizontal",
+    "segundos": 5,
+    "miniatura": "catalogo/miniaturas/Preset-CardCarousel.jpg",
+    "video": "catalogo/videos/Preset-CardCarousel.mp4"
+  },
+  {
+    "id": "CutoutObject",
+    "grupo": "Forma, cámara y 3D",
+    "resumen": "Objeto recortado que cae al papel con su sombra",
+    "composicion": "Preset-CutoutObject-horizontal",
+    "segundos": 3,
+    "miniatura": "catalogo/miniaturas/Preset-CutoutObject.jpg",
+    "video": "catalogo/videos/Preset-CutoutObject.mp4"
+  },
+  {
+    "id": "BeforeAfter",
+    "grupo": "Interfaz y producto",
+    "resumen": "Comparación antes y después con cortina",
+    "composicion": "Preset-BeforeAfter-horizontal",
+    "segundos": 5.7,
+    "miniatura": "catalogo/miniaturas/Preset-BeforeAfter.jpg",
+    "video": "catalogo/videos/Preset-BeforeAfter.mp4"
+  },
+  {
+    "id": "SplitStack",
+    "grupo": "Interfaz y producto",
+    "resumen": "Pantalla partida: gráfico arriba, presentador abajo",
+    "composicion": "Preset-SplitStack-horizontal",
+    "segundos": 2.5,
+    "miniatura": "catalogo/miniaturas/Preset-SplitStack.jpg",
+    "video": "catalogo/videos/Preset-SplitStack.mp4"
+  },
+  {
+    "id": "GradientFlow",
+    "grupo": "Texturas y estilos",
+    "resumen": "Fondo de color que fluye despacio",
+    "composicion": "Preset-GradientFlow-horizontal",
+    "segundos": 5,
+    "miniatura": "catalogo/miniaturas/Preset-GradientFlow.jpg",
+    "video": "catalogo/videos/Preset-GradientFlow.mp4"
+  },
+  {
+    "id": "Trazo",
+    "grupo": "Anotación",
+    "resumen": "Línea que se dibuja como a mano, base del kit",
+    "composicion": "Preset-Trazo-horizontal",
+    "segundos": 2.5,
+    "miniatura": "catalogo/miniaturas/Preset-Trazo.jpg",
+    "video": "catalogo/videos/Preset-Trazo.mp4"
+  },
+  {
+    "id": "Circulo",
+    "grupo": "Anotación",
+    "resumen": "Círculo de resalte alrededor de algo",
+    "composicion": "Preset-Circulo-horizontal",
+    "segundos": 2.5,
+    "miniatura": "catalogo/miniaturas/Preset-Circulo.jpg",
+    "video": "catalogo/videos/Preset-Circulo.mp4"
+  },
+  {
+    "id": "Recuadro",
+    "grupo": "Anotación",
+    "resumen": "Recuadro dibujado alrededor de una zona",
+    "composicion": "Preset-Recuadro-horizontal",
+    "segundos": 2.5,
+    "miniatura": "catalogo/miniaturas/Preset-Recuadro.jpg",
+    "video": "catalogo/videos/Preset-Recuadro.mp4"
+  },
+  {
+    "id": "Flecha",
+    "grupo": "Anotación",
+    "resumen": "Flecha curva entre dos puntos",
+    "composicion": "Preset-Flecha-horizontal",
+    "segundos": 3,
+    "miniatura": "catalogo/miniaturas/Preset-Flecha.jpg",
+    "video": "catalogo/videos/Preset-Flecha.mp4"
+  },
+  {
+    "id": "Subrayado",
+    "grupo": "Anotación",
+    "resumen": "Subrayado simple o doble",
+    "composicion": "Preset-Subrayado-horizontal",
+    "segundos": 3,
+    "miniatura": "catalogo/miniaturas/Preset-Subrayado.jpg",
+    "video": "catalogo/videos/Preset-Subrayado.mp4"
+  },
+  {
+    "id": "Tachado",
+    "grupo": "Anotación",
+    "resumen": "Tachado de una palabra",
+    "composicion": "Preset-Tachado-horizontal",
+    "segundos": 3,
+    "miniatura": "catalogo/miniaturas/Preset-Tachado.jpg",
+    "video": "catalogo/videos/Preset-Tachado.mp4"
+  },
+  {
+    "id": "Callout",
+    "grupo": "Anotación",
+    "resumen": "Punto, línea guía y rótulo que nombra algo",
+    "composicion": "Preset-Callout-horizontal",
+    "segundos": 3,
+    "miniatura": "catalogo/miniaturas/Preset-Callout.jpg",
+    "video": "catalogo/videos/Preset-Callout.mp4"
+  },
+  {
+    "id": "Nodo",
+    "grupo": "Anotación",
+    "resumen": "Cajas y conectores de un diagrama que se construye",
+    "composicion": "Preset-Nodo-horizontal",
+    "segundos": 4,
+    "miniatura": "catalogo/miniaturas/Preset-Nodo.jpg",
+    "video": "catalogo/videos/Preset-Nodo.mp4"
+  },
+  {
+    "id": "AnilloPunteado",
+    "grupo": "Anotación",
+    "resumen": "Anillo punteado que marca una zona",
+    "composicion": "Preset-AnilloPunteado-horizontal",
+    "segundos": 3.7,
+    "miniatura": "catalogo/miniaturas/Preset-AnilloPunteado.jpg",
+    "video": "catalogo/videos/Preset-AnilloPunteado.mp4"
+  },
+  {
+    "id": "Llave",
+    "grupo": "Anotación",
+    "resumen": "Llave que agrupa varios elementos con su rótulo",
+    "composicion": "Preset-Llave-horizontal",
+    "segundos": 3.3,
+    "miniatura": "catalogo/miniaturas/Preset-Llave.jpg",
+    "video": "catalogo/videos/Preset-Llave.mp4"
+  },
+  {
+    "id": "DatoCallout",
+    "grupo": "Anotación",
+    "resumen": "Cifra grande que sale de un punto del objeto",
+    "composicion": "Preset-DatoCallout-horizontal",
+    "segundos": 4,
+    "miniatura": "catalogo/miniaturas/Preset-DatoCallout.jpg",
+    "video": "catalogo/videos/Preset-DatoCallout.mp4"
+  },
+  {
+    "id": "PasoTracker",
+    "grupo": "Anotación",
+    "resumen": "Lista de pasos que lleva la cuenta",
+    "composicion": "Preset-PasoTracker-horizontal",
+    "segundos": 5,
+    "miniatura": "catalogo/miniaturas/Preset-PasoTracker.jpg",
+    "video": "catalogo/videos/Preset-PasoTracker.mp4"
+  },
+  {
+    "id": "Lupa",
+    "grupo": "Anotación",
+    "resumen": "Lupa que amplía una zona en un recuadro",
+    "composicion": "Preset-Lupa-horizontal",
+    "segundos": 3.7,
+    "miniatura": "catalogo/miniaturas/Preset-Lupa.jpg",
+    "video": "catalogo/videos/Preset-Lupa.mp4"
+  }
+]

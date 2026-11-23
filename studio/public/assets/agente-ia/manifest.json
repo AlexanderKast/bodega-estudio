@@ -1,0 +1,234 @@
+{
+  "pieza": "agente-ia",
+  "assets": [
+    {
+      "id": "monitor",
+      "tipo": "objeto",
+      "archivo": "monitor.png",
+      "descripcion": "A vintage beige CRT computer monitor seen straight from the front, thick plastic bezel, completely blank dark screen, small base",
+      "prompt": "A vintage beige CRT computer monitor seen straight from the front, thick plastic bezel, completely blank dark screen, small base. Black and white studio photograph of a single object cut out from a 1970s printed magazine, high contrast monochrome, visible halftone print dots and slight paper grain, soft even light from the top left, matte, centered, whole object visible. Limited color palette: black, mid gray, off-white. A single isolated object, centered, the whole object inside the frame with clear margin on all sides, on a plain flat uniform mid gray background, no floor, no cast shadow on the background, no other objects. No text, no letters, no numbers, no logos anywhere in the image; every surface, screen and label is blank.",
+      "negativo": "text, letters, words, numbers, digits, typography, captions, labels, signage, logo, watermark, signature, handwriting, UI text, subtitles, color, 3d render, glossy, neon, purple, blue gradient, drop shadow, frame, border, hands, people, screen content",
+      "negativo_activo": true,
+      "semilla": 2520261917,
+      "modelo": {
+        "clave": "zimage",
+        "nombre": "Z-Image Turbo (int8)",
+        "unet": "z_image_turbo_int8_convrot.safetensors",
+        "clip": "qwen_3_4b_fp8_mixed.safetensors",
+        "vae": "ae.safetensors"
+      },
+      "pasos": 8,
+      "cfg": 2.0,
+      "tamano": [
+        1024,
+        1024
+      ],
+      "referencia_sha256": null,
+      "comfyui": "0.37.0",
+      "fecha": "2026-11-11",
+      "recorte_papel": {
+        "archivo": "monitor-papel.png",
+        "tamano": [
+          879,
+          882
+        ],
+        "caja_origen": [
+          97,
+          165,
+          926,
+          997
+        ],
+        "motor": "comfy",
+        "modelo": "birefnet.safetensors",
+        "borde_papel": 14.0
+      }
+    },
+    {
+      "id": "llave",
+      "tipo": "objeto",
+      "archivo": "llave.png",
+      "descripcion": "A steel adjustable wrench lying diagonally, seen from directly above",
+      "prompt": "A steel adjustable wrench lying diagonally, seen from directly above. Black and white studio photograph of a single object cut out from a 1970s printed magazine, high contrast monochrome, visible halftone print dots and slight paper grain, soft even light from the top left, matte, centered, whole object visible. Limited color palette: black, mid gray, off-white. A single isolated object, centered, the whole object inside the frame with clear margin on all sides, on a plain flat uniform mid gray background, no floor, no cast shadow on the background, no other objects. No text, no letters, no numbers, no logos anywhere in the image; every surface, screen and label is blank.",
+      "negativo": "text, letters, words, numbers, digits, typography, captions, labels, signage, logo, watermark, signature, handwriting, UI text, subtitles, color, 3d render, glossy, neon, purple, blue gradient, drop shadow, frame, border, hands, people, screen content",
+      "negativo_activo": true,
+      "semilla": 3732091063,
+      "modelo": {
+        "clave": "zimage",
+        "nombre": "Z-Image Turbo (int8)",
+        "unet": "z_image_turbo_int8_convrot.safetensors",
+        "clip": "qwen_3_4b_fp8_mixed.safetensors",
+        "vae": "ae.safetensors"
+      },
+      "pasos": 8,
+      "cfg": 2.0,
+      "tamano": [
+        1024,
+        1024
+      ],
+      "referencia_sha256": null,
+      "comfyui": "0.37.0",
+      "fecha": "2026-11-11",
+      "recorte_papel": {
+        "archivo": "llave-papel.png",
+        "tamano": [
+          593,
+          781
+        ],
+        "caja_origen": [
+          247,
+          155,
+          790,
+          886
+        ],
+        "motor": "comfy",
+        "modelo": "birefnet.safetensors",
+        "borde_papel": 14.0
+      }
+    },
+    {
+      "id": "calendario",
+      "tipo": "objeto",
+      "archivo": "calendario.png",
+      "descripcion": "A desk tear-off calendar block with a blank white page and metal binding rings at the top, seen from the front",
+      "prompt": "A desk tear-off calendar block with a blank white page and metal binding rings at the top, seen from the front. Black and white studio photograph of a single object cut out from a 1970s printed magazine, high contrast monochrome, visible halftone print dots and slight paper grain, soft even light from the top left, matte, centered, whole object visible. Limited color palette: black, mid gray, off-white. A single isolated object, centered, the whole object inside the frame with clear margin on all sides, on a plain flat uniform mid gray background, no floor, no cast shadow on the background, no other objects. No text, no letters, no numbers, no logos anywhere in the image; every surface, screen and label is blank.",
+      "negativo": "text, letters, words, numbers, digits, typography, captions, labels, signage, logo, watermark, signature, handwriting, UI text, subtitles, color, 3d render, glossy, neon, purple, blue gradient, drop shadow, frame, border, hands, people, screen content",
+      "negativo_activo": true,
+      "semilla": 3180627962,
+      "modelo": {
+        "clave": "zimage",
+        "nombre": "Z-Image Turbo (int8)",
+        "unet": "z_image_turbo_int8_convrot.safetensors",
+        "clip": "qwen_3_4b_fp8_mixed.safetensors",
+        "vae": "ae.safetensors"
+      },
+      "pasos": 8,
+      "cfg": 2.0,
+      "tamano": [
+        1024,
+        1024
+      ],
+      "referencia_sha256": null,
+      "comfyui": "0.37.0",
+      "fecha": "2026-11-11",
+      "recorte_papel": {
+        "archivo": "calendario-papel.png",
+        "tamano": [
+          624,
+          864
+        ],
+        "caja_origen": [
+          226,
+          110,
+          800,
+          924
+        ],
+        "motor": "comfy",
+        "modelo": "birefnet.safetensors",
+        "borde_papel": 14.0
+      }
+    },
+    {
+      "id": "sobre",
+      "tipo": "objeto",
+      "archivo": "sobre.png",
+      "descripcion": "A closed paper mail envelope with the triangular flap visible, seen from directly above, slightly rotated",
+      "prompt": "A closed paper mail envelope with the triangular flap visible, seen from directly above, slightly rotated. Black and white studio photograph of a single object cut out from a 1970s printed magazine, high contrast monochrome, visible halftone print dots and slight paper grain, soft even light from the top left, matte, centered, whole object visible. Limited color palette: black, mid gray, off-white. A single isolated object, centered, the whole object inside the frame with clear margin on all sides, on a plain flat uniform mid gray background, no floor, no cast shadow on the background, no other objects. No text, no letters, no numbers, no logos anywhere in the image; every surface, screen and label is blank.",
+      "negativo": "text, letters, words, numbers, digits, typography, captions, labels, signage, logo, watermark, signature, handwriting, UI text, subtitles, color, 3d render, glossy, neon, purple, blue gradient, drop shadow, frame, border, hands, people, screen content",
+      "negativo_activo": true,
+      "semilla": 1741610742,
+      "modelo": {
+        "clave": "zimage",
+        "nombre": "Z-Image Turbo (int8)",
+        "unet": "z_image_turbo_int8_convrot.safetensors",
+        "clip": "qwen_3_4b_fp8_mixed.safetensors",
+        "vae": "ae.safetensors"
+      },
+      "pasos": 8,
+      "cfg": 2.0,
+      "tamano": [
+        1024,
+        1024
+      ],
+      "referencia_sha256": null,
+      "comfyui": "0.37.0",
+      "fecha": "2026-11-11",
+      "recorte_papel": {
+        "archivo": "sobre-papel.png",
+        "tamano": [
+          888,
+          705
+        ],
+        "caja_origen": [
+          91,
+          199,
+          929,
+          854
+        ],
+        "motor": "comfy",
+        "modelo": "birefnet.safetensors",
+        "borde_papel": 14.0
+      }
+    },
+    {
+      "id": "lupa",
+      "tipo": "objeto",
+      "archivo": "lupa.png",
+      "descripcion": "A magnifying glass with a round lens and a dark wooden handle, seen from directly above, handle pointing to the lower right",
+      "prompt": "A magnifying glass with a round lens and a dark wooden handle, seen from directly above, handle pointing to the lower right. Black and white studio photograph of a single object cut out from a 1970s printed magazine, high contrast monochrome, visible halftone print dots and slight paper grain, soft even light from the top left, matte, centered, whole object visible. Limited color palette: black, mid gray, off-white. A single isolated object, centered, the whole object inside the frame with clear margin on all sides, on a plain flat uniform mid gray background, no floor, no cast shadow on the background, no other objects. No text, no letters, no numbers, no logos anywhere in the image; every surface, screen and label is blank.",
+      "negativo": "text, letters, words, numbers, digits, typography, captions, labels, signage, logo, watermark, signature, handwriting, UI text, subtitles, color, 3d render, glossy, neon, purple, blue gradient, drop shadow, frame, border, hands, people, screen content",
+      "negativo_activo": true,
+      "semilla": 2673635022,
+      "modelo": {
+        "clave": "zimage",
+        "nombre": "Z-Image Turbo (int8)",
+        "unet": "z_image_turbo_int8_convrot.safetensors",
+        "clip": "qwen_3_4b_fp8_mixed.safetensors",
+        "vae": "ae.safetensors"
+      },
+      "pasos": 8,
+      "cfg": 2.0,
+      "tamano": [
+        1024,
+        1024
+      ],
+      "referencia_sha256": null,
+      "comfyui": "0.37.0",
+      "fecha": "2026-11-11",
+      "recorte_papel": {
+        "archivo": "lupa-papel.png",
+        "tamano": [
+          660,
+          901
+        ],
+        "caja_origen": [
+          258,
+          130,
+          868,
+          981
+        ],
+        "motor": "comfy",
+        "modelo": "birefnet.safetensors",
+        "borde_papel": 14.0
+      }
+    }
+  ],
+  "estilo": {
+    "prompt_estilo": "Black and white studio photograph of a single object cut out from a 1970s printed magazine, high contrast monochrome, visible halftone print dots and slight paper grain, soft even light from the top left, matte, centered, whole object visible",
+    "paleta": [
+      {
+        "nombre": "black",
+        "hex": "#14110D"
+      },
+      {
+        "nombre": "mid gray",
+        "hex": "#8C8A84"
+      },
+      {
+        "nombre": "off-white",
+        "hex": "#EFE9DC"
+      }
+    ],
+    "negativo": "color, 3d render, glossy, neon, purple, blue gradient, drop shadow, frame, border, hands, people, screen content",
+    "fondo_recorte": "mid gray"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "variante": "lavanda-contraste",
+  "beats": [
+    {
+      "tipo": "objeto",
+      "fondo": "claro",
+      "texto": "Tu / *atención*",
+      "nota": "",
+      "segundos": 2.4,
+      "media": "",
+      "items": [],
+      "cifra": 0,
+      "sufijo": "",
+      "pill": ""
+    },
+    {
+      "tipo": "objeto",
+      "fondo": "claro",
+      "texto": "Parece / un *detalle*",
+      "nota": "hasta que lo *mides*",
+      "segundos": 3,
+      "media": "",
+      "items": [],
+      "cifra": 0,
+      "sufijo": "",
+      "pill": ""
+    },
+    {
+      "tipo": "lista",
+      "fondo": "oscuro",
+      "texto": "Y no... / *no es*",
+      "nota": "",
+      "segundos": 3.6,
+      "media": "",
+      "items": [
+        "Más horas",
+        "Más apps",
+        "Más ganas"
+      ],
+      "cifra": 0,
+      "sufijo": "",
+      "pill": ""
+    },
+    {
+      "tipo": "cifra",
+      "fondo": "claro",
+      "texto": "En solo",
+      "nota": "",
+      "segundos": 3.4,
+      "media": "",
+      "items": [],
+      "cifra": 120000,
+      "sufijo": "personas",
+      "pill": "03 semanas"
+    },
+    {
+      "tipo": "objeto",
+      "fondo": "claro",
+      "texto": "Es algo / *simple*",
+      "nota": "un *sistema* que se repite",
+      "segundos": 3,
+      "media": "",
+      "items": [],
+      "cifra": 0,
+      "sufijo": "",
+      "pill": ""
+    }
+  ],
+  "cierre": {
+    "texto": "Empieza / *hoy*",
+    "firma": "@tumarca",
+    "media": "",
+    "segundos": 2.8
+  },
+  "colores": {}
+}

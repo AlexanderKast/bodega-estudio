@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catálogo Bodega Estudio</title>
+<style>
+  :root { --fondo: #f6f4ee; --panel: #ffffff; --texto: #1c1b17; --suave: #6a675e; --linea: #dedacd; --acento: #3f6212; }
+  @media (prefers-color-scheme: dark) { :root { --fondo: #0b0d09; --panel: #141810; --texto: #f2f5e8; --suave: #a3aa96; --linea: #2a3122; --acento: #a3e635; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--fondo); color: var(--texto); font: 16px/1.5 system-ui, sans-serif; }
+  header, main { max-width: 1180px; margin: 0 auto; padding: 24px 16px; }
+  h1 { font-size: 28px; margin: 0 0 4px; } h2 { font-size: 20px; margin: 40px 0 12px; } h3 { font-size: 17px; margin: 0 0 6px; }
+  header p { color: var(--suave); margin: 0 0 16px; }
+  input { width: 100%; max-width: 420px; padding: 10px 12px; border: 1px solid var(--linea); border-radius: 8px; background: var(--panel); color: inherit; font: inherit; }
+  .rejilla { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+  .tarjeta { background: var(--panel); border: 1px solid var(--linea); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
+  .muestra { display: block; width: 100%; background: #0b0d09; cursor: zoom-in; }
+  .tarjeta .muestra { aspect-ratio: 9 / 16; max-height: 420px; object-fit: contain; }
+  .cuerpo { padding: 14px; } .cuerpo p { margin: 0 0 8px; font-size: 14px; }
+  .cuando, .meta { color: var(--suave); } .meta { font-size: 13px; }
+  code { font: 13px ui-monospace, monospace; color: var(--acento); overflow-wrap: anywhere; }
+  details { margin-top: 10px; font-size: 13px; } summary { cursor: pointer; color: var(--suave); }
+  details ul { padding-left: 18px; margin: 6px 0; } details span { color: var(--suave); } details em { color: var(--suave); }
+  .presets { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); }
+  .preset { background: var(--panel); border: 1px solid var(--linea); border-radius: 10px; overflow: hidden; font-size: 13px; }
+  .preset .muestra { aspect-ratio: 16 / 9; object-fit: cover; }
+  dialog { border: 0; padding: 0; background: #0b0d09; border-radius: 12px; max-width: 94vw; max-height: 94vh; overflow: hidden; }
+  dialog::backdrop { background: rgba(0, 0, 0, 0.78); }
+  dialog video { display: block; max-width: 94vw; max-height: 94vh; }
+  .ayuda { font-size: 14px; }
+  .preset div { padding: 8px 10px; } .preset strong { display: block; } .preset span { color: var(--suave); }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Catálogo Bodega Estudio</h1>
+  <p>10 plantillas y 74 presets. Generado desde el código con <code>node scripts/catalogo.mjs</code>.</p>
+  <p class="ayuda">Pasa el cursor sobre un ejemplo para verlo en movimiento. Clic para verlo grande.</p>
+  <input id="buscar" type="search" placeholder="Buscar: tutorial, producto, antes y después…" aria-label="Buscar en el catálogo">
+</header>
+<main>
+  <h2>Plantillas</h2>
+  <div class="rejilla">
+      <article class="tarjeta" data-texto="plantilla-molde texto con gancho letra a letra, cortes secos y punch-in sobre tu material, con rótulo abajo a la izquierda. un reel corto de frases sobre video o fotos, o como punto de partida para una plantilla nueva.">
+        <video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Plantilla-Molde.jpg" src="videos/Plantilla-Molde.mp4" aria-label="Ejemplo de Molde" tabindex="0"></video>
+        <div class="cuerpo">
+          <h3>Molde</h3>
+          <p>Texto con gancho letra a letra, cortes secos y punch-in sobre tu material, con rótulo abajo a la izquierda.</p>
+          <p class="cuando"><strong>Úsala para:</strong> Un reel corto de frases sobre video o fotos, o como punto de partida para una plantilla nueva.</p>
+          <p class="meta">9:16, 4:5, 1:1 · muestra de 6.2 s</p>
+          <code>/mm-plantilla Plantilla-Molde</code>
+          <details>
+            <summary>Campos (4)</summary>
+            <ul><li><code>beats</code> <span>lista de objetos</span><ul><li><code>texto</code> <span>texto</span></li><li><code>segundos</code> <span>número</span></li><li><code>media</code> <span>texto</span></li><li><code>punch</code> <span>sí/no</span></li></ul></li><li><code>cierre</code> <span>texto</span> <em>texto del último plano</em></li><li><code>segundosCierre</code> <span>número</span></li><li><code>colores</code> <span>objeto</span><ul><li><code>fondo</code> <span>color (hex)</span></li><li><code>texto</code> <span>color (hex)</span></li><li><code>acento</code> <span>color (hex)</span></li></ul></li></ul>
+          </details>
+        </div>
+      </article>
+      <article class="tarjeta" data-texto="plantilla-editorialrecorte un objeto recortado por idea sobre cartulina, con titular grotesco y una palabra de acento en serif itálica. explicar una idea en 3 a 6 pasos con objetos o productos recortados: consejos, listas y cifras con look editorial.">
+        <video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Plantilla-EditorialRecorte.jpg" src="videos/Plantilla-EditorialRecorte.mp4" aria-label="Ejemplo de EditorialRecorte" tabindex="0"></video>
+        <div class="cuerpo">
+          <h3>EditorialRecorte</h3>
+          <p>Un objeto recortado por idea sobre cartulina, con titular grotesco y una palabra de acento en serif itálica.</p>
+          <p class="cuando"><strong>Úsala para:</strong> Explicar una idea en 3 a 6 pasos con objetos o productos recortados: consejos, listas y cifras con look editorial.</p>
+          <p class="meta">9:16, 4:5 · muestra de 16.6 s</p>
+          <code>/mm-plantilla Plantilla-EditorialRecorte</code>
+          <details>
+            <summary>Campos (4)</summary>
+            <ul><li><code>variante</code> <span>&quot;gris-script&quot; | &quot;acento-azul&quot; | &quot;noche-amarilla&quot; | &quot;crema-marco&quot;</span> <em>tratamiento medido de cada video de la familia: paleta, ritmo y transición</em></li><li><code>beats</code> <span>lista de objetos</span><ul><li><code>tipo</code> <span>&quot;objeto&quot; | &quot;tarjeta&quot; | &quot;lista&quot; | &quot;cifra&quot;</span></li><li><code>apoyo</code> <span>texto</span></li><li><code>titular</code> <span>texto</span></li><li><code>segundos</code> <span>número</span></li><li><code>media</code> <span>texto</span></li><li><code>items</code> <span>lista de texto</span></li><li><code>cifra</code> <span>número</span></li><li><code>sufijo</code> <span>texto</span></li></ul></li><li><code>cierre</code> <span>objeto</span><ul><li><code>texto</code> <span>texto</span></li><li><code>firma</code> <span>texto</span></li><li><code>logo</code> <span>texto</span></li><li><code>segundos</code> <span>número</span></li></ul></li><li><code>colores</code> <span>objeto</span> <em>vacío = paleta de la variante</em><ul><li><code>fondo</code> <span>color (hex)</span></li><li><code>texto</code> <span>color (hex)</span></li><li><code>acento</code> <span>color (hex)</span></li></ul></li></ul>
+          </details>
+        </div>
+      </article>
+      <article class="tarjeta" data-texto="plantilla-collageimpacto tipografía condensada gigante sobre papel, con recortes que tocan las letras y caídas a negro al golpe. un mensaje fuerte y corto: manifiesto, apertura de campaña o gancho que tiene que frenar el scroll.">
+        <video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Plantilla-CollageImpacto.jpg" src="videos/Plantilla-CollageImpacto.mp4" aria-label="Ejemplo de CollageImpacto" tabindex="0"></video>
+        <div class="cuerpo">
+          <h3>CollageImpacto</h3>
+          <p>Tipografía condensada gigante sobre papel, con recortes que tocan las letras y caídas a negro al golpe.</p>
+          <p class="cuando"><strong>Úsala para:</strong> Un mensaje fuerte y corto: manifiesto, apertura de campaña o gancho que tiene que frenar el scroll.</p>
+          <p class="meta">9:16, 4:5 · muestra de 17.2 s</p>
+          <code>/mm-plantilla Plantilla-CollageImpacto</code>
+          <details>
+            <summary>Campos (4)</summary>
+            <ul><li><code>variante</code> <span>&quot;crema-rojo&quot; | &quot;papel-tinta&quot; | &quot;gris-objeto&quot;</span> <em>tratamiento medido de cada video de la familia: paleta, ritmo y transición</em></li><li><code>beats</code> <span>lista de objetos</span><ul><li><code>tipo</code> <span>&quot;impacto&quot; | &quot;frase&quot; | &quot;objeto&quot; | &quot;oscuro&quot;</span></li><li><code>texto</code> <span>texto</span></li><li><code>segundos</code> <span>número</span></li><li><code>recorte</code> <span>texto</span></li><li><code>imagen</code> <span>texto</span></li><li><code>golpe</code> <span>sí/no</span></li></ul></li><li><code>cierre</code> <span>objeto</span><ul><li><code>texto</code> <span>texto</span></li><li><code>firma</code> <span>texto</span></li><li><code>recorte</code> <span>texto</span></li><li><code>segundos</code> <span>número</span></li></ul></li><li><code>colores</code> <span>objeto</span> <em>fondo = papel, texto = tinta, acento = color de la idea; vacío = paleta de la variante</em><ul><li><code>fondo</code> <span>color (hex)</span></li><li><code>texto</code> <span>color (hex)</span></li><li><code>acento</code> <span>color (hex)</span></li></ul></li></ul>
+          </details>
+        </div>
+      </article>
+      <article class="tarjeta" data-texto="plantilla-explicadorobjetos texto cinético sans y serif itálica alternando fondo claro y oscuro, con objetos 3d flotando y pills. explicar un concepto abstracto con objetos como metáfora, sin persona en cámara.">
+        <video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Plantilla-ExplicadorObjetos.jpg" src="videos/Plantilla-ExplicadorObjetos.mp4" aria-label="Ejemplo de ExplicadorObjetos" tabindex="0"></video>
+        <div class="cuerpo">
+          <h3>ExplicadorObjetos</h3>
+          <p>Texto cinético sans y serif itálica alternando fondo claro y oscuro, con objetos 3D flotando y pills.</p>
+          <p class="cuando"><strong>Úsala para:</strong> Explicar un concepto abstracto con objetos como metáfora, sin persona en cámara.</p>
+          <p class="meta">9:16, 4:5 · muestra de 18.2 s</p>
+          <code>/mm-plantilla Plantilla-ExplicadorObjetos</code>
+          <details>
+            <summary>Campos (4)</summary>
+            <ul><li><code>variante</code> <span>&quot;lavanda-contraste&quot; | &quot;calido-ventana&quot;</span> <em>tratamiento medido de cada video de la familia: paleta, ritmo y transición</em></li><li><code>beats</code> <span>lista de objetos</span><ul><li><code>tipo</code> <span>&quot;objeto&quot; | &quot;lista&quot; | &quot;cifra&quot;</span></li><li><code>fondo</code> <span>&quot;claro&quot; | &quot;oscuro&quot;</span></li><li><code>texto</code> <span>texto</span></li><li><code>nota</code> <span>texto</span></li><li><code>segundos</code> <span>número</span></li><li><code>media</code> <span>texto</span></li><li><code>items</code> <span>lista de texto</span></li><li><code>cifra</code> <span>número</span></li><li><code>sufijo</code> <span>texto</span></li><li><code>pill</code> <span>texto</span></li></ul></li><li><code>cierre</code> <span>objeto</span><ul><li><code>texto</code> <span>texto</span></li><li><code>firma</code> <span>texto</span></li><li><code>media</code> <span>texto</span></li><li><code>segundos</code> <span>número</span></li></ul></li><li><code>colores</code> <span>objeto</span> <em>fondo = escena clara, texto = tinta, acento = resaltador/acento; vacío = paleta de la variante</em><ul><li><code>fondo</code> <span>color (hex)</span></li><li><code>texto</code> <span>color (hex)</span></li><li><code>acento</code> <span>color (hex)</span></li></ul></li></ul>
+          </details>
+        </div>
+      </article>
+      <article class="tarjeta" data-texto="plantilla-saasuicristal una toma continua donde cada idea sale de la anterior: tarjetas de cristal, contador, bento, morph y captura con cursor. presentar un software o una función: anuncio de producto, lanzamiento o demo de interfaz.">
+        <video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Plantilla-SaasUiCristal.jpg" src="videos/Plantilla-SaasUiCristal.mp4" aria-label="Ejemplo de SaasUiCristal" tabindex="0"></video>
+        <div class="cuerpo">
+          <h3>SaasUiCristal</h3>
+          <p>Una toma continua donde cada idea sale de la anterior: tarjetas de cristal, contador, bento, morph y captura con cursor.</p>
+          <p class="cuando"><strong>Úsala para:</strong> Presentar un software o una función: anuncio de producto, lanzamiento o demo de interfaz.</p>
+          <p class="meta">9:16, 4:5, 1:1 · muestra de 21.1 s</p>
+          <code>/mm-plantilla Plantilla-SaasUiCristal</code>
+          <details>
+            <summary>Campos (7)</summary>
+            <ul><li><code>variante</code> <span>&quot;noche-cristal&quot; | &quot;bento-inclinado&quot; | &quot;morph-claro&quot; | &quot;pasos-carbon&quot; | &quot;hoja-cursor&quot;</span> <em>una por video de origen: paleta, tratamiento de tarjetas y tipo de transición</em></li><li><code>escenas</code> <span>lista de objetos</span><ul><li><code>tipo</code> <span>&quot;gancho&quot; | &quot;tarjetas&quot; | &quot;contador&quot; | &quot;bento&quot; | &quot;morph&quot; | &quot;captura&quot; | &quot;lista&quot;</span></li><li><code>titulo</code> <span>texto</span></li><li><code>items</code> <span>lista de texto</span></li><li><code>desde</code> <span>número</span></li><li><code>hasta</code> <span>número</span></li><li><code>media</code> <span>texto</span></li><li><code>segundos</code> <span>número</span></li></ul></li><li><code>marca</code> <span>texto</span> <em>wordmark del cierre</em></li><li><code>frase</code> <span>texto</span> <em>frase bajo el wordmark</em></li><li><code>cta</code> <span>texto</span> <em>CTA que el cursor señala en el cierre; vacío = sin CTA</em></li><li><code>segundosCierre</code> <span>número</span></li><li><code>colores</code> <span>objeto</span><ul><li><code>fondo</code> <span>color (hex)</span></li><li><code>texto</code> <span>color (hex)</span></li><li><code>acento</code> <span>color (hex)</span></li></ul></li></ul>
+          </details>
+        </div>
+      </article>
+      <article class="tarjeta" data-texto="plantilla-antesdespues el antes chico y el después grande en perspectiva, recorriendo varios resultados con cortina, rasgado o barrido. mostrar transformaciones: rediseños, ediciones de foto, estilos generados con ia o resultados de un servicio.">
+        <video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Plantilla-AntesDespues.jpg" src="videos/Plantilla-AntesDespues.mp4" aria-label="Ejemplo de AntesDespues" tabindex="0"></video>
+        <div class="cuerpo">
+          <h3>AntesDespues</h3>
+          <p>El antes chico y el después grande en perspectiva, recorriendo varios resultados con cortina, rasgado o barrido.</p>
+          <p class="cuando"><strong>Úsala para:</strong> Mostrar transformaciones: rediseños, ediciones de foto, estilos generados con IA o resultados de un servicio.</p>
+          <p class="meta">9:16, 4:5 · muestra de 11.7 s</p>
+          <code>/mm-plantilla Plantilla-AntesDespues</code>
+          <details>
+            <summary>Campos (7)</summary>
+            <ul><li><code>variante</code> <span>&quot;tarjetas-perspectiva&quot; | &quot;escenario-timeline&quot;</span> <em>layout, paleta y ritmo de cada video de origen</em></li><li><code>antes</code> <span>texto</span> <em>clip crudo del cliente (panel chico)</em></li><li><code>etiquetaAntes</code> <span>texto</span></li><li><code>etiquetaDespues</code> <span>texto</span></li><li><code>estados</code> <span>lista de objetos</span><ul><li><code>estilo</code> <span>&quot;video&quot; | &quot;papel&quot; | &quot;color&quot; | &quot;reticula&quot; | &quot;periodico&quot; | &quot;crema&quot; | &quot;dato&quot;</span></li><li><code>texto</code> <span>texto</span></li><li><code>clave</code> <span>texto</span></li><li><code>media</code> <span>texto</span></li><li><code>segundos</code> <span>número</span></li><li><code>entrada</code> <span>&quot;corte&quot; | &quot;cortina&quot; | &quot;rasgado&quot; | &quot;barrido&quot;</span></li></ul></li><li><code>timeline</code> <span>objeto</span> <em>solo escenario-timeline: captura propia del timeline; vacío = pistas de muestra</em><ul><li><code>etiqueta</code> <span>texto</span></li><li><code>media</code> <span>texto</span></li></ul></li><li><code>colores</code> <span>objeto</span><ul><li><code>fondo</code> <span>color (hex)</span></li><li><code>texto</code> <span>color (hex)</span></li><li><code>acento</code> <span>color (hex)</span></li></ul></li></ul>
+          </details>
+        </div>
+      </article>
+      <article class="tarjeta" data-texto="plantilla-showcasedispositivo pantallas que se suceden al golpe dentro de un teléfono o una laptop, con render 3d opcional. mostrar una app o una web dentro del dispositivo: recorrido de pantallas o anuncio de app.">
+        <video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Plantilla-ShowcaseDispositivo.jpg" src="videos/Plantilla-ShowcaseDispositivo.mp4" aria-label="Ejemplo de ShowcaseDispositivo" tabindex="0"></video>
+        <div class="cuerpo">
+          <h3>ShowcaseDispositivo</h3>
+          <p>Pantallas que se suceden al golpe dentro de un teléfono o una laptop, con render 3D opcional.</p>
+          <p class="cuando"><strong>Úsala para:</strong> Mostrar una app o una web dentro del dispositivo: recorrido de pantallas o anuncio de app.</p>
+          <p class="meta">9:16, 4:5, 1:1 · muestra de 14 s</p>
+          <code>/mm-plantilla Plantilla-ShowcaseDispositivo</code>
+          <details>
+            <summary>Campos (8)</summary>
+            <ul><li><code>variante</code> <span>&quot;telefono-3d&quot; | &quot;laptop-catalogo&quot;</span> <em>dispositivo, paleta, cámara y golpes de cada video de origen</em></li><li><code>dispositivo</code> <span>&quot;auto&quot; | &quot;telefono&quot; | &quot;laptop&quot;</span> <em>auto = el de la variante</em></li><li><code>pantallas</code> <span>lista de objetos</span><ul><li><code>tipo</code> <span>&quot;inicio&quot; | &quot;bloqueo&quot; | &quot;media&quot; | &quot;mapa&quot; | &quot;titular&quot; | &quot;rejilla&quot; | &quot;eco&quot; | &quot;datos&quot;</span></li><li><code>texto</code> <span>texto</span></li><li><code>subtexto</code> <span>texto</span></li><li><code>items</code> <span>lista de texto</span></li><li><code>numero</code> <span>número</span></li><li><code>media</code> <span>texto</span></li><li><code>segundos</code> <span>número</span></li><li><code>encuadre</code> <span>&quot;dispositivo&quot; | &quot;pantalla&quot; | &quot;inclinado&quot;</span></li><li><code>cambio</code> <span>&quot;fundido&quot; | &quot;empuje&quot; | &quot;flash&quot; | &quot;tinta&quot; | &quot;bloques&quot;</span></li></ul></li><li><code>marca</code> <span>texto</span> <em>wordmark del splash final</em></li><li><code>frase</code> <span>texto</span></li><li><code>render3d</code> <span>texto</span> <em>video con alfa del dispositivo entrando (Blender); vacío = vuelo del dispositivo dibujado</em></li><li><code>segundosCierre</code> <span>número</span></li><li><code>colores</code> <span>objeto</span><ul><li><code>fondo</code> <span>color (hex)</span></li><li><code>texto</code> <span>color (hex)</span></li><li><code>acento</code> <span>color (hex)</span></li></ul></li></ul>
+          </details>
+        </div>
+      </article>
+      <article class="tarjeta" data-texto="plantilla-talkingheadinsertos presentador a cámara con punch-in en los golpes, subtítulo con chip de acento, pill fija y capturas insertadas. editar una grabación tuya hablando a cámara, con su transcripción por palabras, sin montarla a mano.">
+        <video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Plantilla-TalkingHeadInsertos.jpg" src="videos/Plantilla-TalkingHeadInsertos.mp4" aria-label="Ejemplo de TalkingHeadInsertos" tabindex="0"></video>
+        <div class="cuerpo">
+          <h3>TalkingHeadInsertos</h3>
+          <p>Presentador a cámara con punch-in en los golpes, subtítulo con chip de acento, pill fija y capturas insertadas.</p>
+          <p class="cuando"><strong>Úsala para:</strong> Editar una grabación tuya hablando a cámara, con su transcripción por palabras, sin montarla a mano.</p>
+          <p class="meta">9:16 · muestra de 33.4 s</p>
+          <code>/mm-plantilla Plantilla-TalkingHeadInsertos</code>
+          <details>
+            <summary>Campos (9)</summary>
+            <ul><li><code>variante</code> <span>&quot;pantalla-pasos&quot; | &quot;insertos-pecho&quot; | &quot;pill-fija&quot; | &quot;cortes-rapidos&quot;</span> <em>pantalla-pasos=7701672067120368948 · insertos-pecho=7702620779518643478 · pill-fija=7698456660611796231 · cortes-rapidos=7690371798784871701</em></li><li><code>media</code> <span>texto</span> <em>video del presentador, con su voz; vacío = silueta</em></li><li><code>palabras</code> <span>lista de objetos</span> <em>palabras de Whisper en segundos: [{word, start, end}]</em><ul><li><code>word</code> <span>texto</span></li><li><code>start</code> <span>número</span></li><li><code>end</code> <span>número</span></li></ul></li><li><code>claves</code> <span>lista de texto</span> <em>palabras que van en chip (sin tildes da igual)</em></li><li><code>pill</code> <span>texto</span> <em>promesa fija arriba (3–4 palabras); vacío = sin pill</em></li><li><code>golpes</code> <span>lista de número</span> <em>segundos de los punch-in; alternan cerrado/abierto</em></li><li><code>insertos</code> <span>lista de objetos</span><ul><li><code>tipo</code> <span>&quot;captura&quot; | &quot;carrusel&quot;</span></li><li><code>at</code> <span>número</span></li><li><code>duracion</code> <span>número</span></li><li><code>media</code> <span>texto</span></li><li><code>titulo</code> <span>texto</span></li><li><code>paso</code> <span>número</span></li><li><code>zonas</code> <span>lista de objetos</span></li><li><code>tarjetas</code> <span>lista de texto</span></li></ul></li><li><code>segundosCola</code> <span>número</span></li><li><code>colores</code> <span>objeto</span><ul><li><code>fondo</code> <span>color (hex)</span></li><li><code>texto</code> <span>color (hex)</span></li><li><code>acento</code> <span>color (hex)</span></li></ul></li></ul>
+          </details>
+        </div>
+      </article>
+      <article class="tarjeta" data-texto="plantilla-splitstack pantalla partida: gráficos o b-roll arriba, presentador abajo y el subtítulo en la costura con palabras clave en color. una grabación a cámara que necesita datos, titulares o b-roll visibles todo el tiempo.">
+        <video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Plantilla-SplitStack.jpg" src="videos/Plantilla-SplitStack.mp4" aria-label="Ejemplo de SplitStack" tabindex="0"></video>
+        <div class="cuerpo">
+          <h3>SplitStack</h3>
+          <p>Pantalla partida: gráficos o B-roll arriba, presentador abajo y el subtítulo en la costura con palabras clave en color.</p>
+          <p class="cuando"><strong>Úsala para:</strong> Una grabación a cámara que necesita datos, titulares o B-roll visibles todo el tiempo.</p>
+          <p class="meta">9:16 · muestra de 27.7 s</p>
+          <code>/mm-plantilla Plantilla-SplitStack</code>
+          <details>
+            <summary>Campos (11)</summary>
+            <ul><li><code>variante</code> <span>&quot;infografia&quot; | &quot;ai-real&quot; | &quot;ugc-paneles&quot;</span> <em>infografia=7gMbZTdLlxs · ai-real=tiktok-7697333991984221462 · ugc-paneles=zlOCQxQYnYc</em></li><li><code>media</code> <span>texto</span> <em>video del presentador (panel de abajo), con su voz</em></li><li><code>palabras</code> <span>lista de objetos</span> <em>palabras de Whisper en segundos: [{word, start, end}]</em><ul><li><code>word</code> <span>texto</span></li><li><code>start</code> <span>número</span></li><li><code>end</code> <span>número</span></li></ul></li><li><code>claves</code> <span>lista de texto</span></li><li><code>beats</code> <span>lista de objetos</span><ul><li><code>tipo</code> <span>&quot;dato&quot; | &quot;titular&quot; | &quot;ui&quot; | &quot;broll&quot;</span></li><li><code>segundos</code> <span>número</span></li><li><code>palabra</code> <span>texto</span></li><li><code>detalle</code> <span>texto</span></li><li><code>valor</code> <span>número</span></li><li><code>desde</code> <span>número</span></li><li><code>prefijo</code> <span>texto</span></li><li><code>sufijo</code> <span>texto</span></li><li><code>media</code> <span>texto</span></li></ul></li><li><code>marcas</code> <span>lista de texto</span> <em>lockup de la barra superior (variante ai-real)</em></li><li><code>etiquetaArriba</code> <span>texto</span></li><li><code>etiquetaAbajo</code> <span>texto</span></li><li><code>cta</code> <span>texto</span> <em>pill final (variante ugc-paneles); vacío = sin CTA</em></li><li><code>segundosCola</code> <span>número</span></li><li><code>colores</code> <span>objeto</span><ul><li><code>fondo</code> <span>color (hex)</span></li><li><code>texto</code> <span>color (hex)</span></li><li><code>acento</code> <span>color (hex)</span></li></ul></li></ul>
+          </details>
+        </div>
+      </article>
+      <article class="tarjeta" data-texto="plantilla-tutorialpasos tutorial por pasos: tarjeta paso n entre secciones, screencast con zoom a la región y cursor, y resultado final. enseñar un proceso en pantalla a partir de una grabación de pantalla y una locución.">
+        <video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Plantilla-TutorialPasos.jpg" src="videos/Plantilla-TutorialPasos.mp4" aria-label="Ejemplo de TutorialPasos" tabindex="0"></video>
+        <div class="cuerpo">
+          <h3>TutorialPasos</h3>
+          <p>Tutorial por pasos: tarjeta PASO N entre secciones, screencast con zoom a la región y cursor, y resultado final.</p>
+          <p class="cuando"><strong>Úsala para:</strong> Enseñar un proceso en pantalla a partir de una grabación de pantalla y una locución.</p>
+          <p class="meta">9:16, 16:9 · muestra de 34.3 s</p>
+          <code>/mm-plantilla Plantilla-TutorialPasos</code>
+          <details>
+            <summary>Campos (11)</summary>
+            <ul><li><code>variante</code> <span>&quot;pizarra&quot; | &quot;movil&quot;</span> <em>pizarra=n50KkoucMpU · movil=tHzfsCsWL6M</em></li><li><code>titulo</code> <span>lista de texto</span> <em>líneas del titular de apertura; *palabra* va en serif itálica</em></li><li><code>etiqueta</code> <span>texto</span></li><li><code>segundosIntro</code> <span>número</span></li><li><code>segundosTarjeta</code> <span>número</span></li><li><code>pasos</code> <span>lista de objetos</span><ul><li><code>titulo</code> <span>texto</span></li><li><code>segundos</code> <span>número</span></li><li><code>media</code> <span>texto</span></li><li><code>zonas</code> <span>lista de objetos</span></li></ul></li><li><code>resultado</code> <span>objeto</span><ul><li><code>media</code> <span>texto</span></li><li><code>texto</code> <span>texto</span></li><li><code>segundos</code> <span>número</span></li></ul></li><li><code>voz</code> <span>texto</span> <em>voz en off (mp3/wav/m4a); vacío = sin audio</em></li><li><code>palabras</code> <span>lista de objetos</span> <em>palabras de Whisper en segundos: [{word, start, end}]</em><ul><li><code>word</code> <span>texto</span></li><li><code>start</code> <span>número</span></li><li><code>end</code> <span>número</span></li></ul></li><li><code>claves</code> <span>lista de texto</span></li><li><code>colores</code> <span>objeto</span><ul><li><code>fondo</code> <span>color (hex)</span></li><li><code>texto</code> <span>color (hex)</span></li><li><code>acento</code> <span>color (hex)</span></li></ul></li></ul>
+          </details>
+        </div>
+      </article>
+  </div>
+  <h2>Presets · Tipografía</h2>
+  <div class="presets">
+    <div class="preset" data-texto="masktitle titular cuyas líneas salen de una máscara tipografía"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-MaskTitle.jpg" src="videos/Preset-MaskTitle.mp4" aria-label="Ejemplo de MaskTitle" tabindex="0"></video><div><strong>MaskTitle</strong><span>Titular cuyas líneas salen de una máscara</span></div></div>
+    <div class="preset" data-texto="charcascade texto que entra letra por letra con spring tipografía"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-CharCascade.jpg" src="videos/Preset-CharCascade.mp4" aria-label="Ejemplo de CharCascade" tabindex="0"></video><div><strong>CharCascade</strong><span>Texto que entra letra por letra con spring</span></div></div>
+    <div class="preset" data-texto="wordrotator una palabra de la frase que va cambiando tipografía"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-WordRotator.jpg" src="videos/Preset-WordRotator.mp4" aria-label="Ejemplo de WordRotator" tabindex="0"></video><div><strong>WordRotator</strong><span>Una palabra de la frase que va cambiando</span></div></div>
+    <div class="preset" data-texto="markerhighlight resaltador a mano sobre una palabra tipografía"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-MarkerHighlight.jpg" src="videos/Preset-MarkerHighlight.mp4" aria-label="Ejemplo de MarkerHighlight" tabindex="0"></video><div><strong>MarkerHighlight</strong><span>Resaltador a mano sobre una palabra</span></div></div>
+    <div class="preset" data-texto="scrambleresolve texto que se descifra hasta quedar legible tipografía"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-ScrambleResolve.jpg" src="videos/Preset-ScrambleResolve.mp4" aria-label="Ejemplo de ScrambleResolve" tabindex="0"></video><div><strong>ScrambleResolve</strong><span>Texto que se descifra hasta quedar legible</span></div></div>
+    <div class="preset" data-texto="stretchrepeater repetición suiza de una palabra estirada tipografía"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-StretchRepeater.jpg" src="videos/Preset-StretchRepeater.mp4" aria-label="Ejemplo de StretchRepeater" tabindex="0"></video><div><strong>StretchRepeater</strong><span>Repetición suiza de una palabra estirada</span></div></div>
+    <div class="preset" data-texto="variableaxistype fuente variable con el peso en onda tipografía"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-VariableAxisType.jpg" src="videos/Preset-VariableAxisType.mp4" aria-label="Ejemplo de VariableAxisType" tabindex="0"></video><div><strong>VariableAxisType</strong><span>Fuente variable con el peso en onda</span></div></div>
+    <div class="preset" data-texto="textonpath texto que recorre un trayecto curvo tipografía"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-TextOnPath.jpg" src="videos/Preset-TextOnPath.mp4" aria-label="Ejemplo de TextOnPath" tabindex="0"></video><div><strong>TextOnPath</strong><span>Texto que recorre un trayecto curvo</span></div></div>
+    <div class="preset" data-texto="textwarp texto deformado en arco u onda tipografía"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-TextWarp.jpg" src="videos/Preset-TextWarp.mp4" aria-label="Ejemplo de TextWarp" tabindex="0"></video><div><strong>TextWarp</strong><span>Texto deformado en arco u onda</span></div></div>
+    <div class="preset" data-texto="texttunnel túnel de texto en profundidad tipografía"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-TextTunnel.jpg" src="videos/Preset-TextTunnel.mp4" aria-label="Ejemplo de TextTunnel" tabindex="0"></video><div><strong>TextTunnel</strong><span>Túnel de texto en profundidad</span></div></div>
+    <div class="preset" data-texto="marqueerows filas de texto que corren en sentidos opuestos tipografía"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-MarqueeRows.jpg" src="videos/Preset-MarqueeRows.mp4" aria-label="Ejemplo de MarqueeRows" tabindex="0"></video><div><strong>MarqueeRows</strong><span>Filas de texto que corren en sentidos opuestos</span></div></div>
+    <div class="preset" data-texto="blurstack pila de líneas donde solo una queda nítida tipografía"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-BlurStack.jpg" src="videos/Preset-BlurStack.mp4" aria-label="Ejemplo de BlurStack" tabindex="0"></video><div><strong>BlurStack</strong><span>Pila de líneas donde solo una queda nítida</span></div></div>
+    <div class="preset" data-texto="typesandwich un objeto metido entre dos capas de titular tipografía"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-TypeSandwich.jpg" src="videos/Preset-TypeSandwich.mp4" aria-label="Ejemplo de TypeSandwich" tabindex="0"></video><div><strong>TypeSandwich</strong><span>Un objeto metido entre dos capas de titular</span></div></div>
+  </div>
+  <h2>Presets · Datos</h2>
+  <div class="presets">
+    <div class="preset" data-texto="linedraw línea o forma que se dibuja datos"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-LineDraw.jpg" src="videos/Preset-LineDraw.mp4" aria-label="Ejemplo de LineDraw" tabindex="0"></video><div><strong>LineDraw</strong><span>Línea o forma que se dibuja</span></div></div>
+    <div class="preset" data-texto="countup cifra que cuenta hasta su valor datos"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-CountUp.jpg" src="videos/Preset-CountUp.mp4" aria-label="Ejemplo de CountUp" tabindex="0"></video><div><strong>CountUp</strong><span>Cifra que cuenta hasta su valor</span></div></div>
+    <div class="preset" data-texto="maptrace ruta que se traza sobre un mapa editorial datos"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-MapTrace.jpg" src="videos/Preset-MapTrace.mp4" aria-label="Ejemplo de MapTrace" tabindex="0"></video><div><strong>MapTrace</strong><span>Ruta que se traza sobre un mapa editorial</span></div></div>
+    <div class="preset" data-texto="barrace barras que compiten y se adelantan datos"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-BarRace.jpg" src="videos/Preset-BarRace.mp4" aria-label="Ejemplo de BarRace" tabindex="0"></video><div><strong>BarRace</strong><span>Barras que compiten y se adelantan</span></div></div>
+    <div class="preset" data-texto="unitgrid proporción en una rejilla de unidades (37 de cada 100) datos"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-UnitGrid.jpg" src="videos/Preset-UnitGrid.mp4" aria-label="Ejemplo de UnitGrid" tabindex="0"></video><div><strong>UnitGrid</strong><span>Proporción en una rejilla de unidades (37 de cada 100)</span></div></div>
+  </div>
+  <h2>Presets · Retención y captions</h2>
+  <div class="presets">
+    <div class="preset" data-texto="lowerthird rótulo de nombre y cargo retención y captions"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-LowerThird.jpg" src="videos/Preset-LowerThird.mp4" aria-label="Ejemplo de LowerThird" tabindex="0"></video><div><strong>LowerThird</strong><span>Rótulo de nombre y cargo</span></div></div>
+    <div class="preset" data-texto="karaokecaption subtítulo que se ilumina palabra a palabra retención y captions"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-KaraokeCaption.jpg" src="videos/Preset-KaraokeCaption.mp4" aria-label="Ejemplo de KaraokeCaption" tabindex="0"></video><div><strong>KaraokeCaption</strong><span>Subtítulo que se ilumina palabra a palabra</span></div></div>
+    <div class="preset" data-texto="wordwindowcaption subtítulo en ventanas de 1 a 3 palabras retención y captions"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-WordWindowCaption.jpg" src="videos/Preset-WordWindowCaption.mp4" aria-label="Ejemplo de WordWindowCaption" tabindex="0"></video><div><strong>WordWindowCaption</strong><span>Subtítulo en ventanas de 1 a 3 palabras</span></div></div>
+    <div class="preset" data-texto="punchin golpe de encuadre en cada evento retención y captions"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-PunchIn.jpg" src="videos/Preset-PunchIn.mp4" aria-label="Ejemplo de PunchIn" tabindex="0"></video><div><strong>PunchIn</strong><span>Golpe de encuadre en cada evento</span></div></div>
+    <div class="preset" data-texto="speedlines líneas de velocidad de anime retención y captions"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-SpeedLines.jpg" src="videos/Preset-SpeedLines.mp4" aria-label="Ejemplo de SpeedLines" tabindex="0"></video><div><strong>SpeedLines</strong><span>Líneas de velocidad de anime</span></div></div>
+    <div class="preset" data-texto="impactframe cuadro de impacto: flash invertido y temblor retención y captions"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-ImpactFrame.jpg" src="videos/Preset-ImpactFrame.mp4" aria-label="Ejemplo de ImpactFrame" tabindex="0"></video><div><strong>ImpactFrame</strong><span>Cuadro de impacto: flash invertido y temblor</span></div></div>
+    <div class="preset" data-texto="chipcaption subtítulo con la palabra clave en un chip de color retención y captions"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-ChipCaption.jpg" src="videos/Preset-ChipCaption.mp4" aria-label="Ejemplo de ChipCaption" tabindex="0"></video><div><strong>ChipCaption</strong><span>Subtítulo con la palabra clave en un chip de color</span></div></div>
+    <div class="preset" data-texto="pill etiqueta fija en forma de pastilla retención y captions"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-Pill.jpg" src="videos/Preset-Pill.mp4" aria-label="Ejemplo de Pill" tabindex="0"></video><div><strong>Pill</strong><span>Etiqueta fija en forma de pastilla</span></div></div>
+  </div>
+  <h2>Presets · Forma, cámara y 3D</h2>
+  <div class="presets">
+    <div class="preset" data-texto="camerarig cámara viva: deriva, empuje y mano forma, cámara y 3d"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-CameraRig.jpg" src="videos/Preset-CameraRig.mp4" aria-label="Ejemplo de CameraRig" tabindex="0"></video><div><strong>CameraRig</strong><span>Cámara viva: deriva, empuje y mano</span></div></div>
+    <div class="preset" data-texto="parallax planos que se mueven a distinta velocidad forma, cámara y 3d"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-Parallax.jpg" src="videos/Preset-Parallax.mp4" aria-label="Ejemplo de Parallax" tabindex="0"></video><div><strong>Parallax</strong><span>Planos que se mueven a distinta velocidad</span></div></div>
+    <div class="preset" data-texto="depthcards tarjetas apiladas con profundidad forma, cámara y 3d"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-DepthCards.jpg" src="videos/Preset-DepthCards.mp4" aria-label="Ejemplo de DepthCards" tabindex="0"></video><div><strong>DepthCards</strong><span>Tarjetas apiladas con profundidad</span></div></div>
+    <div class="preset" data-texto="logosting cierre de logo forma, cámara y 3d"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-LogoSting.jpg" src="videos/Preset-LogoSting.mp4" aria-label="Ejemplo de LogoSting" tabindex="0"></video><div><strong>LogoSting</strong><span>Cierre de logo</span></div></div>
+    <div class="preset" data-texto="blenderlayer render 3d de blender con alfa como capa forma, cámara y 3d"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-BlenderLayer.jpg" src="videos/Preset-BlenderLayer.mp4" aria-label="Ejemplo de BlenderLayer" tabindex="0"></video><div><strong>BlenderLayer</strong><span>Render 3D de Blender con alfa como capa</span></div></div>
+    <div class="preset" data-texto="shapemorph una forma que se convierte en otra forma, cámara y 3d"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-ShapeMorph.jpg" src="videos/Preset-ShapeMorph.mp4" aria-label="Ejemplo de ShapeMorph" tabindex="0"></video><div><strong>ShapeMorph</strong><span>Una forma que se convierte en otra</span></div></div>
+    <div class="preset" data-texto="gooeymerge formas que se funden como gotas forma, cámara y 3d"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-GooeyMerge.jpg" src="videos/Preset-GooeyMerge.mp4" aria-label="Ejemplo de GooeyMerge" tabindex="0"></video><div><strong>GooeyMerge</strong><span>Formas que se funden como gotas</span></div></div>
+    <div class="preset" data-texto="isoscene diagrama isométrico que se arma forma, cámara y 3d"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-IsoScene.jpg" src="videos/Preset-IsoScene.mp4" aria-label="Ejemplo de IsoScene" tabindex="0"></video><div><strong>IsoScene</strong><span>Diagrama isométrico que se arma</span></div></div>
+    <div class="preset" data-texto="cutoutobject objeto recortado que cae al papel con su sombra forma, cámara y 3d"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-CutoutObject.jpg" src="videos/Preset-CutoutObject.mp4" aria-label="Ejemplo de CutoutObject" tabindex="0"></video><div><strong>CutoutObject</strong><span>Objeto recortado que cae al papel con su sombra</span></div></div>
+  </div>
+  <h2>Presets · Transiciones</h2>
+  <div class="presets">
+    <div class="preset" data-texto="splitreveal la escena se abre en dos y revela la siguiente transiciones"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-SplitReveal.jpg" src="videos/Preset-SplitReveal.mp4" aria-label="Ejemplo de SplitReveal" tabindex="0"></video><div><strong>SplitReveal</strong><span>La escena se abre en dos y revela la siguiente</span></div></div>
+    <div class="preset" data-texto="whip barrido rápido de cámara transiciones"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-Whip.jpg" src="videos/Preset-Whip.mp4" aria-label="Ejemplo de Whip" tabindex="0"></video><div><strong>Whip</strong><span>Barrido rápido de cámara</span></div></div>
+    <div class="preset" data-texto="zoomthrough zoom que atraviesa hacia la siguiente escena transiciones"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-ZoomThrough.jpg" src="videos/Preset-ZoomThrough.mp4" aria-label="Ejemplo de ZoomThrough" tabindex="0"></video><div><strong>ZoomThrough</strong><span>Zoom que atraviesa hacia la siguiente escena</span></div></div>
+    <div class="preset" data-texto="maskwipe barrido por máscara transiciones"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-MaskWipe.jpg" src="videos/Preset-MaskWipe.mp4" aria-label="Ejemplo de MaskWipe" tabindex="0"></video><div><strong>MaskWipe</strong><span>Barrido por máscara</span></div></div>
+    <div class="preset" data-texto="noiseblocks bloques de ruido que tapan y destapan transiciones"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-NoiseBlocks.jpg" src="videos/Preset-NoiseBlocks.mp4" aria-label="Ejemplo de NoiseBlocks" tabindex="0"></video><div><strong>NoiseBlocks</strong><span>Bloques de ruido que tapan y destapan</span></div></div>
+    <div class="preset" data-texto="clockwipe barrido de reloj con spring transiciones"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-ClockWipe.jpg" src="videos/Preset-ClockWipe.mp4" aria-label="Ejemplo de ClockWipe" tabindex="0"></video><div><strong>ClockWipe</strong><span>Barrido de reloj con spring</span></div></div>
+    <div class="preset" data-texto="lightleak fuga de luz entre escenas transiciones"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-LightLeak.jpg" src="videos/Preset-LightLeak.mp4" aria-label="Ejemplo de LightLeak" tabindex="0"></video><div><strong>LightLeak</strong><span>Fuga de luz entre escenas</span></div></div>
+  </div>
+  <h2>Presets · Texturas y estilos</h2>
+  <div class="presets">
+    <div class="preset" data-texto="glitchhit glitch corto de acento texturas y estilos"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-GlitchHit.jpg" src="videos/Preset-GlitchHit.mp4" aria-label="Ejemplo de GlitchHit" tabindex="0"></video><div><strong>GlitchHit</strong><span>Glitch corto de acento</span></div></div>
+    <div class="preset" data-texto="lottielayer animación de after effects exportada con bodymovin texturas y estilos"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-LottieLayer.jpg" src="videos/Preset-LottieLayer.mp4" aria-label="Ejemplo de LottieLayer" tabindex="0"></video><div><strong>LottieLayer</strong><span>Animación de After Effects exportada con Bodymovin</span></div></div>
+    <div class="preset" data-texto="look acabado de la pieza: grano, viñeta, temperatura y tonos texturas y estilos"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-Look.jpg" src="videos/Preset-Look.mp4" aria-label="Ejemplo de Look" tabindex="0"></video><div><strong>Look</strong><span>Acabado de la pieza: grano, viñeta, temperatura y tonos</span></div></div>
+    <div class="preset" data-texto="boilline trazo que hierve como dibujado a mano texturas y estilos"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-BoilLine.jpg" src="videos/Preset-BoilLine.mp4" aria-label="Ejemplo de BoilLine" tabindex="0"></video><div><strong>BoilLine</strong><span>Trazo que hierve como dibujado a mano</span></div></div>
+    <div class="preset" data-texto="risolayer risografía con fuera de registro texturas y estilos"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-RisoLayer.jpg" src="videos/Preset-RisoLayer.mp4" aria-label="Ejemplo de RisoLayer" tabindex="0"></video><div><strong>RisoLayer</strong><span>Risografía con fuera de registro</span></div></div>
+    <div class="preset" data-texto="bayerdither trama de un bit (dither) texturas y estilos"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-BayerDither.jpg" src="videos/Preset-BayerDither.mp4" aria-label="Ejemplo de BayerDither" tabindex="0"></video><div><strong>BayerDither</strong><span>Trama de un bit (dither)</span></div></div>
+    <div class="preset" data-texto="papertear papel que se arranca para revelar texturas y estilos"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-PaperTear.jpg" src="videos/Preset-PaperTear.mp4" aria-label="Ejemplo de PaperTear" tabindex="0"></video><div><strong>PaperTear</strong><span>Papel que se arranca para revelar</span></div></div>
+    <div class="preset" data-texto="slicedisplace imagen cortada en franjas que se desplazan texturas y estilos"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-SliceDisplace.jpg" src="videos/Preset-SliceDisplace.mp4" aria-label="Ejemplo de SliceDisplace" tabindex="0"></video><div><strong>SliceDisplace</strong><span>Imagen cortada en franjas que se desplazan</span></div></div>
+    <div class="preset" data-texto="gradientflow fondo de color que fluye despacio texturas y estilos"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-GradientFlow.jpg" src="videos/Preset-GradientFlow.mp4" aria-label="Ejemplo de GradientFlow" tabindex="0"></video><div><strong>GradientFlow</strong><span>Fondo de color que fluye despacio</span></div></div>
+  </div>
+  <h2>Presets · Renders de servidor</h2>
+  <div class="presets">
+    <div class="preset" data-texto="deviceorbit grabación real dentro de un teléfono 3d que orbita renders de servidor"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-DeviceOrbit.jpg" src="videos/Preset-DeviceOrbit.mp4" aria-label="Ejemplo de DeviceOrbit" tabindex="0"></video><div><strong>DeviceOrbit</strong><span>Grabación real dentro de un teléfono 3D que orbita</span></div></div>
+    <div class="preset" data-texto="clayrebote plastilina con squash &amp; stretch renders de servidor"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-ClayRebote.jpg" src="videos/Preset-ClayRebote.mp4" aria-label="Ejemplo de ClayRebote" tabindex="0"></video><div><strong>ClayRebote</strong><span>Plastilina con squash &amp; stretch</span></div></div>
+    <div class="preset" data-texto="datamosh datamosh real entre dos tomas renders de servidor"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-Datamosh.jpg" src="videos/Preset-Datamosh.mp4" aria-label="Ejemplo de Datamosh" tabindex="0"></video><div><strong>Datamosh</strong><span>Datamosh real entre dos tomas</span></div></div>
+  </div>
+  <h2>Presets · Interfaz y producto</h2>
+  <div class="presets">
+    <div class="preset" data-texto="cursor cursor que viaja y hace clic interfaz y producto"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-Cursor.jpg" src="videos/Preset-Cursor.mp4" aria-label="Ejemplo de Cursor" tabindex="0"></video><div><strong>Cursor</strong><span>Cursor que viaja y hace clic</span></div></div>
+    <div class="preset" data-texto="screenframe captura de pantalla con zoom a una región interfaz y producto"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-ScreenFrame.jpg" src="videos/Preset-ScreenFrame.mp4" aria-label="Ejemplo de ScreenFrame" tabindex="0"></video><div><strong>ScreenFrame</strong><span>Captura de pantalla con zoom a una región</span></div></div>
+    <div class="preset" data-texto="bentogrid rejilla bento que se arma por celdas interfaz y producto"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-BentoGrid.jpg" src="videos/Preset-BentoGrid.mp4" aria-label="Ejemplo de BentoGrid" tabindex="0"></video><div><strong>BentoGrid</strong><span>Rejilla bento que se arma por celdas</span></div></div>
+    <div class="preset" data-texto="cardmorph tarjeta que se transforma en otra interfaz y producto"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-CardMorph.jpg" src="videos/Preset-CardMorph.mp4" aria-label="Ejemplo de CardMorph" tabindex="0"></video><div><strong>CardMorph</strong><span>Tarjeta que se transforma en otra</span></div></div>
+    <div class="preset" data-texto="cardcarousel carrusel de tarjetas interfaz y producto"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-CardCarousel.jpg" src="videos/Preset-CardCarousel.mp4" aria-label="Ejemplo de CardCarousel" tabindex="0"></video><div><strong>CardCarousel</strong><span>Carrusel de tarjetas</span></div></div>
+    <div class="preset" data-texto="beforeafter comparación antes y después con cortina interfaz y producto"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-BeforeAfter.jpg" src="videos/Preset-BeforeAfter.mp4" aria-label="Ejemplo de BeforeAfter" tabindex="0"></video><div><strong>BeforeAfter</strong><span>Comparación antes y después con cortina</span></div></div>
+    <div class="preset" data-texto="splitstack pantalla partida: gráfico arriba, presentador abajo interfaz y producto"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-SplitStack.jpg" src="videos/Preset-SplitStack.mp4" aria-label="Ejemplo de SplitStack" tabindex="0"></video><div><strong>SplitStack</strong><span>Pantalla partida: gráfico arriba, presentador abajo</span></div></div>
+  </div>
+  <h2>Presets · Anotación</h2>
+  <div class="presets">
+    <div class="preset" data-texto="trazo línea que se dibuja como a mano, base del kit anotación"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-Trazo.jpg" src="videos/Preset-Trazo.mp4" aria-label="Ejemplo de Trazo" tabindex="0"></video><div><strong>Trazo</strong><span>Línea que se dibuja como a mano, base del kit</span></div></div>
+    <div class="preset" data-texto="circulo círculo de resalte alrededor de algo anotación"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-Circulo.jpg" src="videos/Preset-Circulo.mp4" aria-label="Ejemplo de Circulo" tabindex="0"></video><div><strong>Circulo</strong><span>Círculo de resalte alrededor de algo</span></div></div>
+    <div class="preset" data-texto="recuadro recuadro dibujado alrededor de una zona anotación"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-Recuadro.jpg" src="videos/Preset-Recuadro.mp4" aria-label="Ejemplo de Recuadro" tabindex="0"></video><div><strong>Recuadro</strong><span>Recuadro dibujado alrededor de una zona</span></div></div>
+    <div class="preset" data-texto="flecha flecha curva entre dos puntos anotación"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-Flecha.jpg" src="videos/Preset-Flecha.mp4" aria-label="Ejemplo de Flecha" tabindex="0"></video><div><strong>Flecha</strong><span>Flecha curva entre dos puntos</span></div></div>
+    <div class="preset" data-texto="subrayado subrayado simple o doble anotación"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-Subrayado.jpg" src="videos/Preset-Subrayado.mp4" aria-label="Ejemplo de Subrayado" tabindex="0"></video><div><strong>Subrayado</strong><span>Subrayado simple o doble</span></div></div>
+    <div class="preset" data-texto="tachado tachado de una palabra anotación"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-Tachado.jpg" src="videos/Preset-Tachado.mp4" aria-label="Ejemplo de Tachado" tabindex="0"></video><div><strong>Tachado</strong><span>Tachado de una palabra</span></div></div>
+    <div class="preset" data-texto="callout punto, línea guía y rótulo que nombra algo anotación"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-Callout.jpg" src="videos/Preset-Callout.mp4" aria-label="Ejemplo de Callout" tabindex="0"></video><div><strong>Callout</strong><span>Punto, línea guía y rótulo que nombra algo</span></div></div>
+    <div class="preset" data-texto="nodo cajas y conectores de un diagrama que se construye anotación"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-Nodo.jpg" src="videos/Preset-Nodo.mp4" aria-label="Ejemplo de Nodo" tabindex="0"></video><div><strong>Nodo</strong><span>Cajas y conectores de un diagrama que se construye</span></div></div>
+    <div class="preset" data-texto="anillopunteado anillo punteado que marca una zona anotación"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-AnilloPunteado.jpg" src="videos/Preset-AnilloPunteado.mp4" aria-label="Ejemplo de AnilloPunteado" tabindex="0"></video><div><strong>AnilloPunteado</strong><span>Anillo punteado que marca una zona</span></div></div>
+    <div class="preset" data-texto="llave llave que agrupa varios elementos con su rótulo anotación"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-Llave.jpg" src="videos/Preset-Llave.mp4" aria-label="Ejemplo de Llave" tabindex="0"></video><div><strong>Llave</strong><span>Llave que agrupa varios elementos con su rótulo</span></div></div>
+    <div class="preset" data-texto="datocallout cifra grande que sale de un punto del objeto anotación"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-DatoCallout.jpg" src="videos/Preset-DatoCallout.mp4" aria-label="Ejemplo de DatoCallout" tabindex="0"></video><div><strong>DatoCallout</strong><span>Cifra grande que sale de un punto del objeto</span></div></div>
+    <div class="preset" data-texto="pasotracker lista de pasos que lleva la cuenta anotación"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-PasoTracker.jpg" src="videos/Preset-PasoTracker.mp4" aria-label="Ejemplo de PasoTracker" tabindex="0"></video><div><strong>PasoTracker</strong><span>Lista de pasos que lleva la cuenta</span></div></div>
+    <div class="preset" data-texto="lupa lupa que amplía una zona en un recuadro anotación"><video class="muestra" muted loop playsinline preload="none" poster="miniaturas/Preset-Lupa.jpg" src="videos/Preset-Lupa.mp4" aria-label="Ejemplo de Lupa" tabindex="0"></video><div><strong>Lupa</strong><span>Lupa que amplía una zona en un recuadro</span></div></div>
+  </div>
+</main>
+<dialog id="grande" aria-label="Ejemplo ampliado"><video controls loop muted playsinline></video></dialog>
+<script>
+  const buscar = document.getElementById("buscar");
+  buscar.addEventListener("input", () => {
+    const q = buscar.value.trim().toLowerCase();
+    for (const el of document.querySelectorAll("[data-texto]")) el.hidden = q !== "" && !el.dataset.texto.includes(q);
+  });
+  const grande = document.getElementById("grande");
+  const videoGrande = grande.querySelector("video");
+  for (const v of document.querySelectorAll("video.muestra")) {
+    const tocar = () => v.play().catch(() => {});
+    const parar = () => { v.pause(); v.currentTime = 0; };
+    v.addEventListener("mouseenter", tocar);
+    v.addEventListener("focus", tocar);
+    v.addEventListener("mouseleave", parar);
+    v.addEventListener("blur", parar);
+    const abrir = () => { videoGrande.src = v.currentSrc || v.src; grande.showModal(); videoGrande.play().catch(() => {}); };
+    v.addEventListener("click", abrir);
+    v.addEventListener("keydown", (e) => { if (e.key === "Enter") abrir(); });
+  }
+  grande.addEventListener("click", (e) => { if (e.target === grande) grande.close(); });
+  grande.addEventListener("close", () => { videoGrande.pause(); videoGrande.removeAttribute("src"); videoGrande.load(); });
+</script>
+</body>
+</html>

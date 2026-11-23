@@ -1,0 +1,400 @@
+{
+  "variante": "infografia",
+  "media": "",
+  "palabras": [
+    {
+      "word": "Hace",
+      "start": 0.3,
+      "end": 0.62
+    },
+    {
+      "word": "cinco",
+      "start": 0.67,
+      "end": 1.03
+    },
+    {
+      "word": "años",
+      "start": 1.08,
+      "end": 1.44
+    },
+    {
+      "word": "dictar",
+      "start": 1.49,
+      "end": 1.9
+    },
+    {
+      "word": "era",
+      "start": 1.95,
+      "end": 2.22
+    },
+    {
+      "word": "lento",
+      "start": 2.27,
+      "end": 2.64
+    },
+    {
+      "word": "y",
+      "start": 2.69,
+      "end": 2.91
+    },
+    {
+      "word": "casi",
+      "start": 2.96,
+      "end": 3.27
+    },
+    {
+      "word": "nadie",
+      "start": 3.32,
+      "end": 3.69
+    },
+    {
+      "word": "lo",
+      "start": 3.74,
+      "end": 3.96
+    },
+    {
+      "word": "usaba.",
+      "start": 4.01,
+      "end": 4.42
+    },
+    {
+      "word": "Hoy",
+      "start": 4.89,
+      "end": 5.16
+    },
+    {
+      "word": "el",
+      "start": 5.21,
+      "end": 5.43
+    },
+    {
+      "word": "setenta",
+      "start": 5.48,
+      "end": 5.94
+    },
+    {
+      "word": "y",
+      "start": 5.99,
+      "end": 6.21
+    },
+    {
+      "word": "tres",
+      "start": 6.26,
+      "end": 6.58
+    },
+    {
+      "word": "por",
+      "start": 6.63,
+      "end": 6.9
+    },
+    {
+      "word": "ciento",
+      "start": 6.95,
+      "end": 7.36
+    },
+    {
+      "word": "de",
+      "start": 7.41,
+      "end": 7.67
+    },
+    {
+      "word": "los",
+      "start": 7.72,
+      "end": 8
+    },
+    {
+      "word": "equipos",
+      "start": 8.05,
+      "end": 8.5
+    },
+    {
+      "word": "ya",
+      "start": 8.55,
+      "end": 8.78
+    },
+    {
+      "word": "escribe",
+      "start": 8.83,
+      "end": 9.33
+    },
+    {
+      "word": "hablando.",
+      "start": 9.38,
+      "end": 9.88
+    },
+    {
+      "word": "El",
+      "start": 10.35,
+      "end": 10.58
+    },
+    {
+      "word": "secreto",
+      "start": 10.63,
+      "end": 11.09
+    },
+    {
+      "word": "no",
+      "start": 11.14,
+      "end": 11.4
+    },
+    {
+      "word": "es",
+      "start": 11.45,
+      "end": 11.67
+    },
+    {
+      "word": "la",
+      "start": 11.72,
+      "end": 11.95
+    },
+    {
+      "word": "herramienta,",
+      "start": 12,
+      "end": 12.65
+    },
+    {
+      "word": "es",
+      "start": 12.92,
+      "end": 13.18
+    },
+    {
+      "word": "el",
+      "start": 13.23,
+      "end": 13.45
+    },
+    {
+      "word": "flujo.",
+      "start": 13.5,
+      "end": 13.87
+    },
+    {
+      "word": "Hablas,",
+      "start": 14.34,
+      "end": 14.75
+    },
+    {
+      "word": "la",
+      "start": 15.02,
+      "end": 15.28
+    },
+    {
+      "word": "app",
+      "start": 15.33,
+      "end": 15.61
+    },
+    {
+      "word": "limpia",
+      "start": 15.66,
+      "end": 16.07
+    },
+    {
+      "word": "las",
+      "start": 16.12,
+      "end": 16.39
+    },
+    {
+      "word": "muletillas",
+      "start": 16.44,
+      "end": 17.08
+    },
+    {
+      "word": "y",
+      "start": 17.13,
+      "end": 17.31
+    },
+    {
+      "word": "te",
+      "start": 17.36,
+      "end": 17.58
+    },
+    {
+      "word": "deja",
+      "start": 17.63,
+      "end": 17.95
+    },
+    {
+      "word": "el",
+      "start": 18,
+      "end": 18.26
+    },
+    {
+      "word": "texto",
+      "start": 18.31,
+      "end": 18.68
+    },
+    {
+      "word": "listo.",
+      "start": 18.73,
+      "end": 19.09
+    },
+    {
+      "word": "Así",
+      "start": 19.56,
+      "end": 19.83
+    },
+    {
+      "word": "un",
+      "start": 19.88,
+      "end": 20.15
+    },
+    {
+      "word": "correo",
+      "start": 20.2,
+      "end": 20.61
+    },
+    {
+      "word": "de",
+      "start": 20.66,
+      "end": 20.88
+    },
+    {
+      "word": "diez",
+      "start": 20.93,
+      "end": 21.25
+    },
+    {
+      "word": "minutos",
+      "start": 21.3,
+      "end": 21.8
+    },
+    {
+      "word": "sale",
+      "start": 21.85,
+      "end": 22.17
+    },
+    {
+      "word": "en",
+      "start": 22.22,
+      "end": 22.44
+    },
+    {
+      "word": "uno.",
+      "start": 22.49,
+      "end": 22.76
+    },
+    {
+      "word": "Pruébalo",
+      "start": 23.23,
+      "end": 23.78
+    },
+    {
+      "word": "una",
+      "start": 23.83,
+      "end": 24.1
+    },
+    {
+      "word": "semana",
+      "start": 24.15,
+      "end": 24.56
+    },
+    {
+      "word": "y",
+      "start": 24.61,
+      "end": 24.79
+    },
+    {
+      "word": "mide",
+      "start": 24.84,
+      "end": 25.2
+    },
+    {
+      "word": "cuánto",
+      "start": 25.25,
+      "end": 25.66
+    },
+    {
+      "word": "tiempo",
+      "start": 25.71,
+      "end": 26.12
+    },
+    {
+      "word": "recuperas.",
+      "start": 26.17,
+      "end": 26.72
+    }
+  ],
+  "claves": [
+    "setenta",
+    "flujo",
+    "muletillas",
+    "diez",
+    "semana"
+  ],
+  "beats": [
+    {
+      "tipo": "dato",
+      "segundos": 4.89,
+      "palabra": "Hace",
+      "detalle": "dictar era lento",
+      "valor": 5,
+      "desde": 0,
+      "prefijo": "",
+      "sufijo": " años",
+      "media": ""
+    },
+    {
+      "tipo": "dato",
+      "segundos": 5.74,
+      "palabra": "Ya dictan",
+      "detalle": "de los equipos",
+      "valor": 73,
+      "desde": 0,
+      "prefijo": "",
+      "sufijo": "%",
+      "media": ""
+    },
+    {
+      "tipo": "titular",
+      "segundos": 3.71,
+      "palabra": "El flujo",
+      "detalle": "no la herramienta",
+      "valor": 0,
+      "desde": 0,
+      "prefijo": "",
+      "sufijo": "",
+      "media": ""
+    },
+    {
+      "tipo": "ui",
+      "segundos": 5.22,
+      "palabra": "Sin muletillas",
+      "detalle": "dictado.app",
+      "valor": 0,
+      "desde": 0,
+      "prefijo": "",
+      "sufijo": "",
+      "media": ""
+    },
+    {
+      "tipo": "dato",
+      "segundos": 3.67,
+      "palabra": "Un correo",
+      "detalle": "de diez minutos a uno",
+      "valor": 1,
+      "desde": 10,
+      "prefijo": "",
+      "sufijo": " min",
+      "media": ""
+    },
+    {
+      "tipo": "broll",
+      "segundos": 3.49,
+      "palabra": "Una semana",
+      "detalle": "mide lo que recuperas",
+      "valor": 0,
+      "desde": 0,
+      "prefijo": "",
+      "sufijo": "",
+      "media": ""
+    }
+  ],
+  "marcas": [
+    "TU MARCA",
+    "ESTUDIO"
+  ],
+  "etiquetaArriba": "IA:",
+  "etiquetaAbajo": "REAL:",
+  "cta": "Comenta GUÍA",
+  "segundosCola": 1,
+  "colores": {}
+}

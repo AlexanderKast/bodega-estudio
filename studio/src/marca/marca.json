@@ -1,0 +1,34 @@
+{
+  "nombre": "Bodega de Belleza",
+  "firma": "Bodega de Belleza",
+  "origen": "Manual de marca de Bodega de Belleza (tokens-bodega.json, copia de bodega-de-belleza/docs/marca/tokens.json v2, 2026-10-30). Tema Negro.",
+  "colores": {
+    "fondo": "#1d1d1b",
+    "superficie": "#2a2a28",
+    "linea": "#3a3a37",
+    "texto": "#f4f9fc",
+    "suave": "#a6a8ab",
+    "acento": "#b112e3",
+    "acentoProfundo": "#7757bd",
+    "acentoClaro": "#c03bfb",
+    "sombraCalida": "#140b18"
+  },
+  "fuentes": {
+    "titulo": "Anton",
+    "texto": "Archivo",
+    "mono": "JetBrains Mono"
+  },
+  "radios": { "chico": 12, "medio": 16, "grande": 24 },
+  "logos": {
+    "sobreOscuro": "marca/logo-negativo.svg",
+    "sobreClaro": "marca/logo-positivo.svg",
+    "sobreVioleta": "marca/logo-sobre-violeta.svg"
+  },
+  "reglas": [
+    "Titulares en Impact (respaldo Anton) y en MAYÚSCULAS; texto en Archivo.",
+    "El violeta #b112e3 sobre negro solo en formas o texto grande (3.27:1), nunca texto pequeño.",
+    "#c03bfb solo para titulares de 24 px o más.",
+    "Los logos no se redibujan, no se recolorean y no se generan con IA: se usan los SVG de public/marca/.",
+    "Nada de degradado morado-azul genérico: la única luz degradada es la de la flecha del logo (#7757bd → #c342ff)."
+  ]
+}

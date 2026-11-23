@@ -1,0 +1,23 @@
+node_modules/
+studio/out/
+.DS_Store
+*.log
+__pycache__/
+*.pyc
+
+# Material crudo de referentes (videos, transcripciones, skills de terceros): no se versiona
+referentes/_raw/
+
+# Chrome headless que descarga el renderer de Remotion
+.remotion/
+.playwright-mcp/
+
+# Material de Bodega: crudos, podcast, referentes descargados y renders. Son datos personales del cliente
+# (cláusula 9 del contrato): viven en el equipo de trabajo o en el VPS de Bodega, nunca en git.
+trabajo/
+studio/public/clientes/
+studio/public/voz/
+studio/src/data/*.voz.json
+
+.venv/
+.remotion-licencia

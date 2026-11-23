@@ -1,0 +1,66 @@
+{
+  "variante": "gris-script",
+  "beats": [
+    {
+      "tipo": "objeto",
+      "apoyo": "Si tienes una idea",
+      "titular": "no la *guardes*",
+      "segundos": 2.8,
+      "media": "",
+      "items": [],
+      "cifra": 0,
+      "sufijo": ""
+    },
+    {
+      "tipo": "cifra",
+      "apoyo": "de las ideas se quedan en la libreta",
+      "titular": "",
+      "segundos": 3,
+      "media": "",
+      "items": [],
+      "cifra": 8,
+      "sufijo": " de 10"
+    },
+    {
+      "tipo": "tarjeta",
+      "apoyo": "",
+      "titular": "Empezar mal / es mejor que no empezar",
+      "segundos": 2.2,
+      "media": "",
+      "items": [],
+      "cifra": 0,
+      "sufijo": ""
+    },
+    {
+      "tipo": "lista",
+      "apoyo": "",
+      "titular": "Lo que *sí* sirve",
+      "segundos": 3.4,
+      "media": "",
+      "items": [
+        "Un borrador",
+        "Una fecha",
+        "Alguien que lo vea"
+      ],
+      "cifra": 0,
+      "sufijo": ""
+    },
+    {
+      "tipo": "objeto",
+      "apoyo": "La constancia le gana",
+      "titular": "al *talento*",
+      "segundos": 3,
+      "media": "",
+      "items": [],
+      "cifra": 0,
+      "sufijo": ""
+    }
+  ],
+  "cierre": {
+    "texto": "Guárdalo para *mañana*",
+    "firma": "@tumarca",
+    "logo": "",
+    "segundos": 2.2
+  },
+  "colores": {}
+}

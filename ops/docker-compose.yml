@@ -1,0 +1,18 @@
+# En el VPS de Bodega: cd /opt/bodega/estudio/ops && docker compose up -d --build
+# scripts/host.sh entra con `docker exec -w /estudio bodega-estudio ...`.
+services:
+  bodega-estudio:
+    build:
+      context: ..
+      dockerfile: ops/Dockerfile
+    container_name: bodega-estudio
+    restart: unless-stopped
+    volumes:
+      - ..:/estudio
+      # node_modules de Linux dentro de la imagen, no los del clon
+      - /estudio/studio/node_modules
+    environment:
+      - ESTUDIO_EJECUCION=local
+    # KVM 4 del VPS: deja aire para el resto de servicios de Bodega.
+    cpus: "3"
+    mem_limit: 10g

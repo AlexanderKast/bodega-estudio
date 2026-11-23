@@ -1,0 +1,137 @@
+{
+  "svg": "megafono-recorte.svg",
+  "origen": "megafono-recorte.png",
+  "tamano": [
+    805,
+    716
+  ],
+  "modo": "apilado",
+  "tolerancia": 1.4,
+  "nodos": 561,
+  "bytes": 18290,
+  "capas": [
+    {
+      "id": "capa-01-373d2c",
+      "color": "#373D2C",
+      "nombre": "",
+      "caja": [
+        7,
+        7,
+        712,
+        529
+      ],
+      "pivote": [
+        179.4,
+        266.7
+      ],
+      "area": 41218,
+      "paths": [
+        "capa-01-373d2c-p01",
+        "capa-01-373d2c-p02"
+      ]
+    },
+    {
+      "id": "capa-02-b9b875",
+      "color": "#B9B875",
+      "nombre": "",
+      "caja": [
+        32,
+        38,
+        528,
+        499
+      ],
+      "pivote": [
+        173.5,
+        300.8
+      ],
+      "area": 72323,
+      "paths": [
+        "capa-02-b9b875-p01",
+        "capa-02-b9b875-p02"
+      ]
+    },
+    {
+      "id": "capa-03-db731c",
+      "color": "#DB731C",
+      "nombre": "",
+      "caja": [
+        446,
+        142,
+        797,
+        508
+      ],
+      "pivote": [
+        634.5,
+        283.5
+      ],
+      "area": 60138,
+      "paths": [
+        "capa-03-db731c-p01",
+        "capa-03-db731c-p02",
+        "capa-03-db731c-p03"
+      ]
+    },
+    {
+      "id": "capa-04-709d41",
+      "color": "#709D41",
+      "nombre": "",
+      "caja": [
+        151,
+        49,
+        660,
+        709
+      ],
+      "pivote": [
+        425.7,
+        423.7
+      ],
+      "area": 52284,
+      "paths": [
+        "capa-04-709d41-p01",
+        "capa-04-709d41-p02"
+      ]
+    },
+    {
+      "id": "capa-05-ebe7c0",
+      "color": "#EBE7C0",
+      "nombre": "",
+      "caja": [
+        126,
+        48,
+        539,
+        662
+      ],
+      "pivote": [
+        384.6,
+        276.5
+      ],
+      "area": 48447,
+      "paths": [
+        "capa-05-ebe7c0-p01",
+        "capa-05-ebe7c0-p02",
+        "capa-05-ebe7c0-p03",
+        "capa-05-ebe7c0-p04"
+      ]
+    },
+    {
+      "id": "capa-06-dfdcaf",
+      "color": "#DFDCAF",
+      "nombre": "",
+      "caja": [
+        274,
+        205,
+        540,
+        552
+      ],
+      "pivote": [
+        404.8,
+        330.5
+      ],
+      "area": 23785,
+      "paths": [
+        "capa-06-dfdcaf-p01",
+        "capa-06-dfdcaf-p02"
+      ]
+    }
+  ]
+}

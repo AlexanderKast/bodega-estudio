@@ -1,0 +1,438 @@
+{
+  "audio": "mesa.wav",
+  "idioma": "es",
+  "duracion": 22.72,
+  "texto": "Le explicas todo a la IA y 20 mensajes después se le olvida lo primero que dijiste, no es que sea distraída, trabaja sobre una mesa y en esa mesa solo cabe cierta cantidad de ocas, cada mensaje nuevo es otra oca, cuando la mesa se llena las primeras se caen al piso, eso es la ventana de contexto, lo que cabe en la mesa no lo que tú le contaste, así que no le des más ocas, dale las tres que importan y ponlas arriba.",
+  "words": [
+    {
+      "word": "Le",
+      "start": 0,
+      "end": 0.14
+    },
+    {
+      "word": "explicas",
+      "start": 0.14,
+      "end": 0.54
+    },
+    {
+      "word": "todo",
+      "start": 0.54,
+      "end": 0.78
+    },
+    {
+      "word": "a",
+      "start": 0.78,
+      "end": 0.9
+    },
+    {
+      "word": "la",
+      "start": 0.9,
+      "end": 0.98
+    },
+    {
+      "word": "IA",
+      "start": 0.98,
+      "end": 1.24
+    },
+    {
+      "word": "y",
+      "start": 1.24,
+      "end": 1.44
+    },
+    {
+      "word": "20",
+      "start": 1.44,
+      "end": 1.76
+    },
+    {
+      "word": "mensajes",
+      "start": 1.76,
+      "end": 2.24
+    },
+    {
+      "word": "después",
+      "start": 2.24,
+      "end": 2.6
+    },
+    {
+      "word": "se",
+      "start": 2.6,
+      "end": 2.88
+    },
+    {
+      "word": "le",
+      "start": 2.88,
+      "end": 2.98
+    },
+    {
+      "word": "olvida",
+      "start": 2.98,
+      "end": 3.28
+    },
+    {
+      "word": "lo",
+      "start": 3.28,
+      "end": 3.42
+    },
+    {
+      "word": "primero",
+      "start": 3.42,
+      "end": 3.74
+    },
+    {
+      "word": "que",
+      "start": 3.74,
+      "end": 3.9
+    },
+    {
+      "word": "dijiste,",
+      "start": 3.9,
+      "end": 4.38
+    },
+    {
+      "word": "no",
+      "start": 4.58,
+      "end": 4.9
+    },
+    {
+      "word": "es",
+      "start": 4.9,
+      "end": 5.04
+    },
+    {
+      "word": "que",
+      "start": 5.04,
+      "end": 5.14
+    },
+    {
+      "word": "sea",
+      "start": 5.14,
+      "end": 5.34
+    },
+    {
+      "word": "distraída,",
+      "start": 5.34,
+      "end": 5.88
+    },
+    {
+      "word": "trabaja",
+      "start": 6.26,
+      "end": 6.64
+    },
+    {
+      "word": "sobre",
+      "start": 6.64,
+      "end": 6.8
+    },
+    {
+      "word": "una",
+      "start": 6.8,
+      "end": 6.98
+    },
+    {
+      "word": "mesa",
+      "start": 6.98,
+      "end": 7.26
+    },
+    {
+      "word": "y",
+      "start": 7.26,
+      "end": 7.42
+    },
+    {
+      "word": "en",
+      "start": 7.42,
+      "end": 7.52
+    },
+    {
+      "word": "esa",
+      "start": 7.52,
+      "end": 7.66
+    },
+    {
+      "word": "mesa",
+      "start": 7.66,
+      "end": 7.88
+    },
+    {
+      "word": "solo",
+      "start": 7.88,
+      "end": 8.14
+    },
+    {
+      "word": "cabe",
+      "start": 8.14,
+      "end": 8.4
+    },
+    {
+      "word": "cierta",
+      "start": 8.4,
+      "end": 8.78
+    },
+    {
+      "word": "cantidad",
+      "start": 8.78,
+      "end": 9.14
+    },
+    {
+      "word": "de",
+      "start": 9.14,
+      "end": 9.36
+    },
+    {
+      "word": "ocas,",
+      "start": 9.36,
+      "end": 9.56
+    },
+    {
+      "word": "cada",
+      "start": 9.9,
+      "end": 10.1
+    },
+    {
+      "word": "mensaje",
+      "start": 10.1,
+      "end": 10.54
+    },
+    {
+      "word": "nuevo",
+      "start": 10.54,
+      "end": 10.84
+    },
+    {
+      "word": "es",
+      "start": 10.84,
+      "end": 11.06
+    },
+    {
+      "word": "otra",
+      "start": 11.06,
+      "end": 11.24
+    },
+    {
+      "word": "oca,",
+      "start": 11.24,
+      "end": 11.52
+    },
+    {
+      "word": "cuando",
+      "start": 11.8,
+      "end": 12
+    },
+    {
+      "word": "la",
+      "start": 12,
+      "end": 12.12
+    },
+    {
+      "word": "mesa",
+      "start": 12.12,
+      "end": 12.34
+    },
+    {
+      "word": "se",
+      "start": 12.34,
+      "end": 12.54
+    },
+    {
+      "word": "llena",
+      "start": 12.54,
+      "end": 12.8
+    },
+    {
+      "word": "las",
+      "start": 12.8,
+      "end": 12.98
+    },
+    {
+      "word": "primeras",
+      "start": 12.98,
+      "end": 13.38
+    },
+    {
+      "word": "se",
+      "start": 13.38,
+      "end": 13.56
+    },
+    {
+      "word": "caen",
+      "start": 13.56,
+      "end": 13.84
+    },
+    {
+      "word": "al",
+      "start": 13.84,
+      "end": 13.96
+    },
+    {
+      "word": "piso,",
+      "start": 13.96,
+      "end": 14.32
+    },
+    {
+      "word": "eso",
+      "start": 14.66,
+      "end": 14.86
+    },
+    {
+      "word": "es",
+      "start": 14.86,
+      "end": 14.96
+    },
+    {
+      "word": "la",
+      "start": 14.96,
+      "end": 15.06
+    },
+    {
+      "word": "ventana",
+      "start": 15.06,
+      "end": 15.44
+    },
+    {
+      "word": "de",
+      "start": 15.44,
+      "end": 15.56
+    },
+    {
+      "word": "contexto,",
+      "start": 15.56,
+      "end": 16.04
+    },
+    {
+      "word": "lo",
+      "start": 16.32,
+      "end": 16.38
+    },
+    {
+      "word": "que",
+      "start": 16.38,
+      "end": 16.5
+    },
+    {
+      "word": "cabe",
+      "start": 16.5,
+      "end": 16.76
+    },
+    {
+      "word": "en",
+      "start": 16.76,
+      "end": 16.88
+    },
+    {
+      "word": "la",
+      "start": 16.88,
+      "end": 16.96
+    },
+    {
+      "word": "mesa",
+      "start": 16.96,
+      "end": 17.22
+    },
+    {
+      "word": "no",
+      "start": 17.22,
+      "end": 17.4
+    },
+    {
+      "word": "lo",
+      "start": 17.4,
+      "end": 17.5
+    },
+    {
+      "word": "que",
+      "start": 17.5,
+      "end": 17.6
+    },
+    {
+      "word": "tú",
+      "start": 17.6,
+      "end": 17.72
+    },
+    {
+      "word": "le",
+      "start": 17.72,
+      "end": 17.84
+    },
+    {
+      "word": "contaste,",
+      "start": 17.84,
+      "end": 18.38
+    },
+    {
+      "word": "así",
+      "start": 18.64,
+      "end": 18.84
+    },
+    {
+      "word": "que",
+      "start": 18.84,
+      "end": 19.02
+    },
+    {
+      "word": "no",
+      "start": 19.02,
+      "end": 19.16
+    },
+    {
+      "word": "le",
+      "start": 19.16,
+      "end": 19.28
+    },
+    {
+      "word": "des",
+      "start": 19.28,
+      "end": 19.4
+    },
+    {
+      "word": "más",
+      "start": 19.4,
+      "end": 19.56
+    },
+    {
+      "word": "ocas,",
+      "start": 19.56,
+      "end": 19.86
+    },
+    {
+      "word": "dale",
+      "start": 20.36,
+      "end": 20.54
+    },
+    {
+      "word": "las",
+      "start": 20.54,
+      "end": 20.74
+    },
+    {
+      "word": "tres",
+      "start": 20.74,
+      "end": 20.94
+    },
+    {
+      "word": "que",
+      "start": 20.94,
+      "end": 21.16
+    },
+    {
+      "word": "importan",
+      "start": 21.16,
+      "end": 21.68
+    },
+    {
+      "word": "y",
+      "start": 21.68,
+      "end": 21.84
+    },
+    {
+      "word": "ponlas",
+      "start": 21.84,
+      "end": 22.2
+    },
+    {
+      "word": "arriba.",
+      "start": 22.2,
+      "end": 22.5
+    }
+  ]
+}

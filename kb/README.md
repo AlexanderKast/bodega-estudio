@@ -1,0 +1,39 @@
+# KB de motion — `master-motion` (borrador 2026-11-07)
+
+Base de conocimiento para hacer video con acabado de motion designer profesional (After Effects) usando Remotion 4, HyperFrames/GSAP y Blender, sin "look de IA". Todo en español, con valores, código y reglas verificables. Destino final: carpeta `kb/` del repo `master-motion`.
+
+| Archivo | Qué contiene |
+|---|---|
+| [00-principios.md](00-principios.md) | Los 12 principios de Disney traducidos a motion con un check por principio; 10 reglas de oro del acabado AE; orden de trabajo (blocking → splines → overlap → polish → look → sonido); checklist de QA de entrega. |
+| [01-easing-y-curvas.md](01-easing-y-curvas.md) | Speed/value graph de AE y fórmula speed+influence → `cubic-bezier` (función `aeEase`); tabla de tokens con nombre (`arrive`, `leave`, `snap`, `glide`…) con equivalente AE y GSAP; tabla completa de easings.net; tokens de Material 3, CSS y Carbon; springs de Remotion (ζ, presets `springSmooth/Critical/Snappy/Pop/Bouncy/Heavy`), conversión desde springs de Apple; reglas de easing lintables. |
+| [02-tiempos.md](02-tiempos.md) | Duraciones en segundos y frames (30/60 fps) por tipo de elemento; regla de distancia y peso; stagger por unidad (letra, palabra, línea, card) con stagger no lineal y por distancia al foco; fórmula de tiempo de lectura y holds; ritmo por formato (reel, anuncio, VSL); fps; reglas lintables. |
+| [03-tipografia-cinetica.md](03-tipografia-cinetica.md) | Decisiones tipográficas (familias, tamaños por formato, tracking, interlineado, alineación); catálogo de técnicas con parámetros (mask reveal, blur por palabra, split chars, tracking in, weight morph, highlight, scramble, captions karaoke); componente `LineReveal`; captions con Whisper + `@remotion/captions`; reglas lintables. |
+| [04-transiciones.md](04-transiciones.md) | Catálogo de 13 transiciones con cuándo usarlas, duración, curva e implementación; reglas de continuidad de vector/velocidad y sincronía; código con `TransitionSeries`, whip pan con blur y presentación custom; reglas lintables. |
+| [05-camara-y-profundidad.md](05-camara-y-profundidad.md) | Cámara virtual 2.5D en Remotion con CSS 3D y escala compensada; vocabulario de movimientos con valores; handheld con `noise2D`; parallax por planos y fotos con profundidad; DOF (blur por distancia, perspectiva atmosférica); motion blur (`CameraMotionBlur`, shutter angle, samples); reglas lintables. |
+| [06-color-y-textura.md](06-color-y-textura.md) | Estructura de paleta, neutros con temperatura, OKLCH; grano (tabla de valores, componente `Grain` con `feTurbulence`, ffmpeg); receta de halation; viñeta, aberración, gate weave, bloom, dither; gradientes con ruido y anti-banding; orden del color grade; reglas lintables; cómo mantener un solo estilo entre los assets generados de una pieza. |
+| [07-sonido-y-sync.md](07-sonido-y-sync.md) | Flujo audio-primero (voz → Whisper → beats → marcas); tolerancias de sincronía por evento; BPM que dan frames enteros; helpers `beatFrames`/`pulse`; audio reactivo con `visualizeAudio`; niveles de mezcla (−14 LUFS, −1 dBTP), ducking en Remotion y ffmpeg; SFX por tipo de animación; reglas lintables. |
+| [08-after-effects.md](08-after-effects.md) | Equivalencias AE → Remotion (`time`, `linear`, `valueAtTime`, `wiggle`…); helper de keyframes; inertial bounce, overshoot de Ebberts, bounce físico, wiggle con ruido, `loopOut` (cycle/pingpong/offset/continue), autofade, snap zoom, squash por velocidad, counter; Text Animator/Range Selector y presets de texto; tabla de plugins de AE y su sustituto. |
+| [09-blender.md](09-blender.md) | Blender headless en el servidor (`-b -P --`); setup reproducible Cycles + OptiX + alfa + motion blur + AgX; EEVEE según versión; shadow catcher y pases EXR; cámaras con Track To, DOF y easing de f-curves; Geometry Nodes por script; de PNG RGBA a WebM VP9 alfa / ProRes 4444 y composición en Remotion/HyperFrames. |
+| [10-anti-look-ia.md](10-anti-look-ia.md) | 40+ "tells" con ID estable (`AI-01`…`AI-44`) en motion, diseño visual y contenido, cada uno con alternativa y regla para `motion-lint`; esqueleto del linter (análisis estático + muestreo de frames). |
+| [11-referentes.md](11-referentes.md) | Estudios (Buck, ManvsMachine, Gunner…), educadores (School of Motion, Ben Marriott, Jake in Motion, Ebberts), marcas a desmontar (Apple, Stripe, Linear…), repos para leer código (Remotion, Motion Canvas, Theatre.js, GSAP, anime.js, motion.dev, lottie-web, HyperFrames) y plantilla YAML para extraer rasgos de un referente. |
+| [13-estilos.md](13-estilos.md) | Catálogo de 20 direcciones de arte (suiza, editorial, retención, collage, cel, riso, dither, isométrico, data viz, glitch, clay, producto premium, generativo…) con firma medible, género, motor, presets que las sirven y faltantes; 14 técnicas nuevas con licencia; lo gastado; backlog P1–P3. Fichas completas en `referentes/estilos/`. |
+| [14-plantillas.md](14-plantillas.md) | Reels, TikToks y Shorts medidos (`medir.py`: cortes exactos, easing estimado, cortes sobre golpe) y replicados como plantillas Remotion con props zod editables; flujo `/replicar`, reglas y catálogo. |
+| [15-narrativa-explainer.md](15-narrativa-explainer.md) | Cómo cuentan una idea seis explainers profesionales medidos: proporciones de problema → tensión → revelación → cierre, la metáfora central que se transforma, qué persiste entre beats y cómo se pasa de uno a otro, duración de beat, elementos por beat, densidad y huecos, y 8 reglas para el guion. |
+| [16-composicion-y-mirada.md](16-composicion-y-mirada.md) | Un foco por momento y cuánto salta entre beats; los cinco recursos para llevar la mirada de una anotación a la siguiente; peso visual (un color de acento, grosor antes que tamaño); espacio negativo medido; cámara (duración, pico, curva, deriva) y motion blur por referente; textura, sombra y grano; 9 reglas para el storyboard. |
+| [17-anotacion.md](17-anotacion.md) | Tabla de valores medidos por pieza y por piel: cuánto tarda un círculo, una flecha, un subrayado o una ruta, grosor, vueltas, punta, permanencia, desfase con la voz y rótulos; y la lista exacta de cambios que pide en `pieles.tsx`, `mano.ts`, `Trazo.tsx` y `piezas.tsx`. |
+| [traduccion-hyperframes.md](traduccion-hyperframes.md) | Tabla Remotion ↔ HyperFrames/GSAP (tiempo, composición, secuencias, tracks, media, fuentes, verificación); ejemplo traducido; tokens de easing en ambos lados; spring → CustomEase muestreado; stagger; efectos; checklist de portabilidad. |
+
+## Convenciones compartidas por todos los archivos
+
+- **Tokens de easing** (`arrive`, `arriveSoft`, `arriveGentle`, `leave`, `leaveSoft`, `move`, `snap`, `glide`, `overshoot`, `linear`) y **presets de spring** definidos en `01`; el resto de archivos los referencia por nombre.
+- Tiempos en frames a **30 fps** salvo indicación; a 60 fps duplicar.
+- Todo valor animado es función de `frame` (determinista).
+- Las reglas lintables de cada archivo + los IDs `AI-xx` de `10` son la especificación de `motion-lint`.
+- Trabajo pesado (render Blender, Whisper, beat tracking, ffmpeg final, motion blur con muchas muestras) va a **el VPS de Bodega**.
+
+## Estado
+
+Borrador. Pendiente de integrar en `kb/` del repo y de validar en piezas reales: los presets de spring (frames de asentamiento son aproximados), la tabla de duraciones, y la API de f-curves de Blender según la versión instalada en el servidor (slotted actions en ≥ 4.4, identificador de EEVEE en 5.x).
+
+- `12-metodos-de-referentes.md` — síntesis de 16 videos de referencia: familias de proceso, qué separa el acabado pro del look de IA, método actualizado del estudio y backlog priorizado.
+- `15`, `16` y `17` — estándar medido de explainers (Fase 0, 2026-11-11): seis referentes, siete tramos. Puntaje del crítico sobre los referentes y umbral del piloto en `referentes/explainers-estandar.md`.

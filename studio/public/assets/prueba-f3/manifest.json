@@ -1,0 +1,202 @@
+{
+  "pieza": "prueba-f3",
+  "assets": [
+    {
+      "id": "despertador",
+      "tipo": "objeto",
+      "archivo": "despertador.png",
+      "descripcion": "A classic twin-bell alarm clock with a blank dial and two plain hands",
+      "prompt": "A classic twin-bell alarm clock with a blank dial and two plain hands. Hand-painted gouache illustration made of cut paper shapes, bold simple flat forms, visible dry-brush texture and paper grain, matte, soft diffuse light from the top left, slightly imperfect hand-cut edges, no outlines, no gradients, no gloss, editorial explainer style. Limited color palette: charcoal black, lime green, warm cream, burnt orange. A single isolated object, centered, the whole object inside the frame with clear margin on all sides, on a plain flat uniform mid gray background, no floor, no cast shadow on the background, no other objects. No text, no letters, no numbers, no logos anywhere in the image; every surface, screen and label is blank.",
+      "negativo": "text, letters, words, numbers, digits, typography, captions, labels, signage, logo, watermark, signature, handwriting, UI text, subtitles, photo, 3d render, glossy, neon, purple, blue gradient, drop shadow, frame, border",
+      "negativo_activo": true,
+      "semilla": 887564297,
+      "modelo": {
+        "clave": "zimage",
+        "nombre": "Z-Image Turbo (int8)",
+        "unet": "z_image_turbo_int8_convrot.safetensors",
+        "clip": "qwen_3_4b_fp8_mixed.safetensors",
+        "vae": "ae.safetensors"
+      },
+      "pasos": 8,
+      "cfg": 2.0,
+      "tamano": [
+        1024,
+        1024
+      ],
+      "referencia_sha256": null,
+      "comfyui": "0.37.0",
+      "fecha": "2026-11-10",
+      "recorte": {
+        "archivo": "despertador-recorte.png",
+        "tamano": [
+          638,
+          872
+        ],
+        "caja_origen": [
+          203,
+          87,
+          841,
+          959
+        ],
+        "motor": "comfy",
+        "modelo": "birefnet.safetensors",
+        "borde_papel": 0
+      },
+      "recorte_papel": {
+        "archivo": "despertador-papel.png",
+        "tamano": [
+          694,
+          928
+        ],
+        "caja_origen": [
+          203,
+          87,
+          841,
+          959
+        ],
+        "motor": "comfy",
+        "modelo": "birefnet.safetensors",
+        "borde_papel": 16.0
+      }
+    },
+    {
+      "id": "lupa",
+      "tipo": "objeto",
+      "archivo": "lupa.png",
+      "descripcion": "A magnifying glass with a round lens and a short thick handle, tilted",
+      "prompt": "A magnifying glass with a round lens and a short thick handle, tilted. Hand-painted gouache illustration made of cut paper shapes, bold simple flat forms, visible dry-brush texture and paper grain, matte, soft diffuse light from the top left, slightly imperfect hand-cut edges, no outlines, no gradients, no gloss, editorial explainer style. Limited color palette: charcoal black, lime green, warm cream, burnt orange. A single isolated object, centered, the whole object inside the frame with clear margin on all sides, on a plain flat uniform mid gray background, no floor, no cast shadow on the background, no other objects. No text, no letters, no numbers, no logos anywhere in the image; every surface, screen and label is blank.",
+      "negativo": "text, letters, words, numbers, digits, typography, captions, labels, signage, logo, watermark, signature, handwriting, UI text, subtitles, photo, 3d render, glossy, neon, purple, blue gradient, drop shadow, frame, border",
+      "negativo_activo": true,
+      "semilla": 84273465,
+      "modelo": {
+        "clave": "zimage",
+        "nombre": "Z-Image Turbo (int8)",
+        "unet": "z_image_turbo_int8_convrot.safetensors",
+        "clip": "qwen_3_4b_fp8_mixed.safetensors",
+        "vae": "ae.safetensors"
+      },
+      "pasos": 8,
+      "cfg": 2.0,
+      "tamano": [
+        1024,
+        1024
+      ],
+      "referencia_sha256": null,
+      "comfyui": "0.37.0",
+      "fecha": "2026-11-10",
+      "recorte": {
+        "archivo": "lupa-recorte.png",
+        "tamano": [
+          732,
+          797
+        ],
+        "caja_origen": [
+          153,
+          115,
+          885,
+          912
+        ],
+        "motor": "comfy",
+        "modelo": "birefnet.safetensors",
+        "borde_papel": 0
+      },
+      "recorte_papel": {
+        "archivo": "lupa-papel.png",
+        "tamano": [
+          788,
+          853
+        ],
+        "caja_origen": [
+          153,
+          115,
+          885,
+          912
+        ],
+        "motor": "comfy",
+        "modelo": "birefnet.safetensors",
+        "borde_papel": 16.0
+      }
+    },
+    {
+      "id": "megafono",
+      "tipo": "objeto",
+      "archivo": "megafono.png",
+      "descripcion": "A hand megaphone with a wide cone and a pistol grip, seen from the side",
+      "prompt": "A hand megaphone with a wide cone and a pistol grip, seen from the side. Hand-painted gouache illustration made of cut paper shapes, bold simple flat forms, visible dry-brush texture and paper grain, matte, soft diffuse light from the top left, slightly imperfect hand-cut edges, no outlines, no gradients, no gloss, editorial explainer style. Limited color palette: charcoal black, lime green, warm cream, burnt orange. A single isolated object, centered, the whole object inside the frame with clear margin on all sides, on a plain flat uniform mid gray background, no floor, no cast shadow on the background, no other objects. No text, no letters, no numbers, no logos anywhere in the image; every surface, screen and label is blank.",
+      "negativo": "text, letters, words, numbers, digits, typography, captions, labels, signage, logo, watermark, signature, handwriting, UI text, subtitles, photo, 3d render, glossy, neon, purple, blue gradient, drop shadow, frame, border",
+      "negativo_activo": true,
+      "semilla": 1912207581,
+      "modelo": {
+        "clave": "zimage",
+        "nombre": "Z-Image Turbo (int8)",
+        "unet": "z_image_turbo_int8_convrot.safetensors",
+        "clip": "qwen_3_4b_fp8_mixed.safetensors",
+        "vae": "ae.safetensors"
+      },
+      "pasos": 8,
+      "cfg": 2.0,
+      "tamano": [
+        1024,
+        1024
+      ],
+      "referencia_sha256": null,
+      "comfyui": "0.37.0",
+      "fecha": "2026-11-10",
+      "recorte": {
+        "archivo": "megafono-recorte.png",
+        "tamano": [
+          805,
+          716
+        ],
+        "caja_origen": [
+          111,
+          143,
+          916,
+          859
+        ],
+        "motor": "comfy",
+        "modelo": "birefnet.safetensors",
+        "borde_papel": 0
+      },
+      "recorte_papel": {
+        "archivo": "megafono-papel.png",
+        "tamano": [
+          861,
+          772
+        ],
+        "caja_origen": [
+          111,
+          143,
+          916,
+          859
+        ],
+        "motor": "comfy",
+        "modelo": "birefnet.safetensors",
+        "borde_papel": 16.0
+      }
+    }
+  ],
+  "estilo": {
+    "prompt_estilo": "Hand-painted gouache illustration made of cut paper shapes, bold simple flat forms, visible dry-brush texture and paper grain, matte, soft diffuse light from the top left, slightly imperfect hand-cut edges, no outlines, no gradients, no gloss, editorial explainer style",
+    "paleta": [
+      {
+        "nombre": "charcoal black",
+        "hex": "#1B1D19"
+      },
+      {
+        "nombre": "lime green",
+        "hex": "#A3E635"
+      },
+      {
+        "nombre": "warm cream",
+        "hex": "#E9E2CF"
+      },
+      {
+        "nombre": "burnt orange",
+        "hex": "#D9622B"
+      }
+    ],
+    "negativo": "photo, 3d render, glossy, neon, purple, blue gradient, drop shadow, frame, border",
+    "fondo_recorte": "mid gray"
+  }
+}

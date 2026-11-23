@@ -1,0 +1,52 @@
+{
+  "pieza": "Mesa",
+  "formato": "horizontal",
+  "bocetos": "assets/mesa-boceto",
+  "beats": [
+    {
+      "id": "01-olvido",
+      "acto": "problema",
+      "voz": "Le explicas todo a la IA y, veinte mensajes después, se le olvida lo primero que dijiste.",
+      "cue": "explicas",
+      "se_ve": "Una mesa de trabajo vista desde arriba con una sola hoja; llegan más hojas desde la derecha.",
+      "diagrama": "Mesa con 1 hoja → 6 hojas. La primera lleva una esquina doblada (se reconoce después).",
+      "anotacion": "Círculo sobre la primera hoja al decir «lo primero»."
+    },
+    {
+      "id": "02-mesa",
+      "acto": "tensión",
+      "voz": "No es que sea distraída. Trabaja sobre una mesa, y en esa mesa solo cabe cierta cantidad de hojas.",
+      "cue": "distraída",
+      "se_ve": "La cámara se abre: la mesa completa, con el borde marcado. Las hojas la ocupan casi toda.",
+      "diagrama": "Mesa llena (9 hojas). El borde aparece como límite.",
+      "anotacion": "Subrayado doble del borde derecho de la mesa en «solo cabe»."
+    },
+    {
+      "id": "03-caida",
+      "acto": "tensión",
+      "voz": "Cada mensaje nuevo es otra hoja. Cuando la mesa se llena, las primeras se caen al piso.",
+      "cue": "cada",
+      "se_ve": "Entra una hoja nueva por la derecha y empuja la fila; la hoja de la esquina doblada cae por el borde izquierdo.",
+      "diagrama": "Mesa llena + 1: la hoja 1 queda fuera de la mesa, abajo a la izquierda.",
+      "anotacion": "Flecha curva desde la hoja nueva hasta la que cae."
+    },
+    {
+      "id": "04-ventana",
+      "acto": "revelación",
+      "voz": "Eso es la ventana de contexto: lo que cabe en la mesa, no lo que tú le contaste.",
+      "cue": "eso",
+      "se_ve": "Plano general: la mesa arriba, el montón de hojas caídas abajo. Rótulo «ventana de contexto» sobre la mesa.",
+      "diagrama": "Dos zonas: dentro de la mesa (lo que la IA ve) y el piso (lo que ya no ve).",
+      "anotacion": "Callout «ventana de contexto» anclado al borde; tachado sobre el montón del piso."
+    },
+    {
+      "id": "05-tres",
+      "acto": "cierre",
+      "voz": "Así que no le des más hojas. Dale las tres que importan, y ponlas arriba.",
+      "cue": "así",
+      "se_ve": "La mesa se despeja y quedan tres hojas ordenadas arriba; la de la esquina doblada vuelve y es la primera.",
+      "diagrama": "Mesa con 3 hojas arriba y espacio libre. Hold final de 2 s.",
+      "anotacion": "Círculo que encierra las tres hojas en «las tres»."
+    }
+  ]
+}

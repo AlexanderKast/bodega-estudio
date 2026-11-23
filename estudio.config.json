@@ -1,0 +1,20 @@
+{
+  "$comentario": "Dónde corre lo pesado del estudio. local = en este computador; vps = en el VPS de Bodega por SSH. Nunca en servidores de terceros (cláusula 9 del contrato).",
+  "ejecucion": "local",
+  "vps": {
+    "alias_ssh": "bodega-vps",
+    "ruta_repo": "/opt/bodega/estudio",
+    "contenedor": "bodega-estudio"
+  },
+  "whisper": {
+    "modelo": "medium",
+    "dispositivo": "auto",
+    "precision": "int8",
+    "idioma": "es"
+  },
+  "render": {
+    "concurrencia": 0,
+    "timeout_ms": 180000
+  },
+  "carpeta_trabajo": "trabajo"
+}

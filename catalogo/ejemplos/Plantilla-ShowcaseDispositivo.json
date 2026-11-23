@@ -1,0 +1,76 @@
+{
+  "variante": "telefono-3d",
+  "dispositivo": "auto",
+  "pantallas": [
+    {
+      "tipo": "inicio",
+      "texto": "",
+      "subtexto": "",
+      "items": [],
+      "numero": 0,
+      "media": "",
+      "segundos": 2,
+      "encuadre": "dispositivo",
+      "cambio": "fundido"
+    },
+    {
+      "tipo": "bloqueo",
+      "texto": "10:24",
+      "subtexto": "Jueves 12",
+      "items": [
+        "Tu ruta de hoy está lista",
+        "Salida recomendada: 8:40"
+      ],
+      "numero": 0,
+      "media": "",
+      "segundos": 2.4,
+      "encuadre": "pantalla",
+      "cambio": "empuje"
+    },
+    {
+      "tipo": "media",
+      "texto": "Escanea la calle",
+      "subtexto": "",
+      "items": [],
+      "numero": 0,
+      "media": "",
+      "segundos": 2.2,
+      "encuadre": "pantalla",
+      "cambio": "fundido"
+    },
+    {
+      "tipo": "mapa",
+      "texto": "Llegas en 12 min",
+      "subtexto": "Por la ruta con menos semáforos",
+      "items": [],
+      "numero": 0,
+      "media": "",
+      "segundos": 2.6,
+      "encuadre": "inclinado",
+      "cambio": "flash"
+    },
+    {
+      "tipo": "datos",
+      "texto": "Tiempo ahorrado por semana",
+      "subtexto": "",
+      "items": [
+        "L",
+        "M",
+        "X",
+        "J",
+        "V",
+        "S"
+      ],
+      "numero": 38,
+      "media": "",
+      "segundos": 2.2,
+      "encuadre": "pantalla",
+      "cambio": "tinta"
+    }
+  ],
+  "marca": "Brújula",
+  "frase": "Llega sin preguntar.",
+  "render3d": "",
+  "segundosCierre": 2.6,
+  "colores": {}
+}

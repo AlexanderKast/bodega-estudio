@@ -1,0 +1,18 @@
+{
+  "pieza": "mesa-boceto",
+  "prompt_estilo": "Rough storyboard thumbnail sketch, loose black marker lines on off-white paper, flat mid-gray marker shading, simple shapes, no detail, no color, drawn quickly by a storyboard artist, flat view from directly above",
+  "paleta": [
+    { "nombre": "black", "hex": "#14110D" },
+    { "nombre": "mid gray", "hex": "#8C8A84" },
+    { "nombre": "off-white", "hex": "#F4F1EA" }
+  ],
+  "negativo": "photo, 3d render, color, glossy, gradient, detailed illustration, frame, border, people, hands",
+  "modelo": "zimage",
+  "assets": [
+    { "id": "01-olvido", "tipo": "boceto", "tamano": [1024, 576], "descripcion": "A desk seen from directly above with one sheet of paper with a folded corner on the left, five more blank sheets sliding in from the right edge" },
+    { "id": "02-mesa", "tipo": "boceto", "tamano": [1024, 576], "descripcion": "A wide view from directly above of a rectangular desk with a thick outlined border, nine blank sheets of paper in a row covering almost the whole surface" },
+    { "id": "03-caida", "tipo": "boceto", "tamano": [1024, 576], "descripcion": "A desk from above completely covered with blank sheets, a new sheet pushing in from the right edge, one sheet with a folded corner falling off the left edge" },
+    { "id": "04-ventana", "tipo": "boceto", "tamano": [1024, 576], "descripcion": "A desk from above in the upper half covered with blank sheets, a messy pile of fallen blank sheets on the floor in the lower left, large empty area in the upper right" },
+    { "id": "05-tres", "tipo": "boceto", "tamano": [1024, 576], "descripcion": "A clean desk from above with only three blank sheets neatly aligned in a row at the top, the first one with a folded corner, the rest of the desk empty" }
+  ]
+}

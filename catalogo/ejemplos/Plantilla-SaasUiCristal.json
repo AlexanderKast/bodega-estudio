@@ -1,0 +1,102 @@
+{
+  "variante": "noche-cristal",
+  "escenas": [
+    {
+      "tipo": "gancho",
+      "titulo": "",
+      "items": [
+        "Cada",
+        "segundo",
+        "cuenta"
+      ],
+      "desde": 0,
+      "hasta": 0,
+      "media": "",
+      "segundos": 1.8
+    },
+    {
+      "tipo": "tarjetas",
+      "titulo": "Estado del turno",
+      "items": [
+        "Tickets abiertos|128",
+        "Espera|2:40",
+        "Resueltos|86 %",
+        "Canales|4"
+      ],
+      "desde": 0,
+      "hasta": 0,
+      "media": "",
+      "segundos": 2.8
+    },
+    {
+      "tipo": "contador",
+      "titulo": "Agentes activos",
+      "items": [
+        "SLA al día"
+      ],
+      "desde": 12,
+      "hasta": 200,
+      "media": "",
+      "segundos": 3.4
+    },
+    {
+      "tipo": "bento",
+      "titulo": "Tu semana",
+      "items": [
+        "Respuesta media|38 s",
+        "Satisfacción|4,8",
+        "Escalados|22 %",
+        "Turnos cubiertos|14",
+        "Idiomas|6"
+      ],
+      "desde": 0,
+      "hasta": 0,
+      "media": "",
+      "segundos": 3.6
+    },
+    {
+      "tipo": "morph",
+      "titulo": "Una llamada, resuelta",
+      "items": [
+        "Detecta el motivo",
+        "Busca el pedido",
+        "Propone el cambio",
+        "Confirma por correo"
+      ],
+      "desde": 0,
+      "hasta": 0,
+      "media": "",
+      "segundos": 3.6
+    },
+    {
+      "tipo": "captura",
+      "titulo": "Así se ve por dentro",
+      "items": [
+        "Abrir caso",
+        "Enviar guía"
+      ],
+      "desde": 0,
+      "hasta": 0,
+      "media": "",
+      "segundos": 3.4
+    },
+    {
+      "tipo": "lista",
+      "titulo": "Hecho en 4 minutos",
+      "items": [
+        "Correo enviado|16:11",
+        "Guía compartida|16:15",
+        "Caso cerrado|16:18"
+      ],
+      "desde": 0,
+      "hasta": 0,
+      "media": "",
+      "segundos": 2.8
+    }
+  ],
+  "marca": "Cauce",
+  "frase": "Soporte que atiende mientras duermes.",
+  "cta": "",
+  "segundosCierre": 3,
+  "colores": {}
+}

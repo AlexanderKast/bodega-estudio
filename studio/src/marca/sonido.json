@@ -1,0 +1,30 @@
+{
+  "nombre": "Paleta de sonido Bodega de Belleza: corta, limpia y brillante (un solo kit por pieza). Se ajusta en F3 con los videos publicados.",
+  "roles": {
+    "pop": "earshot/ui_pop/soft",
+    "land": "earshot/fit/land.light/finger_wood",
+    "click": "earshot/click/soft",
+    "tick": "earshot/fit/tick/domino",
+    "snap": "earshot/fit/snap/switch_flip",
+    "bell": "earshot/mallet/celesta",
+    "hit": "earshot/cut_hit/punch",
+    "whoosh.short": "earshot/whoosh_fast/crisp",
+    "whoosh.long": "earshot/pro_whoosh_big/swell",
+    "riser": "earshot/pro_riser/air_gate",
+    "glitch": "earshot/glitch/mid"
+  },
+  "niveles_db": {
+    "pop": -12,
+    "land": -10,
+    "click": -14,
+    "tick": -16,
+    "snap": -12,
+    "bell": -12,
+    "hit": -4,
+    "whoosh.short": -10,
+    "whoosh.long": -9,
+    "riser": -8,
+    "glitch": -11
+  },
+  "musica_db": -16
+}

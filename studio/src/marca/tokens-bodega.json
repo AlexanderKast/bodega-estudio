@@ -1,0 +1,286 @@
+{
+ "name": "Bodega de Belleza",
+ "version": 2,
+ "color": {
+  "themes": [
+   {
+    "id": "dark",
+    "name": "Negro (principal)"
+   },
+   {
+    "id": "light",
+    "name": "Claro"
+   }
+  ],
+  "tokens": [
+   {
+    "name": "negro-marca",
+    "value": {
+     "dark": "#1d1d1b",
+     "light": "#1d1d1b"
+    },
+    "usage": "Negro oficial del manual (R29 G29 B27 · C75 M65 Y63 K81). Fondos principales, wordmark en versión positiva."
+   },
+   {
+    "name": "violeta-marca",
+    "value": {
+     "dark": "#b112e3",
+     "light": "#b112e3"
+    },
+    "usage": "Violeta oficial del manual (R177 G18 B227 · C64 M82 Y0 K0). Color de marca: fondos de pieza, empaques, bloques. Texto encima en `on-violeta` (4.87:1). Sobre `negro-marca` solo como color grande o de forma (3.27:1), nunca texto pequeño."
+   },
+   {
+    "name": "blanco-marca",
+    "value": {
+     "dark": "#f4f9fc",
+     "light": "#f4f9fc"
+    },
+    "usage": "Blanco oficial del manual (R244 G249 B252 · C5 M0 Y0 K0). Fondos claros y wordmark sobre violeta."
+   },
+   {
+    "name": "violeta-titulos",
+    "value": {
+     "dark": "#c03bfb",
+     "light": "#c03bfb"
+    },
+    "usage": "Violeta de los titulares en Impact del manual ('DE MARCA') y de su filete. Solo texto de 24px o más: 3.76:1 sobre `blanco-marca`, 4.23:1 sobre `negro-marca`."
+   },
+   {
+    "name": "flecha-inicio",
+    "value": {
+     "dark": "#7757bd",
+     "light": "#7757bd"
+    },
+    "usage": "Inicio (izquierda) del degradado de la flecha del logo. Solo dentro del logo."
+   },
+   {
+    "name": "flecha-fin",
+    "value": {
+     "dark": "#c342ff",
+     "light": "#c342ff"
+    },
+    "usage": "Fin (derecha) del degradado de la flecha del logo. Solo dentro del logo; también acento de brillo en key visuals."
+   },
+   {
+    "name": "surface",
+    "value": {
+     "dark": "#1d1d1b",
+     "light": "#f4f9fc"
+    },
+    "usage": "Fondo de página: `negro-marca` en tema Negro, `blanco-marca` en tema Claro."
+   },
+   {
+    "name": "surface-raised",
+    "value": {
+     "dark": "#2a2a28",
+     "light": "#ffffff"
+    },
+    "usage": "Tarjetas y paneles sobre `surface`."
+   },
+   {
+    "name": "surface-inverse",
+    "value": {
+     "dark": "#f4f9fc",
+     "light": "#1d1d1b"
+    },
+    "usage": "Bloques en contraste con `surface` (el panel opuesto de la carta de colores)."
+   },
+   {
+    "name": "border",
+    "value": {
+     "dark": "#3a3a37",
+     "light": "#e1e6ea"
+    },
+    "usage": "Separadores decorativos (no para controles)."
+   },
+   {
+    "name": "border-strong",
+    "value": {
+     "dark": "#7a7c7f",
+     "light": "#7a7d81"
+    },
+    "usage": "Bordes de inputs y controles: 3:1 o más sobre `surface` y `surface-raised`."
+   },
+   {
+    "name": "ink",
+    "value": {
+     "dark": "#f4f9fc",
+     "light": "#1d1d1b"
+    },
+    "usage": "Titulares y texto principal sobre `surface` y `surface-raised`."
+   },
+   {
+    "name": "ink-muted",
+    "value": {
+     "dark": "#a6a8ab",
+     "light": "#5a5c5e"
+    },
+    "usage": "Texto secundario y datos (RGB/CMYK) sobre `surface` y `surface-raised`."
+   },
+   {
+    "name": "accent-text",
+    "value": {
+     "dark": "#d9a6f5",
+     "light": "#8a0db3"
+    },
+    "usage": "Enlaces y palabras destacadas en texto pequeño sobre `surface` y `surface-raised`. Tonos derivados de `violeta-marca` para cumplir 4.5:1; no aparecen en el manual."
+   },
+   {
+    "name": "on-violeta",
+    "value": {
+     "dark": "#f4f9fc",
+     "light": "#f4f9fc"
+    },
+    "usage": "Texto e iconos sobre `violeta-marca` (4.87:1)."
+   },
+   {
+    "name": "focus-ring",
+    "value": {
+     "dark": "#c342ff",
+     "light": "#8a0db3"
+    },
+    "usage": "Anillo de foco sólido de 2px; 3:1+ sobre `surface` y `surface-raised`."
+   }
+  ]
+ },
+ "type": {
+  "fonts": [],
+  "families": {
+   "display": "Impact, Anton, \"Haettenschweiler\", \"Arial Narrow\", sans-serif",
+   "sans": "\"Acumin Variable Concept\", \"Acumin Pro\", Archivo, \"Helvetica Neue\", Arial, sans-serif"
+  },
+  "groups": [
+   {
+    "name": "Display",
+    "family": "display",
+    "styles": [
+     {
+      "name": "display",
+      "fontSize": "88px",
+      "lineHeight": "0.95",
+      "fontWeight": 400,
+      "sample": "COLORES",
+      "usage": "Palabra fuerte del titular en Impact, MAYÚSCULAS (como 'DE MARCA' o 'COLORES' del manual). En `ink` o `violeta-titulos`."
+     },
+     {
+      "name": "h1",
+      "fontSize": "48px",
+      "lineHeight": "1",
+      "fontWeight": 400,
+      "usage": "Titulares de pieza en Impact, MAYÚSCULAS."
+     },
+     {
+      "name": "dato",
+      "fontSize": "28px",
+      "lineHeight": "1.1",
+      "fontWeight": 400,
+      "sample": "#b112e3",
+      "usage": "Cifras, precios y códigos destacados en Impact."
+     }
+    ]
+   },
+   {
+    "name": "Text",
+    "family": "sans",
+    "styles": [
+     {
+      "name": "eyebrow",
+      "fontSize": "40px",
+      "lineHeight": "1",
+      "fontWeight": 300,
+      "letterSpacing": "0.06em",
+      "sample": "TIPOGRAFÍA",
+      "usage": "Primera línea del titular en Acumin liviana, MAYÚSCULAS y tracking abierto, siempre encima de un `display` (par 'TIPOGRAFÍA / DE MARCA')."
+     },
+     {
+      "name": "h2",
+      "fontSize": "20px",
+      "lineHeight": "26px",
+      "fontWeight": 600,
+      "usage": "Subtítulos en Acumin."
+     },
+     {
+      "name": "body",
+      "fontSize": "16px",
+      "lineHeight": "24px",
+      "fontWeight": 400,
+      "usage": "Texto corrido en Acumin."
+     },
+     {
+      "name": "body-sm",
+      "fontSize": "13px",
+      "lineHeight": "18px",
+      "fontWeight": 400,
+      "usage": "Notas, fichas técnicas, datos de color."
+     },
+     {
+      "name": "label",
+      "fontSize": "13px",
+      "lineHeight": "16px",
+      "fontWeight": 600,
+      "letterSpacing": "0.04em",
+      "usage": "Botones y etiquetas."
+     }
+    ]
+   }
+  ]
+ },
+ "spacing": {
+  "tokens": [
+   {
+    "name": "space-1",
+    "value": "4px",
+    "usage": "Ajustes finos."
+   },
+   {
+    "name": "space-2",
+    "value": "8px",
+    "usage": "Entre icono y texto."
+   },
+   {
+    "name": "space-3",
+    "value": "12px",
+    "usage": "Grosor de la barra tricolor separadora; gutter del mosaico de aplicaciones."
+   },
+   {
+    "name": "space-4",
+    "value": "16px",
+    "usage": "Padding de tarjetas y botones."
+   },
+   {
+    "name": "space-6",
+    "value": "24px",
+    "usage": "Entre bloques de una tarjeta."
+   },
+   {
+    "name": "space-12",
+    "value": "48px",
+    "usage": "Márgenes de pieza y entre secciones."
+   }
+  ]
+ },
+ "radius": {
+  "tokens": [
+   {
+    "name": "radius-sm",
+    "value": "6px",
+    "usage": "Inputs, chips."
+   },
+   {
+    "name": "radius-md",
+    "value": "14px",
+    "usage": "Tarjetas e imágenes del mosaico de aplicaciones."
+   },
+   {
+    "name": "radius-xl",
+    "value": "64px",
+    "usage": "Esquinas de paneles grandes y el arco de la carta de colores."
+   },
+   {
+    "name": "radius-full",
+    "value": "9999px",
+    "usage": "Botones píldora."
+   }
+  ]
+ }
+}

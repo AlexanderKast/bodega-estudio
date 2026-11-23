@@ -1,0 +1,122 @@
+{
+  "svg": "despertador-recorte.svg",
+  "origen": "despertador-recorte.png",
+  "tamano": [
+    638,
+    872
+  ],
+  "modo": "apilado",
+  "tolerancia": 1.4,
+  "nodos": 605,
+  "bytes": 19702,
+  "capas": [
+    {
+      "id": "capa-01-3b423c",
+      "color": "#3B423C",
+      "nombre": "",
+      "caja": [
+        7,
+        7,
+        630,
+        865
+      ],
+      "pivote": [
+        313.4,
+        473.2
+      ],
+      "area": 144596,
+      "paths": [
+        "capa-01-3b423c-p01",
+        "capa-01-3b423c-p02"
+      ]
+    },
+    {
+      "id": "capa-02-f7fbde",
+      "color": "#F7FBDE",
+      "nombre": "",
+      "caja": [
+        83,
+        286,
+        583,
+        788
+      ],
+      "pivote": [
+        334.2,
+        544.2
+      ],
+      "area": 166505,
+      "paths": [
+        "capa-02-f7fbde-p01"
+      ]
+    },
+    {
+      "id": "capa-03-beda95",
+      "color": "#BEDA95",
+      "nombre": "",
+      "caja": [
+        54,
+        265,
+        565,
+        785
+      ],
+      "pivote": [
+        244.8,
+        469.8
+      ],
+      "area": 35757,
+      "paths": [
+        "capa-03-beda95-p01",
+        "capa-03-beda95-p02",
+        "capa-03-beda95-p03",
+        "capa-03-beda95-p04",
+        "capa-03-beda95-p05",
+        "capa-03-beda95-p06",
+        "capa-03-beda95-p07",
+        "capa-03-beda95-p08",
+        "capa-03-beda95-p09"
+      ]
+    },
+    {
+      "id": "capa-04-ee7c0b",
+      "color": "#EE7C0B",
+      "nombre": "",
+      "caja": [
+        181,
+        324,
+        494,
+        560
+      ],
+      "pivote": [
+        327.0,
+        463.3
+      ],
+      "area": 14927,
+      "paths": [
+        "capa-04-ee7c0b-p01"
+      ]
+    },
+    {
+      "id": "capa-05-282215",
+      "color": "#282215",
+      "nombre": "",
+      "caja": [
+        126,
+        153,
+        620,
+        864
+      ],
+      "pivote": [
+        456.3,
+        421.3
+      ],
+      "area": 12594,
+      "paths": [
+        "capa-05-282215-p01",
+        "capa-05-282215-p02",
+        "capa-05-282215-p03",
+        "capa-05-282215-p04",
+        "capa-05-282215-p05"
+      ]
+    }
+  ]
+}

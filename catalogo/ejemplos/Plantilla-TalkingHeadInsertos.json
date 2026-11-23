@@ -1,0 +1,448 @@
+{
+  "variante": "pantalla-pasos",
+  "media": "",
+  "palabras": [
+    {
+      "word": "Nadie",
+      "start": 0.3,
+      "end": 0.67
+    },
+    {
+      "word": "te",
+      "start": 0.72,
+      "end": 0.94
+    },
+    {
+      "word": "cuenta",
+      "start": 0.99,
+      "end": 1.44
+    },
+    {
+      "word": "cómo",
+      "start": 1.49,
+      "end": 1.81
+    },
+    {
+      "word": "se",
+      "start": 1.86,
+      "end": 2.08
+    },
+    {
+      "word": "arma",
+      "start": 2.13,
+      "end": 2.45
+    },
+    {
+      "word": "un",
+      "start": 2.5,
+      "end": 2.76
+    },
+    {
+      "word": "video",
+      "start": 2.82,
+      "end": 3.18
+    },
+    {
+      "word": "así.",
+      "start": 3.23,
+      "end": 3.5
+    },
+    {
+      "word": "Parece",
+      "start": 3.97,
+      "end": 4.38
+    },
+    {
+      "word": "magia,",
+      "start": 4.43,
+      "end": 4.84
+    },
+    {
+      "word": "pero",
+      "start": 5.11,
+      "end": 5.43
+    },
+    {
+      "word": "son",
+      "start": 5.48,
+      "end": 5.75
+    },
+    {
+      "word": "dos",
+      "start": 5.8,
+      "end": 6.07
+    },
+    {
+      "word": "pasos",
+      "start": 6.12,
+      "end": 6.52
+    },
+    {
+      "word": "y",
+      "start": 6.57,
+      "end": 6.75
+    },
+    {
+      "word": "un",
+      "start": 6.8,
+      "end": 7.02
+    },
+    {
+      "word": "truco.",
+      "start": 7.07,
+      "end": 7.44
+    },
+    {
+      "word": "Paso",
+      "start": 7.91,
+      "end": 8.27
+    },
+    {
+      "word": "uno:",
+      "start": 8.32,
+      "end": 8.59
+    },
+    {
+      "word": "entra",
+      "start": 8.86,
+      "end": 9.22
+    },
+    {
+      "word": "a",
+      "start": 9.27,
+      "end": 9.45
+    },
+    {
+      "word": "la",
+      "start": 9.5,
+      "end": 9.76
+    },
+    {
+      "word": "galería",
+      "start": 9.81,
+      "end": 10.27
+    },
+    {
+      "word": "y",
+      "start": 10.32,
+      "end": 10.5
+    },
+    {
+      "word": "elige",
+      "start": 10.55,
+      "end": 10.92
+    },
+    {
+      "word": "una",
+      "start": 10.97,
+      "end": 11.28
+    },
+    {
+      "word": "referencia",
+      "start": 11.33,
+      "end": 11.93
+    },
+    {
+      "word": "que",
+      "start": 11.98,
+      "end": 12.25
+    },
+    {
+      "word": "te",
+      "start": 12.3,
+      "end": 12.52
+    },
+    {
+      "word": "guste.",
+      "start": 12.57,
+      "end": 12.98
+    },
+    {
+      "word": "Copia",
+      "start": 13.45,
+      "end": 13.81
+    },
+    {
+      "word": "el",
+      "start": 13.86,
+      "end": 14.09
+    },
+    {
+      "word": "prompt",
+      "start": 14.14,
+      "end": 14.55
+    },
+    {
+      "word": "y",
+      "start": 14.6,
+      "end": 14.81
+    },
+    {
+      "word": "fíjate",
+      "start": 14.86,
+      "end": 15.28
+    },
+    {
+      "word": "qué",
+      "start": 15.33,
+      "end": 15.6
+    },
+    {
+      "word": "modelo",
+      "start": 15.65,
+      "end": 16.06
+    },
+    {
+      "word": "te",
+      "start": 16.11,
+      "end": 16.37
+    },
+    {
+      "word": "recomienda.",
+      "start": 16.42,
+      "end": 17.02
+    },
+    {
+      "word": "Paso",
+      "start": 17.49,
+      "end": 17.81
+    },
+    {
+      "word": "dos:",
+      "start": 17.86,
+      "end": 18.13
+    },
+    {
+      "word": "pégalo",
+      "start": 18.4,
+      "end": 18.85
+    },
+    {
+      "word": "en",
+      "start": 18.9,
+      "end": 19.13
+    },
+    {
+      "word": "tu",
+      "start": 19.18,
+      "end": 19.4
+    },
+    {
+      "word": "editor,",
+      "start": 19.45,
+      "end": 19.86
+    },
+    {
+      "word": "ajusta",
+      "start": 20.13,
+      "end": 20.59
+    },
+    {
+      "word": "tu",
+      "start": 20.64,
+      "end": 20.86
+    },
+    {
+      "word": "marca",
+      "start": 20.91,
+      "end": 21.28
+    },
+    {
+      "word": "y",
+      "start": 21.33,
+      "end": 21.5
+    },
+    {
+      "word": "genera.",
+      "start": 21.55,
+      "end": 22
+    },
+    {
+      "word": "Mira,",
+      "start": 22.47,
+      "end": 22.79
+    },
+    {
+      "word": "el",
+      "start": 23.06,
+      "end": 23.29
+    },
+    {
+      "word": "mismo",
+      "start": 23.34,
+      "end": 23.7
+    },
+    {
+      "word": "clip",
+      "start": 23.75,
+      "end": 24.11
+    },
+    {
+      "word": "en",
+      "start": 24.16,
+      "end": 24.38
+    },
+    {
+      "word": "tres",
+      "start": 24.43,
+      "end": 24.75
+    },
+    {
+      "word": "estilos",
+      "start": 24.8,
+      "end": 25.26
+    },
+    {
+      "word": "distintos.",
+      "start": 25.31,
+      "end": 25.9
+    },
+    {
+      "word": "Y",
+      "start": 26.37,
+      "end": 26.55
+    },
+    {
+      "word": "el",
+      "start": 26.6,
+      "end": 26.82
+    },
+    {
+      "word": "truco:",
+      "start": 26.87,
+      "end": 27.24
+    },
+    {
+      "word": "lo",
+      "start": 27.51,
+      "end": 27.77
+    },
+    {
+      "word": "repites",
+      "start": 27.82,
+      "end": 28.28
+    },
+    {
+      "word": "con",
+      "start": 28.33,
+      "end": 28.6
+    },
+    {
+      "word": "cualquier",
+      "start": 28.65,
+      "end": 29.21
+    },
+    {
+      "word": "tema.",
+      "start": 29.26,
+      "end": 29.61
+    },
+    {
+      "word": "Guárdalo",
+      "start": 30.08,
+      "end": 30.59
+    },
+    {
+      "word": "para",
+      "start": 30.64,
+      "end": 30.96
+    },
+    {
+      "word": "tu",
+      "start": 31.01,
+      "end": 31.23
+    },
+    {
+      "word": "próximo",
+      "start": 31.28,
+      "end": 31.78
+    },
+    {
+      "word": "video.",
+      "start": 31.83,
+      "end": 32.2
+    }
+  ],
+  "claves": [
+    "magia",
+    "truco",
+    "referencia",
+    "prompt",
+    "marca",
+    "estilos",
+    "cualquier"
+  ],
+  "pill": "Tu video en dos pasos",
+  "golpes": [
+    3.97,
+    7.07,
+    7.8100000000000005,
+    13.45,
+    26.87,
+    30.08
+  ],
+  "insertos": [
+    {
+      "tipo": "captura",
+      "at": 7.91,
+      "duracion": 9.43,
+      "media": "",
+      "titulo": "Elige una referencia",
+      "paso": 1,
+      "zonas": [
+        {
+          "x": 0.26,
+          "y": 0.2,
+          "w": 0.45,
+          "h": 0.42,
+          "en": 1.4,
+          "nota": ""
+        },
+        {
+          "x": 0.7,
+          "y": 0.2,
+          "w": 0.26,
+          "h": 0.2,
+          "en": 3.9,
+          "nota": "Copia el prompt"
+        }
+      ],
+      "tarjetas": []
+    },
+    {
+      "tipo": "captura",
+      "at": 17.49,
+      "duracion": 4.88,
+      "media": "",
+      "titulo": "Genera con tu marca",
+      "paso": 2,
+      "zonas": [
+        {
+          "x": 0.26,
+          "y": 0.64,
+          "w": 0.7,
+          "h": 0.28,
+          "en": 1.1,
+          "nota": "Ajusta tu marca"
+        }
+      ],
+      "tarjetas": []
+    },
+    {
+      "tipo": "carrusel",
+      "at": 22.47,
+      "duracion": 4.6,
+      "media": "",
+      "titulo": "El mismo clip · 3 estilos",
+      "paso": 0,
+      "zonas": [],
+      "tarjetas": [
+        "Editorial",
+        "Kinético",
+        "Papel"
+      ]
+    }
+  ],
+  "segundosCola": 1.2,
+  "colores": {}
+}

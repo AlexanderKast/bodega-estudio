@@ -1,0 +1,25 @@
+{
+  "beats": [
+    {
+      "texto": "Nadie te dice esto",
+      "segundos": 1.6,
+      "media": "",
+      "punch": true
+    },
+    {
+      "texto": "El corte va al golpe",
+      "segundos": 1.1,
+      "media": "",
+      "punch": true
+    },
+    {
+      "texto": "Y el texto respira",
+      "segundos": 1.5,
+      "media": "",
+      "punch": true
+    }
+  ],
+  "cierre": "Síguelo",
+  "segundosCierre": 2,
+  "colores": {}
+}

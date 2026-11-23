@@ -1,0 +1,5 @@
+Le explicas todo a la IA y, veinte mensajes después, se le olvida lo primero que dijiste.
+No es que sea distraída. Trabaja sobre una mesa, y en esa mesa solo cabe cierta cantidad de hojas.
+Cada mensaje nuevo es otra hoja. Cuando la mesa se llena, las primeras se caen al piso.
+Eso es la ventana de contexto: lo que cabe en la mesa, no lo que tú le contaste.
+Así que no le des más hojas. Dale las tres que importan, y ponlas arriba.

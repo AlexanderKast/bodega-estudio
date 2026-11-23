@@ -1,0 +1,154 @@
+{
+  "pieza": "agente-ia-boceto",
+  "assets": [
+    {
+      "id": "01-pides",
+      "tipo": "boceto",
+      "archivo": "01-pides.png",
+      "descripcion": "An old computer monitor in the upper half, a sheet of paper full of horizontal lines coming out below it, a small square sticky note with an empty checkbox on the left circled with a marker",
+      "prompt": "An old computer monitor in the upper half, a sheet of paper full of horizontal lines coming out below it, a small square sticky note with an empty checkbox on the left circled with a marker. Rough storyboard thumbnail sketch, loose black marker lines on off-white paper, flat mid-gray marker shading, simple shapes, no detail, no color, drawn quickly by a storyboard artist, vertical phone-screen composition. Limited color palette: black, mid gray, off-white. Full-frame storyboard panel showing the whole composition exactly as described, clear staging and silhouettes, generous empty space where overlays will go. No text, no letters, no numbers, no logos anywhere in the image; every surface, screen and label is blank.",
+      "negativo": "text, letters, words, numbers, digits, typography, captions, labels, signage, logo, watermark, signature, handwriting, UI text, subtitles, photo, 3d render, color, glossy, gradient, detailed illustration, frame, border, people, hands",
+      "negativo_activo": true,
+      "semilla": 195900902,
+      "modelo": {
+        "clave": "zimage",
+        "nombre": "Z-Image Turbo (int8)",
+        "unet": "z_image_turbo_int8_convrot.safetensors",
+        "clip": "qwen_3_4b_fp8_mixed.safetensors",
+        "vae": "ae.safetensors"
+      },
+      "pasos": 8,
+      "cfg": 2.0,
+      "tamano": [
+        576,
+        1024
+      ],
+      "referencia_sha256": null,
+      "comfyui": "0.37.0",
+      "fecha": "2026-11-11"
+    },
+    {
+      "id": "02-vuelta",
+      "tipo": "boceto",
+      "archivo": "02-vuelta.png",
+      "descripcion": "Three rounded boxes in a horizontal row connected by two straight arrows from left to right, a curly bracket under the row, large empty space above and below",
+      "prompt": "Three rounded boxes in a horizontal row connected by two straight arrows from left to right, a curly bracket under the row, large empty space above and below. Rough storyboard thumbnail sketch, loose black marker lines on off-white paper, flat mid-gray marker shading, simple shapes, no detail, no color, drawn quickly by a storyboard artist, vertical phone-screen composition. Limited color palette: black, mid gray, off-white. Full-frame storyboard panel showing the whole composition exactly as described, clear staging and silhouettes, generous empty space where overlays will go. No text, no letters, no numbers, no logos anywhere in the image; every surface, screen and label is blank.",
+      "negativo": "text, letters, words, numbers, digits, typography, captions, labels, signage, logo, watermark, signature, handwriting, UI text, subtitles, photo, 3d render, color, glossy, gradient, detailed illustration, frame, border, people, hands",
+      "negativo_activo": true,
+      "semilla": 2043963526,
+      "modelo": {
+        "clave": "zimage",
+        "nombre": "Z-Image Turbo (int8)",
+        "unet": "z_image_turbo_int8_convrot.safetensors",
+        "clip": "qwen_3_4b_fp8_mixed.safetensors",
+        "vae": "ae.safetensors"
+      },
+      "pasos": 8,
+      "cfg": 2.0,
+      "tamano": [
+        576,
+        1024
+      ],
+      "referencia_sha256": null,
+      "comfyui": "0.37.0",
+      "fecha": "2026-11-11"
+    },
+    {
+      "id": "03-herramientas",
+      "tipo": "boceto",
+      "archivo": "03-herramientas.png",
+      "descripcion": "A dark chalkboard with one rounded box in the center and four simple objects around it: a wrench, a calendar, an envelope and a magnifying glass",
+      "prompt": "A dark chalkboard with one rounded box in the center and four simple objects around it: a wrench, a calendar, an envelope and a magnifying glass. Rough storyboard thumbnail sketch, loose black marker lines on off-white paper, flat mid-gray marker shading, simple shapes, no detail, no color, drawn quickly by a storyboard artist, vertical phone-screen composition. Limited color palette: black, mid gray, off-white. Full-frame storyboard panel showing the whole composition exactly as described, clear staging and silhouettes, generous empty space where overlays will go. No text, no letters, no numbers, no logos anywhere in the image; every surface, screen and label is blank.",
+      "negativo": "text, letters, words, numbers, digits, typography, captions, labels, signage, logo, watermark, signature, handwriting, UI text, subtitles, photo, 3d render, color, glossy, gradient, detailed illustration, frame, border, people, hands",
+      "negativo_activo": true,
+      "semilla": 1512679444,
+      "modelo": {
+        "clave": "zimage",
+        "nombre": "Z-Image Turbo (int8)",
+        "unet": "z_image_turbo_int8_convrot.safetensors",
+        "clip": "qwen_3_4b_fp8_mixed.safetensors",
+        "vae": "ae.safetensors"
+      },
+      "pasos": 8,
+      "cfg": 2.0,
+      "tamano": [
+        576,
+        1024
+      ],
+      "referencia_sha256": null,
+      "comfyui": "0.37.0",
+      "fecha": "2026-11-11"
+    },
+    {
+      "id": "04-rueda",
+      "tipo": "boceto",
+      "archivo": "04-rueda.png",
+      "descripcion": "A dark chalkboard with a big circular arrow loop with three small round stops on it, a rounded box in the center of the loop, a small square sticky note riding on the loop",
+      "prompt": "A dark chalkboard with a big circular arrow loop with three small round stops on it, a rounded box in the center of the loop, a small square sticky note riding on the loop. Rough storyboard thumbnail sketch, loose black marker lines on off-white paper, flat mid-gray marker shading, simple shapes, no detail, no color, drawn quickly by a storyboard artist, vertical phone-screen composition. Limited color palette: black, mid gray, off-white. Full-frame storyboard panel showing the whole composition exactly as described, clear staging and silhouettes, generous empty space where overlays will go. No text, no letters, no numbers, no logos anywhere in the image; every surface, screen and label is blank.",
+      "negativo": "text, letters, words, numbers, digits, typography, captions, labels, signage, logo, watermark, signature, handwriting, UI text, subtitles, photo, 3d render, color, glossy, gradient, detailed illustration, frame, border, people, hands",
+      "negativo_activo": true,
+      "semilla": 357286104,
+      "modelo": {
+        "clave": "zimage",
+        "nombre": "Z-Image Turbo (int8)",
+        "unet": "z_image_turbo_int8_convrot.safetensors",
+        "clip": "qwen_3_4b_fp8_mixed.safetensors",
+        "vae": "ae.safetensors"
+      },
+      "pasos": 8,
+      "cfg": 2.0,
+      "tamano": [
+        576,
+        1024
+      ],
+      "referencia_sha256": null,
+      "comfyui": "0.37.0",
+      "fecha": "2026-11-11"
+    },
+    {
+      "id": "05-diferencia",
+      "tipo": "boceto",
+      "archivo": "05-diferencia.png",
+      "descripcion": "A tall composition split in two halves: the upper half light paper with three boxes in a straight row, the lower half a dark chalkboard with a big circular arrow loop and a small sticky note with a check mark",
+      "prompt": "A tall composition split in two halves: the upper half light paper with three boxes in a straight row, the lower half a dark chalkboard with a big circular arrow loop and a small sticky note with a check mark. Rough storyboard thumbnail sketch, loose black marker lines on off-white paper, flat mid-gray marker shading, simple shapes, no detail, no color, drawn quickly by a storyboard artist, vertical phone-screen composition. Limited color palette: black, mid gray, off-white. Full-frame storyboard panel showing the whole composition exactly as described, clear staging and silhouettes, generous empty space where overlays will go. No text, no letters, no numbers, no logos anywhere in the image; every surface, screen and label is blank.",
+      "negativo": "text, letters, words, numbers, digits, typography, captions, labels, signage, logo, watermark, signature, handwriting, UI text, subtitles, photo, 3d render, color, glossy, gradient, detailed illustration, frame, border, people, hands",
+      "negativo_activo": true,
+      "semilla": 2438577599,
+      "modelo": {
+        "clave": "zimage",
+        "nombre": "Z-Image Turbo (int8)",
+        "unet": "z_image_turbo_int8_convrot.safetensors",
+        "clip": "qwen_3_4b_fp8_mixed.safetensors",
+        "vae": "ae.safetensors"
+      },
+      "pasos": 8,
+      "cfg": 2.0,
+      "tamano": [
+        576,
+        1024
+      ],
+      "referencia_sha256": null,
+      "comfyui": "0.37.0",
+      "fecha": "2026-11-11"
+    }
+  ],
+  "estilo": {
+    "prompt_estilo": "Rough storyboard thumbnail sketch, loose black marker lines on off-white paper, flat mid-gray marker shading, simple shapes, no detail, no color, drawn quickly by a storyboard artist, vertical phone-screen composition",
+    "paleta": [
+      {
+        "nombre": "black",
+        "hex": "#14110D"
+      },
+      {
+        "nombre": "mid gray",
+        "hex": "#8C8A84"
+      },
+      {
+        "nombre": "off-white",
+        "hex": "#F4F1EA"
+      }
+    ],
+    "negativo": "photo, 3d render, color, glossy, gradient, detailed illustration, frame, border, people, hands",
+    "fondo_recorte": null
+  }
+}

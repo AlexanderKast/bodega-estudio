@@ -1,0 +1,13 @@
+{
+  "name": "bodega-estudio",
+  "version": "0.1.0",
+  "description": "Bodega Estudio: el estudio de video de Bodega de Belleza en Claude Code. Edición de crudos y podcast, motion graphics y plantillas con la marca de Bodega, entrenado con su material. Basado en Master Motion. Corre en el computador del equipo o en el VPS de Bodega.",
+  "author": {
+    "name": "IA Master Tech",
+    "url": "https://github.com/AlexanderKast"
+  },
+  "homepage": "https://github.com/AlexanderKast/bodega-estudio",
+  "repository": "https://github.com/AlexanderKast/bodega-estudio",
+  "license": "MIT",
+  "keywords": ["bodega-de-belleza", "video", "remotion", "motion-graphics", "podcast", "whisper"]
+}

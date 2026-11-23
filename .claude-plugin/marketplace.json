@@ -1,0 +1,18 @@
+{
+  "name": "bodega-estudio",
+  "owner": {
+    "name": "IA Master Tech",
+    "url": "https://github.com/AlexanderKast"
+  },
+  "metadata": {
+    "description": "Estudio de video de Bodega de Belleza para Claude Code."
+  },
+  "plugins": [
+    {
+      "name": "bodega-estudio",
+      "source": "./",
+      "description": "Estudio de video de Bodega de Belleza: /bodega-doctor, /master-motion, /mm-plantilla, /mm-catalogo, /mm-render y /replicar. Próximos: /editar-crudo, /podcast y /video-producto.",
+      "version": "0.1.0"
+    }
+  ]
+}

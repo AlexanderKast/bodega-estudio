@@ -1,0 +1,60 @@
+{
+  "variante": "crema-rojo",
+  "beats": [
+    {
+      "tipo": "frase",
+      "texto": "Tu mensaje / *compite* / con _todo_",
+      "segundos": 2.4,
+      "recorte": "",
+      "imagen": "",
+      "golpe": false
+    },
+    {
+      "tipo": "impacto",
+      "texto": "*tres / segundos*",
+      "segundos": 2.2,
+      "recorte": "",
+      "imagen": "",
+      "golpe": true
+    },
+    {
+      "tipo": "frase",
+      "texto": "para que alguien / *decida* / si se _queda_",
+      "segundos": 2.6,
+      "recorte": "",
+      "imagen": "",
+      "golpe": false
+    },
+    {
+      "tipo": "objeto",
+      "texto": "Lo que no se ve / *no se vende*",
+      "segundos": 2.8,
+      "recorte": "",
+      "imagen": "",
+      "golpe": false
+    },
+    {
+      "tipo": "oscuro",
+      "texto": "y casi nadie / *lo dice*",
+      "segundos": 2.4,
+      "recorte": "",
+      "imagen": "",
+      "golpe": true
+    },
+    {
+      "tipo": "impacto",
+      "texto": "*claridad*",
+      "segundos": 2,
+      "recorte": "",
+      "imagen": "",
+      "golpe": true
+    }
+  ],
+  "cierre": {
+    "texto": "Di una cosa. / Dila _bien_.",
+    "firma": "@tumarca",
+    "recorte": "",
+    "segundos": 2.8
+  },
+  "colores": {}
+}

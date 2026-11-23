@@ -1,0 +1,129 @@
+{
+  "svg": "lupa-recorte.svg",
+  "origen": "lupa-recorte.png",
+  "tamano": [
+    732,
+    797
+  ],
+  "modo": "apilado",
+  "tolerancia": 1.4,
+  "nodos": 303,
+  "bytes": 10313,
+  "capas": [
+    {
+      "id": "capa-01-373e24",
+      "color": "#373E24",
+      "nombre": "",
+      "caja": [
+        7,
+        8,
+        474,
+        493
+      ],
+      "pivote": [
+        245.6,
+        243.2
+      ],
+      "area": 61386,
+      "paths": [
+        "capa-01-373e24-p01"
+      ]
+    },
+    {
+      "id": "capa-02-b9d887",
+      "color": "#B9D887",
+      "nombre": "",
+      "caja": [
+        48,
+        48,
+        418,
+        413
+      ],
+      "pivote": [
+        202.0,
+        198.7
+      ],
+      "area": 61321,
+      "paths": [
+        "capa-02-b9d887-p01"
+      ]
+    },
+    {
+      "id": "capa-03-b5d1b1",
+      "color": "#B5D1B1",
+      "nombre": "",
+      "caja": [
+        170,
+        169,
+        431,
+        426
+      ],
+      "pivote": [
+        314.9,
+        311.7
+      ],
+      "area": 37853,
+      "paths": [
+        "capa-03-b5d1b1-p01"
+      ]
+    },
+    {
+      "id": "capa-04-cd733f",
+      "color": "#CD733F",
+      "nombre": "",
+      "caja": [
+        413,
+        442,
+        713,
+        770
+      ],
+      "pivote": [
+        568.7,
+        612.0
+      ],
+      "area": 37217,
+      "paths": [
+        "capa-04-cd733f-p01"
+      ]
+    },
+    {
+      "id": "capa-05-f9f0d0",
+      "color": "#F9F0D0",
+      "nombre": "",
+      "caja": [
+        72,
+        77,
+        245,
+        307
+      ],
+      "pivote": [
+        144.8,
+        158.6
+      ],
+      "area": 13917,
+      "paths": [
+        "capa-05-f9f0d0-p01",
+        "capa-05-f9f0d0-p02"
+      ]
+    },
+    {
+      "id": "capa-06-ad5a21",
+      "color": "#AD5A21",
+      "nombre": "",
+      "caja": [
+        412,
+        496,
+        724,
+        789
+      ],
+      "pivote": [
+        585.1,
+        688.9
+      ],
+      "area": 6605,
+      "paths": [
+        "capa-06-ad5a21-p01"
+      ]
+    }
+  ]
+}

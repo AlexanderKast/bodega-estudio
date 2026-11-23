@@ -1,0 +1,61 @@
+{
+  "variante": "tarjetas-perspectiva",
+  "antes": "",
+  "etiquetaAntes": "Antes",
+  "etiquetaDespues": "Después",
+  "estados": [
+    {
+      "estilo": "video",
+      "texto": "un buen corte se siente",
+      "clave": "corte",
+      "media": "",
+      "segundos": 1.8,
+      "entrada": "corte"
+    },
+    {
+      "estilo": "reticula",
+      "texto": "el resalte va solo en la idea",
+      "clave": "idea",
+      "media": "",
+      "segundos": 1.8,
+      "entrada": "cortina"
+    },
+    {
+      "estilo": "video",
+      "texto": "cada palabra entra cuando se dice",
+      "clave": "dice",
+      "media": "",
+      "segundos": 1.9,
+      "entrada": "corte"
+    },
+    {
+      "estilo": "crema",
+      "texto": "menos efectos, más intención",
+      "clave": "intención",
+      "media": "",
+      "segundos": 2,
+      "entrada": "rasgado"
+    },
+    {
+      "estilo": "reticula",
+      "texto": "y la gente se queda",
+      "clave": "queda",
+      "media": "",
+      "segundos": 1.6,
+      "entrada": "corte"
+    },
+    {
+      "estilo": "crema",
+      "texto": "eso es editar con criterio",
+      "clave": "criterio",
+      "media": "",
+      "segundos": 2.6,
+      "entrada": "corte"
+    }
+  ],
+  "timeline": {
+    "etiqueta": "Línea de tiempo",
+    "media": ""
+  },
+  "colores": {}
+}

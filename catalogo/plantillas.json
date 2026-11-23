@@ -1,0 +1,1448 @@
+[
+  {
+    "id": "Plantilla-Molde",
+    "resumen": "Texto con gancho letra a letra, cortes secos y punch-in sobre tu material, con rótulo abajo a la izquierda.",
+    "cuando": "Un reel corto de frases sobre video o fotos, o como punto de partida para una plantilla nueva.",
+    "fuente": "ninguna (molde base)",
+    "formatos": [
+      "vertical",
+      "retrato",
+      "cuadrado"
+    ],
+    "composiciones": [
+      "Plantilla-Molde-vertical",
+      "Plantilla-Molde-retrato",
+      "Plantilla-Molde-cuadrado"
+    ],
+    "segundos": 6.2,
+    "campos": [
+      {
+        "nombre": "beats",
+        "tipo": "lista de objetos",
+        "obligatorio": true,
+        "campos": [
+          {
+            "nombre": "texto",
+            "tipo": "texto",
+            "obligatorio": true,
+            "descripcion": "2–5 palabras; la primera línea del beat"
+          },
+          {
+            "nombre": "segundos",
+            "tipo": "número",
+            "obligatorio": true
+          },
+          {
+            "nombre": "media",
+            "tipo": "texto",
+            "obligatorio": false,
+            "defecto": "\"\"",
+            "descripcion": "ruta en public/ o URL; vacío = panel liso"
+          },
+          {
+            "nombre": "punch",
+            "tipo": "sí/no",
+            "obligatorio": false,
+            "defecto": "true",
+            "descripcion": "punch-in rápido (3 f, snap) a mitad del plano"
+          }
+        ]
+      },
+      {
+        "nombre": "cierre",
+        "tipo": "texto",
+        "obligatorio": true,
+        "descripcion": "texto del último plano"
+      },
+      {
+        "nombre": "segundosCierre",
+        "tipo": "número",
+        "obligatorio": false,
+        "defecto": "2"
+      },
+      {
+        "nombre": "colores",
+        "tipo": "objeto",
+        "obligatorio": false,
+        "defecto": "{}",
+        "campos": [
+          {
+            "nombre": "fondo",
+            "tipo": "color (hex)",
+            "obligatorio": false
+          },
+          {
+            "nombre": "texto",
+            "tipo": "color (hex)",
+            "obligatorio": false
+          },
+          {
+            "nombre": "acento",
+            "tipo": "color (hex)",
+            "obligatorio": false
+          }
+        ]
+      }
+    ],
+    "ejemplo": "catalogo/ejemplos/Plantilla-Molde.json",
+    "miniatura": "catalogo/miniaturas/Plantilla-Molde.jpg",
+    "video": "catalogo/videos/Plantilla-Molde.mp4",
+    "invocar": "/mm-plantilla Plantilla-Molde"
+  },
+  {
+    "id": "Plantilla-EditorialRecorte",
+    "resumen": "Un objeto recortado por idea sobre cartulina, con titular grotesco y una palabra de acento en serif itálica.",
+    "cuando": "Explicar una idea en 3 a 6 pasos con objetos o productos recortados: consejos, listas y cifras con look editorial.",
+    "fuente": "tiktok-7581551601349954824, tiktok-7622319703679110421, tiktok-7671829994292776200, tiktok-7545813836503289144",
+    "formatos": [
+      "vertical",
+      "retrato"
+    ],
+    "composiciones": [
+      "Plantilla-EditorialRecorte-vertical",
+      "Plantilla-EditorialRecorte-retrato"
+    ],
+    "segundos": 16.6,
+    "campos": [
+      {
+        "nombre": "variante",
+        "tipo": "\"gris-script\" | \"acento-azul\" | \"noche-amarilla\" | \"crema-marco\"",
+        "obligatorio": false,
+        "defecto": "\"gris-script\"",
+        "descripcion": "tratamiento medido de cada video de la familia: paleta, ritmo y transición"
+      },
+      {
+        "nombre": "beats",
+        "tipo": "lista de objetos",
+        "obligatorio": true,
+        "campos": [
+          {
+            "nombre": "tipo",
+            "tipo": "\"objeto\" | \"tarjeta\" | \"lista\" | \"cifra\"",
+            "obligatorio": false,
+            "defecto": "\"objeto\"",
+            "descripcion": "objeto: recorte + titular · tarjeta: color pleno, texto por palabra · lista: viñetas · cifra: contador"
+          },
+          {
+            "nombre": "apoyo",
+            "tipo": "texto",
+            "obligatorio": false,
+            "defecto": "\"\"",
+            "descripcion": "frase chica de apoyo, 3–6 palabras (entra por palabra con blur)"
+          },
+          {
+            "nombre": "titular",
+            "tipo": "texto",
+            "obligatorio": true,
+            "descripcion": "titular; *palabra* = acento en serif itálica; ' / ' parte la línea"
+          },
+          {
+            "nombre": "segundos",
+            "tipo": "número",
+            "obligatorio": true
+          },
+          {
+            "nombre": "media",
+            "tipo": "texto",
+            "obligatorio": false,
+            "defecto": "\"\"",
+            "descripcion": "recorte PNG con alfa, imagen o video; vacío = objeto de muestra"
+          },
+          {
+            "nombre": "items",
+            "tipo": "lista de texto",
+            "obligatorio": false,
+            "defecto": "[]",
+            "descripcion": "solo tipo lista: 2–4 items"
+          },
+          {
+            "nombre": "cifra",
+            "tipo": "número",
+            "obligatorio": false,
+            "defecto": "0",
+            "descripcion": "solo tipo cifra"
+          },
+          {
+            "nombre": "sufijo",
+            "tipo": "texto",
+            "obligatorio": false,
+            "defecto": "\"\"",
+            "descripcion": "solo tipo cifra: %, x, ' de 10'…"
+          }
+        ]
+      },
+      {
+        "nombre": "cierre",
+        "tipo": "objeto",
+        "obligatorio": true,
+        "campos": [
+          {
+            "nombre": "texto",
+            "tipo": "texto",
+            "obligatorio": true,
+            "descripcion": "frase final; *palabra* = acento"
+          },
+          {
+            "nombre": "firma",
+            "tipo": "texto",
+            "obligatorio": false,
+            "defecto": "\"\"",
+            "descripcion": "@usuario o marca, chica"
+          },
+          {
+            "nombre": "logo",
+            "tipo": "texto",
+            "obligatorio": false,
+            "defecto": "\"\"",
+            "descripcion": "ruta en public/ o URL; vacío = panel liso"
+          },
+          {
+            "nombre": "segundos",
+            "tipo": "número",
+            "obligatorio": false,
+            "defecto": "2.2"
+          }
+        ]
+      },
+      {
+        "nombre": "colores",
+        "tipo": "objeto",
+        "obligatorio": false,
+        "defecto": "{}",
+        "descripcion": "vacío = paleta de la variante",
+        "campos": [
+          {
+            "nombre": "fondo",
+            "tipo": "color (hex)",
+            "obligatorio": false
+          },
+          {
+            "nombre": "texto",
+            "tipo": "color (hex)",
+            "obligatorio": false
+          },
+          {
+            "nombre": "acento",
+            "tipo": "color (hex)",
+            "obligatorio": false
+          }
+        ]
+      }
+    ],
+    "ejemplo": "catalogo/ejemplos/Plantilla-EditorialRecorte.json",
+    "miniatura": "catalogo/miniaturas/Plantilla-EditorialRecorte.jpg",
+    "video": "catalogo/videos/Plantilla-EditorialRecorte.mp4",
+    "invocar": "/mm-plantilla Plantilla-EditorialRecorte"
+  },
+  {
+    "id": "Plantilla-CollageImpacto",
+    "resumen": "Tipografía condensada gigante sobre papel, con recortes que tocan las letras y caídas a negro al golpe.",
+    "cuando": "Un mensaje fuerte y corto: manifiesto, apertura de campaña o gancho que tiene que frenar el scroll.",
+    "fuente": "tiktok-7600179656922385685, tiktok-7684823088906636562, C-yZlQXN3rQ",
+    "formatos": [
+      "vertical",
+      "retrato"
+    ],
+    "composiciones": [
+      "Plantilla-CollageImpacto-vertical",
+      "Plantilla-CollageImpacto-retrato"
+    ],
+    "segundos": 17.2,
+    "campos": [
+      {
+        "nombre": "variante",
+        "tipo": "\"crema-rojo\" | \"papel-tinta\" | \"gris-objeto\"",
+        "obligatorio": false,
+        "defecto": "\"crema-rojo\"",
+        "descripcion": "tratamiento medido de cada video de la familia: paleta, ritmo y transición"
+      },
+      {
+        "nombre": "beats",
+        "tipo": "lista de objetos",
+        "obligatorio": true,
+        "campos": [
+          {
+            "nombre": "tipo",
+            "tipo": "\"impacto\" | \"frase\" | \"objeto\" | \"oscuro\"",
+            "obligatorio": false,
+            "defecto": "\"frase\"",
+            "descripcion": "impacto: palabra que llena el ancho · frase: 1–3 niveles · objeto: recorte protagonista · oscuro: foto de fondo"
+          },
+          {
+            "nombre": "texto",
+            "tipo": "texto",
+            "obligatorio": true,
+            "descripcion": "' / ' parte la línea; *idea* = condensada grande; _énfasis_ = serif itálica; el resto, conector chico"
+          },
+          {
+            "nombre": "segundos",
+            "tipo": "número",
+            "obligatorio": true
+          },
+          {
+            "nombre": "recorte",
+            "tipo": "texto",
+            "obligatorio": false,
+            "defecto": "\"\"",
+            "descripcion": "PNG con alfa (objeto que toca las letras); vacío = sin objeto o pieza de muestra"
+          },
+          {
+            "nombre": "imagen",
+            "tipo": "texto",
+            "obligatorio": false,
+            "defecto": "\"\"",
+            "descripcion": "foto o video: fondo de la escena oscura o tarjeta que se parte (gris-objeto)"
+          },
+          {
+            "nombre": "golpe",
+            "tipo": "sí/no",
+            "obligatorio": false,
+            "defecto": "false",
+            "descripcion": "caída a negro (o flash de acento) de 4 f al entrar, sobre el golpe"
+          }
+        ]
+      },
+      {
+        "nombre": "cierre",
+        "tipo": "objeto",
+        "obligatorio": true,
+        "campos": [
+          {
+            "nombre": "texto",
+            "tipo": "texto",
+            "obligatorio": true,
+            "descripcion": "mismo formato que los beats"
+          },
+          {
+            "nombre": "firma",
+            "tipo": "texto",
+            "obligatorio": false,
+            "defecto": "\"\""
+          },
+          {
+            "nombre": "recorte",
+            "tipo": "texto",
+            "obligatorio": false,
+            "defecto": "\"\"",
+            "descripcion": "ruta en public/ o URL; vacío = panel liso"
+          },
+          {
+            "nombre": "segundos",
+            "tipo": "número",
+            "obligatorio": false,
+            "defecto": "2.8"
+          }
+        ]
+      },
+      {
+        "nombre": "colores",
+        "tipo": "objeto",
+        "obligatorio": false,
+        "defecto": "{}",
+        "descripcion": "fondo = papel, texto = tinta, acento = color de la idea; vacío = paleta de la variante",
+        "campos": [
+          {
+            "nombre": "fondo",
+            "tipo": "color (hex)",
+            "obligatorio": false
+          },
+          {
+            "nombre": "texto",
+            "tipo": "color (hex)",
+            "obligatorio": false
+          },
+          {
+            "nombre": "acento",
+            "tipo": "color (hex)",
+            "obligatorio": false
+          }
+        ]
+      }
+    ],
+    "ejemplo": "catalogo/ejemplos/Plantilla-CollageImpacto.json",
+    "miniatura": "catalogo/miniaturas/Plantilla-CollageImpacto.jpg",
+    "video": "catalogo/videos/Plantilla-CollageImpacto.mp4",
+    "invocar": "/mm-plantilla Plantilla-CollageImpacto"
+  },
+  {
+    "id": "Plantilla-ExplicadorObjetos",
+    "resumen": "Texto cinético sans y serif itálica alternando fondo claro y oscuro, con objetos 3D flotando y pills.",
+    "cuando": "Explicar un concepto abstracto con objetos como metáfora, sin persona en cámara.",
+    "fuente": "tiktok-7660733665353272583, tiktok-7560567761760505110",
+    "formatos": [
+      "vertical",
+      "retrato"
+    ],
+    "composiciones": [
+      "Plantilla-ExplicadorObjetos-vertical",
+      "Plantilla-ExplicadorObjetos-retrato"
+    ],
+    "segundos": 18.2,
+    "campos": [
+      {
+        "nombre": "variante",
+        "tipo": "\"lavanda-contraste\" | \"calido-ventana\"",
+        "obligatorio": false,
+        "defecto": "\"lavanda-contraste\"",
+        "descripcion": "tratamiento medido de cada video de la familia: paleta, ritmo y transición"
+      },
+      {
+        "nombre": "beats",
+        "tipo": "lista de objetos",
+        "obligatorio": true,
+        "campos": [
+          {
+            "nombre": "tipo",
+            "tipo": "\"objeto\" | \"lista\" | \"cifra\"",
+            "obligatorio": false,
+            "defecto": "\"objeto\"",
+            "descripcion": "objeto: recorte 3D + texto · lista: pills numeradas · cifra: contador + pill"
+          },
+          {
+            "nombre": "fondo",
+            "tipo": "\"claro\" | \"oscuro\"",
+            "obligatorio": false,
+            "defecto": "\"claro\"",
+            "descripcion": "alternar claro/oscuro marca el giro del argumento"
+          },
+          {
+            "nombre": "texto",
+            "tipo": "texto",
+            "obligatorio": true,
+            "descripcion": "1–3 niveles separados por ' / '; *palabra* = serif itálica de acento"
+          },
+          {
+            "nombre": "nota",
+            "tipo": "texto",
+            "obligatorio": false,
+            "defecto": "\"\"",
+            "descripcion": "línea chica bajo el objeto; *palabra* lleva el resaltador"
+          },
+          {
+            "nombre": "segundos",
+            "tipo": "número",
+            "obligatorio": true
+          },
+          {
+            "nombre": "media",
+            "tipo": "texto",
+            "obligatorio": false,
+            "defecto": "\"\"",
+            "descripcion": "objeto 3D (PNG con alfa), imagen o video; vacío = objeto de muestra"
+          },
+          {
+            "nombre": "items",
+            "tipo": "lista de texto",
+            "obligatorio": false,
+            "defecto": "[]",
+            "descripcion": "solo lista: 2–5 items"
+          },
+          {
+            "nombre": "cifra",
+            "tipo": "número",
+            "obligatorio": false,
+            "defecto": "0",
+            "descripcion": "solo cifra"
+          },
+          {
+            "nombre": "sufijo",
+            "tipo": "texto",
+            "obligatorio": false,
+            "defecto": "\"\"",
+            "descripcion": "solo cifra: palabra en serif itálica bajo el número"
+          },
+          {
+            "nombre": "pill",
+            "tipo": "texto",
+            "obligatorio": false,
+            "defecto": "\"\"",
+            "descripcion": "solo cifra: número + etiqueta, p. ej. '02 meses'"
+          }
+        ]
+      },
+      {
+        "nombre": "cierre",
+        "tipo": "objeto",
+        "obligatorio": true,
+        "campos": [
+          {
+            "nombre": "texto",
+            "tipo": "texto",
+            "obligatorio": true
+          },
+          {
+            "nombre": "firma",
+            "tipo": "texto",
+            "obligatorio": false,
+            "defecto": "\"\""
+          },
+          {
+            "nombre": "media",
+            "tipo": "texto",
+            "obligatorio": false,
+            "defecto": "\"\"",
+            "descripcion": "ruta en public/ o URL; vacío = panel liso"
+          },
+          {
+            "nombre": "segundos",
+            "tipo": "número",
+            "obligatorio": false,
+            "defecto": "2.8"
+          }
+        ]
+      },
+      {
+        "nombre": "colores",
+        "tipo": "objeto",
+        "obligatorio": false,
+        "defecto": "{}",
+        "descripcion": "fondo = escena clara, texto = tinta, acento = resaltador/acento; vacío = paleta de la variante",
+        "campos": [
+          {
+            "nombre": "fondo",
+            "tipo": "color (hex)",
+            "obligatorio": false
+          },
+          {
+            "nombre": "texto",
+            "tipo": "color (hex)",
+            "obligatorio": false
+          },
+          {
+            "nombre": "acento",
+            "tipo": "color (hex)",
+            "obligatorio": false
+          }
+        ]
+      }
+    ],
+    "ejemplo": "catalogo/ejemplos/Plantilla-ExplicadorObjetos.json",
+    "miniatura": "catalogo/miniaturas/Plantilla-ExplicadorObjetos.jpg",
+    "video": "catalogo/videos/Plantilla-ExplicadorObjetos.mp4",
+    "invocar": "/mm-plantilla Plantilla-ExplicadorObjetos"
+  },
+  {
+    "id": "Plantilla-SaasUiCristal",
+    "resumen": "Una toma continua donde cada idea sale de la anterior: tarjetas de cristal, contador, bento, morph y captura con cursor.",
+    "cuando": "Presentar un software o una función: anuncio de producto, lanzamiento o demo de interfaz.",
+    "fuente": "saas-ui-cristal: lpFv-bB-RuM, tiktok-7521798862521060630, tiktok-7613879612723957012, tiktok-7698861538307788033, DryieyoUmLc",
+    "formatos": [
+      "vertical",
+      "retrato",
+      "cuadrado"
+    ],
+    "composiciones": [
+      "Plantilla-SaasUiCristal-vertical",
+      "Plantilla-SaasUiCristal-retrato",
+      "Plantilla-SaasUiCristal-cuadrado"
+    ],
+    "segundos": 21.1,
+    "campos": [
+      {
+        "nombre": "variante",
+        "tipo": "\"noche-cristal\" | \"bento-inclinado\" | \"morph-claro\" | \"pasos-carbon\" | \"hoja-cursor\"",
+        "obligatorio": false,
+        "defecto": "\"noche-cristal\"",
+        "descripcion": "una por video de origen: paleta, tratamiento de tarjetas y tipo de transición"
+      },
+      {
+        "nombre": "escenas",
+        "tipo": "lista de objetos",
+        "obligatorio": true,
+        "campos": [
+          {
+            "nombre": "tipo",
+            "tipo": "\"gancho\" | \"tarjetas\" | \"contador\" | \"bento\" | \"morph\" | \"captura\" | \"lista\"",
+            "obligatorio": true
+          },
+          {
+            "nombre": "titulo",
+            "tipo": "texto",
+            "obligatorio": true,
+            "descripcion": "rótulo de la escena (en contador: etiqueta de la cifra)"
+          },
+          {
+            "nombre": "items",
+            "tipo": "lista de texto",
+            "obligatorio": false,
+            "defecto": "[]",
+            "descripcion": "gancho: palabras · tarjetas/bento: «etiqueta|valor» · morph: pasos · captura: textos del cursor · lista: «acción|hora» · contador: [palabra clave]"
+          },
+          {
+            "nombre": "desde",
+            "tipo": "número",
+            "obligatorio": false,
+            "defecto": "0",
+            "descripcion": "contador: valor inicial"
+          },
+          {
+            "nombre": "hasta",
+            "tipo": "número",
+            "obligatorio": false,
+            "defecto": "0",
+            "descripcion": "contador: valor final"
+          },
+          {
+            "nombre": "media",
+            "tipo": "texto",
+            "obligatorio": false,
+            "defecto": "\"\"",
+            "descripcion": "captura: pantalla o video del producto; vacío = interfaz de muestra"
+          },
+          {
+            "nombre": "segundos",
+            "tipo": "número",
+            "obligatorio": true
+          }
+        ]
+      },
+      {
+        "nombre": "marca",
+        "tipo": "texto",
+        "obligatorio": true,
+        "descripcion": "wordmark del cierre"
+      },
+      {
+        "nombre": "frase",
+        "tipo": "texto",
+        "obligatorio": true,
+        "descripcion": "frase bajo el wordmark"
+      },
+      {
+        "nombre": "cta",
+        "tipo": "texto",
+        "obligatorio": false,
+        "defecto": "\"\"",
+        "descripcion": "CTA que el cursor señala en el cierre; vacío = sin CTA"
+      },
+      {
+        "nombre": "segundosCierre",
+        "tipo": "número",
+        "obligatorio": false,
+        "defecto": "3"
+      },
+      {
+        "nombre": "colores",
+        "tipo": "objeto",
+        "obligatorio": false,
+        "defecto": "{}",
+        "campos": [
+          {
+            "nombre": "fondo",
+            "tipo": "color (hex)",
+            "obligatorio": false
+          },
+          {
+            "nombre": "texto",
+            "tipo": "color (hex)",
+            "obligatorio": false
+          },
+          {
+            "nombre": "acento",
+            "tipo": "color (hex)",
+            "obligatorio": false
+          }
+        ]
+      }
+    ],
+    "ejemplo": "catalogo/ejemplos/Plantilla-SaasUiCristal.json",
+    "miniatura": "catalogo/miniaturas/Plantilla-SaasUiCristal.jpg",
+    "video": "catalogo/videos/Plantilla-SaasUiCristal.mp4",
+    "invocar": "/mm-plantilla Plantilla-SaasUiCristal"
+  },
+  {
+    "id": "Plantilla-AntesDespues",
+    "resumen": "El antes chico y el después grande en perspectiva, recorriendo varios resultados con cortina, rasgado o barrido.",
+    "cuando": "Mostrar transformaciones: rediseños, ediciones de foto, estilos generados con IA o resultados de un servicio.",
+    "fuente": "antes-despues: MoVlt-ptxIk, tiktok-7519674033076571397",
+    "formatos": [
+      "vertical",
+      "retrato"
+    ],
+    "composiciones": [
+      "Plantilla-AntesDespues-vertical",
+      "Plantilla-AntesDespues-retrato"
+    ],
+    "segundos": 11.7,
+    "campos": [
+      {
+        "nombre": "variante",
+        "tipo": "\"tarjetas-perspectiva\" | \"escenario-timeline\"",
+        "obligatorio": false,
+        "defecto": "\"tarjetas-perspectiva\"",
+        "descripcion": "layout, paleta y ritmo de cada video de origen"
+      },
+      {
+        "nombre": "antes",
+        "tipo": "texto",
+        "obligatorio": false,
+        "defecto": "\"\"",
+        "descripcion": "clip crudo del cliente (panel chico)"
+      },
+      {
+        "nombre": "etiquetaAntes",
+        "tipo": "texto",
+        "obligatorio": false,
+        "defecto": "\"Antes\""
+      },
+      {
+        "nombre": "etiquetaDespues",
+        "tipo": "texto",
+        "obligatorio": false,
+        "defecto": "\"Después\""
+      },
+      {
+        "nombre": "estados",
+        "tipo": "lista de objetos",
+        "obligatorio": true,
+        "campos": [
+          {
+            "nombre": "estilo",
+            "tipo": "\"video\" | \"papel\" | \"color\" | \"reticula\" | \"periodico\" | \"crema\" | \"dato\"",
+            "obligatorio": true,
+            "descripcion": "tratamiento del panel grande; usar 2–3 por pieza (AI-14)"
+          },
+          {
+            "nombre": "texto",
+            "tipo": "texto",
+            "obligatorio": true,
+            "descripcion": "frase; en escenario-timeline, varias frases separadas por « / »"
+          },
+          {
+            "nombre": "clave",
+            "tipo": "texto",
+            "obligatorio": false,
+            "defecto": "\"\"",
+            "descripcion": "palabra resaltada (acento); vacío = ninguna"
+          },
+          {
+            "nombre": "media",
+            "tipo": "texto",
+            "obligatorio": false,
+            "defecto": "\"\"",
+            "descripcion": "clip o imagen de este estado; vacío = el clip de «antes»"
+          },
+          {
+            "nombre": "segundos",
+            "tipo": "número",
+            "obligatorio": true
+          },
+          {
+            "nombre": "entrada",
+            "tipo": "\"corte\" | \"cortina\" | \"rasgado\" | \"barrido\"",
+            "obligatorio": false,
+            "defecto": "\"corte\""
+          }
+        ]
+      },
+      {
+        "nombre": "timeline",
+        "tipo": "objeto",
+        "obligatorio": false,
+        "defecto": "{\"etiqueta\":\"Línea de tiempo\",\"media\":\"\"}",
+        "descripcion": "solo escenario-timeline: captura propia del timeline; vacío = pistas de muestra",
+        "campos": [
+          {
+            "nombre": "etiqueta",
+            "tipo": "texto",
+            "obligatorio": false,
+            "defecto": "\"Línea de tiempo\""
+          },
+          {
+            "nombre": "media",
+            "tipo": "texto",
+            "obligatorio": false,
+            "defecto": "\"\"",
+            "descripcion": "ruta en public/ o URL; vacío = panel liso"
+          }
+        ]
+      },
+      {
+        "nombre": "colores",
+        "tipo": "objeto",
+        "obligatorio": false,
+        "defecto": "{}",
+        "campos": [
+          {
+            "nombre": "fondo",
+            "tipo": "color (hex)",
+            "obligatorio": false
+          },
+          {
+            "nombre": "texto",
+            "tipo": "color (hex)",
+            "obligatorio": false
+          },
+          {
+            "nombre": "acento",
+            "tipo": "color (hex)",
+            "obligatorio": false
+          }
+        ]
+      }
+    ],
+    "ejemplo": "catalogo/ejemplos/Plantilla-AntesDespues.json",
+    "miniatura": "catalogo/miniaturas/Plantilla-AntesDespues.jpg",
+    "video": "catalogo/videos/Plantilla-AntesDespues.mp4",
+    "invocar": "/mm-plantilla Plantilla-AntesDespues"
+  },
+  {
+    "id": "Plantilla-ShowcaseDispositivo",
+    "resumen": "Pantallas que se suceden al golpe dentro de un teléfono o una laptop, con render 3D opcional.",
+    "cuando": "Mostrar una app o una web dentro del dispositivo: recorrido de pantallas o anuncio de app.",
+    "fuente": "showcase-dispositivo: DiH9Pek312c, tiktok-7693603336481803542",
+    "formatos": [
+      "vertical",
+      "retrato",
+      "cuadrado"
+    ],
+    "composiciones": [
+      "Plantilla-ShowcaseDispositivo-vertical",
+      "Plantilla-ShowcaseDispositivo-retrato",
+      "Plantilla-ShowcaseDispositivo-cuadrado"
+    ],
+    "segundos": 14,
+    "campos": [
+      {
+        "nombre": "variante",
+        "tipo": "\"telefono-3d\" | \"laptop-catalogo\"",
+        "obligatorio": false,
+        "defecto": "\"telefono-3d\"",
+        "descripcion": "dispositivo, paleta, cámara y golpes de cada video de origen"
+      },
+      {
+        "nombre": "dispositivo",
+        "tipo": "\"auto\" | \"telefono\" | \"laptop\"",
+        "obligatorio": false,
+        "defecto": "\"auto\"",
+        "descripcion": "auto = el de la variante"
+      },
+      {
+        "nombre": "pantallas",
+        "tipo": "lista de objetos",
+        "obligatorio": true,
+        "campos": [
+          {
+            "nombre": "tipo",
+            "tipo": "\"inicio\" | \"bloqueo\" | \"media\" | \"mapa\" | \"titular\" | \"rejilla\" | \"eco\" | \"datos\"",
+            "obligatorio": true
+          },
+          {
+            "nombre": "texto",
+            "tipo": "texto",
+            "obligatorio": false,
+            "defecto": "\"\"",
+            "descripcion": "titular, hora del bloqueo, rótulo del mapa o de los datos"
+          },
+          {
+            "nombre": "subtexto",
+            "tipo": "texto",
+            "obligatorio": false,
+            "defecto": "\"\""
+          },
+          {
+            "nombre": "items",
+            "tipo": "lista de texto",
+            "obligatorio": false,
+            "defecto": "[]",
+            "descripcion": "bloqueo: notificaciones · datos: etiquetas de barras"
+          },
+          {
+            "nombre": "numero",
+            "tipo": "número",
+            "obligatorio": false,
+            "defecto": "0",
+            "descripcion": "datos: cifra final (se muestra con signo y %)"
+          },
+          {
+            "nombre": "media",
+            "tipo": "texto",
+            "obligatorio": false,
+            "defecto": "\"\"",
+            "descripcion": "captura o video de la app del cliente; si hay, ocupa la pantalla"
+          },
+          {
+            "nombre": "segundos",
+            "tipo": "número",
+            "obligatorio": true
+          },
+          {
+            "nombre": "encuadre",
+            "tipo": "\"dispositivo\" | \"pantalla\" | \"inclinado\"",
+            "obligatorio": false,
+            "defecto": "\"dispositivo\"",
+            "descripcion": "cámara: dispositivo entero, pegada a la pantalla o inclinada"
+          },
+          {
+            "nombre": "cambio",
+            "tipo": "\"fundido\" | \"empuje\" | \"flash\" | \"tinta\" | \"bloques\"",
+            "obligatorio": false,
+            "defecto": "\"fundido\"",
+            "descripcion": "cómo entra esta pantalla sobre la anterior"
+          }
+        ]
+      },
+      {
+        "nombre": "marca",
+        "tipo": "texto",
+        "obligatorio": true,
+        "descripcion": "wordmark del splash final"
+      },
+      {
+        "nombre": "frase",
+        "tipo": "texto",
+        "obligatorio": false,
+        "defecto": "\"\""
+      },
+      {
+        "nombre": "render3d",
+        "tipo": "texto",
+        "obligatorio": false,
+        "defecto": "\"\"",
+        "descripcion": "video con alfa del dispositivo entrando (Blender); vacío = vuelo del dispositivo dibujado"
+      },
+      {
+        "nombre": "segundosCierre",
+        "tipo": "número",
+        "obligatorio": false,
+        "defecto": "2.6"
+      },
+      {
+        "nombre": "colores",
+        "tipo": "objeto",
+        "obligatorio": false,
+        "defecto": "{}",
+        "campos": [
+          {
+            "nombre": "fondo",
+            "tipo": "color (hex)",
+            "obligatorio": false
+          },
+          {
+            "nombre": "texto",
+            "tipo": "color (hex)",
+            "obligatorio": false
+          },
+          {
+            "nombre": "acento",
+            "tipo": "color (hex)",
+            "obligatorio": false
+          }
+        ]
+      }
+    ],
+    "ejemplo": "catalogo/ejemplos/Plantilla-ShowcaseDispositivo.json",
+    "miniatura": "catalogo/miniaturas/Plantilla-ShowcaseDispositivo.jpg",
+    "video": "catalogo/videos/Plantilla-ShowcaseDispositivo.mp4",
+    "invocar": "/mm-plantilla Plantilla-ShowcaseDispositivo"
+  },
+  {
+    "id": "Plantilla-TalkingHeadInsertos",
+    "resumen": "Presentador a cámara con punch-in en los golpes, subtítulo con chip de acento, pill fija y capturas insertadas.",
+    "cuando": "Editar una grabación tuya hablando a cámara, con su transcripción por palabras, sin montarla a mano.",
+    "fuente": "referentes/lote-2026-11-08.md · talking-head-insertos (tiktok-7701672067120368948, tiktok-7702620779518643478, tiktok-7698456660611796231, tiktok-7690371798784871701)",
+    "formatos": [
+      "vertical"
+    ],
+    "composiciones": [
+      "Plantilla-TalkingHeadInsertos-vertical"
+    ],
+    "segundos": 33.4,
+    "campos": [
+      {
+        "nombre": "variante",
+        "tipo": "\"pantalla-pasos\" | \"insertos-pecho\" | \"pill-fija\" | \"cortes-rapidos\"",
+        "obligatorio": true,
+        "descripcion": "pantalla-pasos=7701672067120368948 · insertos-pecho=7702620779518643478 · pill-fija=7698456660611796231 · cortes-rapidos=7690371798784871701"
+      },
+      {
+        "nombre": "media",
+        "tipo": "texto",
+        "obligatorio": false,
+        "defecto": "\"\"",
+        "descripcion": "video del presentador, con su voz; vacío = silueta"
+      },
+      {
+        "nombre": "palabras",
+        "tipo": "lista de objetos",
+        "obligatorio": true,
+        "descripcion": "palabras de Whisper en segundos: [{word, start, end}]",
+        "campos": [
+          {
+            "nombre": "word",
+            "tipo": "texto",
+            "obligatorio": true
+          },
+          {
+            "nombre": "start",
+            "tipo": "número",
+            "obligatorio": true
+          },
+          {
+            "nombre": "end",
+            "tipo": "número",
+            "obligatorio": true
+          }
+        ]
+      },
+      {
+        "nombre": "claves",
+        "tipo": "lista de texto",
+        "obligatorio": false,
+        "defecto": "[]",
+        "descripcion": "palabras que van en chip (sin tildes da igual)"
+      },
+      {
+        "nombre": "pill",
+        "tipo": "texto",
+        "obligatorio": false,
+        "defecto": "\"\"",
+        "descripcion": "promesa fija arriba (3–4 palabras); vacío = sin pill"
+      },
+      {
+        "nombre": "golpes",
+        "tipo": "lista de número",
+        "obligatorio": false,
+        "defecto": "[]",
+        "descripcion": "segundos de los punch-in; alternan cerrado/abierto"
+      },
+      {
+        "nombre": "insertos",
+        "tipo": "lista de objetos",
+        "obligatorio": false,
+        "defecto": "[]",
+        "campos": [
+          {
+            "nombre": "tipo",
+            "tipo": "\"captura\" | \"carrusel\"",
+            "obligatorio": true
+          },
+          {
+            "nombre": "at",
+            "tipo": "número",
+            "obligatorio": true,
+            "descripcion": "segundo en que entra"
+          },
+          {
+            "nombre": "duracion",
+            "tipo": "número",
+            "obligatorio": true
+          },
+          {
+            "nombre": "media",
+            "tipo": "texto",
+            "obligatorio": false,
+            "defecto": "\"\"",
+            "descripcion": "captura o grabación de pantalla (solo tipo captura)"
+          },
+          {
+            "nombre": "titulo",
+            "tipo": "texto",
+            "obligatorio": false,
+            "defecto": "\"\"",
+            "descripcion": "captura: texto del chip de paso · carrusel: cabecera de la sección"
+          },
+          {
+            "nombre": "paso",
+            "tipo": "número",
+            "obligatorio": false,
+            "defecto": "0",
+            "descripcion": "número del chip de paso; 0 = sin chip"
+          },
+          {
+            "nombre": "zonas",
+            "tipo": "lista de objetos",
+            "obligatorio": false,
+            "defecto": "[]"
+          },
+          {
+            "nombre": "tarjetas",
+            "tipo": "lista de texto",
+            "obligatorio": false,
+            "defecto": "[]",
+            "descripcion": "solo carrusel: título de cada tarjeta"
+          }
+        ]
+      },
+      {
+        "nombre": "segundosCola",
+        "tipo": "número",
+        "obligatorio": false,
+        "defecto": "1.2"
+      },
+      {
+        "nombre": "colores",
+        "tipo": "objeto",
+        "obligatorio": false,
+        "defecto": "{}",
+        "campos": [
+          {
+            "nombre": "fondo",
+            "tipo": "color (hex)",
+            "obligatorio": false
+          },
+          {
+            "nombre": "texto",
+            "tipo": "color (hex)",
+            "obligatorio": false
+          },
+          {
+            "nombre": "acento",
+            "tipo": "color (hex)",
+            "obligatorio": false
+          }
+        ]
+      }
+    ],
+    "ejemplo": "catalogo/ejemplos/Plantilla-TalkingHeadInsertos.json",
+    "miniatura": "catalogo/miniaturas/Plantilla-TalkingHeadInsertos.jpg",
+    "video": "catalogo/videos/Plantilla-TalkingHeadInsertos.mp4",
+    "invocar": "/mm-plantilla Plantilla-TalkingHeadInsertos"
+  },
+  {
+    "id": "Plantilla-SplitStack",
+    "resumen": "Pantalla partida: gráficos o B-roll arriba, presentador abajo y el subtítulo en la costura con palabras clave en color.",
+    "cuando": "Una grabación a cámara que necesita datos, titulares o B-roll visibles todo el tiempo.",
+    "fuente": "referentes/lote-2026-11-08.md · split-stack (7gMbZTdLlxs, tiktok-7697333991984221462, zlOCQxQYnYc)",
+    "formatos": [
+      "vertical"
+    ],
+    "composiciones": [
+      "Plantilla-SplitStack-vertical"
+    ],
+    "segundos": 27.7,
+    "campos": [
+      {
+        "nombre": "variante",
+        "tipo": "\"infografia\" | \"ai-real\" | \"ugc-paneles\"",
+        "obligatorio": true,
+        "descripcion": "infografia=7gMbZTdLlxs · ai-real=tiktok-7697333991984221462 · ugc-paneles=zlOCQxQYnYc"
+      },
+      {
+        "nombre": "media",
+        "tipo": "texto",
+        "obligatorio": false,
+        "defecto": "\"\"",
+        "descripcion": "video del presentador (panel de abajo), con su voz"
+      },
+      {
+        "nombre": "palabras",
+        "tipo": "lista de objetos",
+        "obligatorio": true,
+        "descripcion": "palabras de Whisper en segundos: [{word, start, end}]",
+        "campos": [
+          {
+            "nombre": "word",
+            "tipo": "texto",
+            "obligatorio": true
+          },
+          {
+            "nombre": "start",
+            "tipo": "número",
+            "obligatorio": true
+          },
+          {
+            "nombre": "end",
+            "tipo": "número",
+            "obligatorio": true
+          }
+        ]
+      },
+      {
+        "nombre": "claves",
+        "tipo": "lista de texto",
+        "obligatorio": false,
+        "defecto": "[]"
+      },
+      {
+        "nombre": "beats",
+        "tipo": "lista de objetos",
+        "obligatorio": true,
+        "campos": [
+          {
+            "nombre": "tipo",
+            "tipo": "\"dato\" | \"titular\" | \"ui\" | \"broll\"",
+            "obligatorio": true,
+            "descripcion": "qué va arriba en este beat"
+          },
+          {
+            "nombre": "segundos",
+            "tipo": "número",
+            "obligatorio": true
+          },
+          {
+            "nombre": "palabra",
+            "tipo": "texto",
+            "obligatorio": true,
+            "descripcion": "keyword grande en acento (1–3 palabras)"
+          },
+          {
+            "nombre": "detalle",
+            "tipo": "texto",
+            "obligatorio": false,
+            "defecto": "\"\"",
+            "descripcion": "línea chica de apoyo; en titular va en serif itálica"
+          },
+          {
+            "nombre": "valor",
+            "tipo": "número",
+            "obligatorio": false,
+            "defecto": "0",
+            "descripcion": "solo dato: cifra final"
+          },
+          {
+            "nombre": "desde",
+            "tipo": "número",
+            "obligatorio": false,
+            "defecto": "0",
+            "descripcion": "solo dato: cifra de arranque"
+          },
+          {
+            "nombre": "prefijo",
+            "tipo": "texto",
+            "obligatorio": false,
+            "defecto": "\"\""
+          },
+          {
+            "nombre": "sufijo",
+            "tipo": "texto",
+            "obligatorio": false,
+            "defecto": "\"\""
+          },
+          {
+            "nombre": "media",
+            "tipo": "texto",
+            "obligatorio": false,
+            "defecto": "\"\"",
+            "descripcion": "ui: captura · broll: clip o imagen"
+          }
+        ]
+      },
+      {
+        "nombre": "marcas",
+        "tipo": "lista de texto",
+        "obligatorio": false,
+        "defecto": "[]",
+        "descripcion": "lockup de la barra superior (variante ai-real)"
+      },
+      {
+        "nombre": "etiquetaArriba",
+        "tipo": "texto",
+        "obligatorio": false,
+        "defecto": "\"IA:\""
+      },
+      {
+        "nombre": "etiquetaAbajo",
+        "tipo": "texto",
+        "obligatorio": false,
+        "defecto": "\"REAL:\""
+      },
+      {
+        "nombre": "cta",
+        "tipo": "texto",
+        "obligatorio": false,
+        "defecto": "\"\"",
+        "descripcion": "pill final (variante ugc-paneles); vacío = sin CTA"
+      },
+      {
+        "nombre": "segundosCola",
+        "tipo": "número",
+        "obligatorio": false,
+        "defecto": "1"
+      },
+      {
+        "nombre": "colores",
+        "tipo": "objeto",
+        "obligatorio": false,
+        "defecto": "{}",
+        "campos": [
+          {
+            "nombre": "fondo",
+            "tipo": "color (hex)",
+            "obligatorio": false
+          },
+          {
+            "nombre": "texto",
+            "tipo": "color (hex)",
+            "obligatorio": false
+          },
+          {
+            "nombre": "acento",
+            "tipo": "color (hex)",
+            "obligatorio": false
+          }
+        ]
+      }
+    ],
+    "ejemplo": "catalogo/ejemplos/Plantilla-SplitStack.json",
+    "miniatura": "catalogo/miniaturas/Plantilla-SplitStack.jpg",
+    "video": "catalogo/videos/Plantilla-SplitStack.mp4",
+    "invocar": "/mm-plantilla Plantilla-SplitStack"
+  },
+  {
+    "id": "Plantilla-TutorialPasos",
+    "resumen": "Tutorial por pasos: tarjeta PASO N entre secciones, screencast con zoom a la región y cursor, y resultado final.",
+    "cuando": "Enseñar un proceso en pantalla a partir de una grabación de pantalla y una locución.",
+    "fuente": "referentes/lote-2026-11-08.md · tutorial-pasos (n50KkoucMpU, tHzfsCsWL6M)",
+    "formatos": [
+      "vertical",
+      "horizontal"
+    ],
+    "composiciones": [
+      "Plantilla-TutorialPasos-vertical",
+      "Plantilla-TutorialPasos-horizontal"
+    ],
+    "segundos": 34.3,
+    "campos": [
+      {
+        "nombre": "variante",
+        "tipo": "\"pizarra\" | \"movil\"",
+        "obligatorio": true,
+        "descripcion": "pizarra=n50KkoucMpU · movil=tHzfsCsWL6M"
+      },
+      {
+        "nombre": "titulo",
+        "tipo": "lista de texto",
+        "obligatorio": true,
+        "descripcion": "líneas del titular de apertura; *palabra* va en serif itálica"
+      },
+      {
+        "nombre": "etiqueta",
+        "tipo": "texto",
+        "obligatorio": false,
+        "defecto": "\"Tutorial\""
+      },
+      {
+        "nombre": "segundosIntro",
+        "tipo": "número",
+        "obligatorio": false,
+        "defecto": "2.6"
+      },
+      {
+        "nombre": "segundosTarjeta",
+        "tipo": "número",
+        "obligatorio": false,
+        "defecto": "2"
+      },
+      {
+        "nombre": "pasos",
+        "tipo": "lista de objetos",
+        "obligatorio": true,
+        "campos": [
+          {
+            "nombre": "titulo",
+            "tipo": "texto",
+            "obligatorio": true,
+            "descripcion": "2–5 palabras: va en la tarjeta y en el chip"
+          },
+          {
+            "nombre": "segundos",
+            "tipo": "número",
+            "obligatorio": true,
+            "descripcion": "largo del screencast del paso"
+          },
+          {
+            "nombre": "media",
+            "tipo": "texto",
+            "obligatorio": false,
+            "defecto": "\"\"",
+            "descripcion": "grabación de pantalla del paso"
+          },
+          {
+            "nombre": "zonas",
+            "tipo": "lista de objetos",
+            "obligatorio": false,
+            "defecto": "[]"
+          }
+        ]
+      },
+      {
+        "nombre": "resultado",
+        "tipo": "objeto",
+        "obligatorio": true,
+        "campos": [
+          {
+            "nombre": "media",
+            "tipo": "texto",
+            "obligatorio": false,
+            "defecto": "\"\"",
+            "descripcion": "ruta en public/ o URL; vacío = panel liso"
+          },
+          {
+            "nombre": "texto",
+            "tipo": "texto",
+            "obligatorio": true
+          },
+          {
+            "nombre": "segundos",
+            "tipo": "número",
+            "obligatorio": true
+          }
+        ]
+      },
+      {
+        "nombre": "voz",
+        "tipo": "texto",
+        "obligatorio": false,
+        "defecto": "\"\"",
+        "descripcion": "voz en off (mp3/wav/m4a); vacío = sin audio"
+      },
+      {
+        "nombre": "palabras",
+        "tipo": "lista de objetos",
+        "obligatorio": true,
+        "descripcion": "palabras de Whisper en segundos: [{word, start, end}]",
+        "campos": [
+          {
+            "nombre": "word",
+            "tipo": "texto",
+            "obligatorio": true
+          },
+          {
+            "nombre": "start",
+            "tipo": "número",
+            "obligatorio": true
+          },
+          {
+            "nombre": "end",
+            "tipo": "número",
+            "obligatorio": true
+          }
+        ]
+      },
+      {
+        "nombre": "claves",
+        "tipo": "lista de texto",
+        "obligatorio": false,
+        "defecto": "[]"
+      },
+      {
+        "nombre": "colores",
+        "tipo": "objeto",
+        "obligatorio": false,
+        "defecto": "{}",
+        "campos": [
+          {
+            "nombre": "fondo",
+            "tipo": "color (hex)",
+            "obligatorio": false
+          },
+          {
+            "nombre": "texto",
+            "tipo": "color (hex)",
+            "obligatorio": false
+          },
+          {
+            "nombre": "acento",
+            "tipo": "color (hex)",
+            "obligatorio": false
+          }
+        ]
+      }
+    ],
+    "ejemplo": "catalogo/ejemplos/Plantilla-TutorialPasos.json",
+    "miniatura": "catalogo/miniaturas/Plantilla-TutorialPasos.jpg",
+    "video": "catalogo/videos/Plantilla-TutorialPasos.mp4",
+    "invocar": "/mm-plantilla Plantilla-TutorialPasos"
+  }
+]
