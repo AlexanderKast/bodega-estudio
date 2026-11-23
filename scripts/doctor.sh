@@ -44,6 +44,17 @@ libre=$(df -Pk "$ESTUDIO_RAIZ" 2>/dev/null | awk 'NR==2 {print int($4/1048576)}'
 hilos=$(getconf _NPROCESSORS_ONLN 2>/dev/null || echo "?")
 ok "hilos de CPU: $hilos"
 [ -f "$ESTUDIO_RAIZ/.remotion-licencia" ] && ok "licencia de Remotion registrada" || aviso "no hay registro de la licencia de Remotion" "Bodega necesita la Company License (remotion.pro). Cuando la compre, anota su id en .remotion-licencia"
+_hf=${HF_HOME:-$HOME/.cache/huggingface}
+if ls -d "$_hf"/hub/models--*faster-whisper-"$WHISPER_MODELO" >/dev/null 2>&1; then ok "modelo de Whisper $WHISPER_MODELO descargado"
+else aviso "el modelo de Whisper $WHISPER_MODELO no está descargado" "se baja solo la primera vez que transcribas (~1,5 GB con medium); o corre scripts/instalar.ps1"; fi
+
+if [ -f "$ESTUDIO_RAIZ/estudio.local.json" ]; then
+  echo "Carpetas del equipo ($ESTUDIO_CARPETA):"
+  for par in "crudos:$ESTUDIO_CRUDOS" "podcast:$ESTUDIO_PODCAST" "productos:$ESTUDIO_PRODUCTOS" "referentes:$ESTUDIO_REFERENTES" "entregas:$ESTUDIO_ENTREGAS"; do
+    nombre=${par%%:*}; ruta=${par#*:}
+    [ -d "$ruta" ] && ok "$nombre: $(basename "$ruta")" || aviso "falta la carpeta de $nombre ($ruta)" "vuelve a correr scripts/instalar.ps1 o créala a mano"
+  done
+fi
 
 if [ "${1:-}" = --vps ] || [ "$ESTUDIO_EJECUCION" = vps ]; then
   echo "VPS de Bodega ($ESTUDIO_VPS_ALIAS):"

@@ -22,6 +22,24 @@ Llámala `$MM`. Si ninguna existe, dilo y da el paso de `INSTALAR.md` para clona
 Si `studio/node_modules` no existe, corre `/bodega-doctor` antes.
 Cada comando de abajo se corre con `cd "$MM"` delante.
 
+## Carpetas del equipo
+
+El material de Bodega y las entregas viven en la carpeta de trabajo del equipo (en Windows,
+`Escritorio\Bodega Estudio\`). Sus rutas: `bash scripts/carpetas.sh` (desde el estudio).
+
+| Carpeta | Para qué |
+|---|---|
+| `01 Crudos` (`crudos`) | Grabaciones sin editar |
+| `02 Podcast` (`podcast`) | Episodios completos |
+| `03 Productos` (`productos`) | Una subcarpeta por producto: fotos, descripción, video de referencia |
+| `04 Referentes` (`referentes`) | Videos o un `.txt` con links de reels que les gustan |
+| `05 Entregas` (`entregas`) | Piezas terminadas, una subcarpeta por fecha |
+
+- Cuando la persona nombre un archivo o producto sin ruta, búscalo primero ahí (p. ej. «las fotos del Serum» →
+  `03 Productos\Serum\`). Nunca borres ni muevas nada de esas carpetas: se copia lo que haga falta al estudio.
+- Al terminar una pieza aprobada, `bash scripts/entregar.sh <master.mp4> "<Nombre claro>"` la deja en
+  `05 Entregas\<fecha>\` y devuelve la ruta: esa es la que se le da a la persona.
+
 ## 1. Elegir
 
 Lee `$MM/catalogo/plantillas.json`: por plantilla trae `resumen`, `cuando` (para qué pieza conviene), `formatos`,
@@ -38,7 +56,8 @@ Lee `$MM/catalogo/plantillas.json`: por plantilla trae `resumen`, `cuando` (para
 Mira los `campos` de la plantilla elegida y pide **en un solo mensaje** lo que falte: los textos, la media
 (grabación, capturas, fotos) y el formato. Declara los valores por defecto que vas a usar para lo demás.
 
-- **Media:** las rutas de las props son relativas a `studio/public/` o URLs. Copia el material de la persona a
+- **Media:** las rutas de las props son relativas a `studio/public/` o URLs. El material suele estar en las carpetas
+  del equipo (`03 Productos`, `01 Crudos`). Cópialo (no lo muevas) a
   `$MM/studio/public/clientes/<pieza>/` y cita esa ruta. Si `ejecucion` es `vps`, súbela con
   `scripts/host.sh subir studio/public/clientes/<pieza>`.
 - **Palabras de la voz** (`palabras` en TalkingHeadInsertos, SplitStack y TutorialPasos): salen de
@@ -80,7 +99,8 @@ scripts/host.sh run 'node scripts/plantilla.mjs <id> --props studio/out/props/<p
 scripts/host.sh traer studio/out/<pieza>.master.mp4                                    # solo en modo vps
 ```
 
-`master.sh` deja el audio en −14 LUFS. Entrega ruta, duración, peso y LUFS. Si el render muere con «Page
+`master.sh` deja el audio en −14 LUFS. Con el sí de la persona, `bash scripts/entregar.sh studio/out/<pieza>.master.mp4
+"<Nombre claro>"` la deja en `05 Entregas\<fecha>\`; entrega esa ruta, duración, peso y LUFS. Si el render muere con «Page
 crashed», revisa el espacio libre (`df -h`) y baja `render.concurrencia` en `estudio.config.json` antes de
 reintentar.
 

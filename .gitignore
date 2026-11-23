@@ -20,4 +20,6 @@ studio/public/voz/
 studio/src/data/*.voz.json
 
 .venv/
+# Ajustes de este computador (carpetas del Escritorio, ejecucion, Whisper): los escribe scripts/instalar.ps1
+estudio.local.json
 .remotion-licencia

@@ -21,4 +21,6 @@ Para `$ARGUMENTS`, con la puerta 2 ya aprobada (y la animática, si es un explai
 4. Antes de entregar, el bucle del crítico (skill `master-motion`, paso 9): `scripts/critica/medir-pieza.sh` y el
    agente `critico-motion` hasta que el veredicto sea "pasa" con el umbral del brief. Las plantillas del catálogo no
    pasan por el crítico: se revisan con la hoja de fotogramas de `plantilla.mjs --stills`.
-5. Poster con ffmpeg y reporte: ruta, duración, peso, LUFS y pico. Entrega solo con el sí de la persona.
+5. Poster con ffmpeg y reporte: ruta, duración, peso, LUFS y pico.
+6. Con el sí de la persona: `bash scripts/entregar.sh studio/out/<Pieza>-<formato>.master.mp4 "<Nombre claro>"` la copia a
+   la carpeta de entregas del equipo (`Escritorio\Bodega Estudio\05 Entregas\<fecha>\`). Da esa ruta.

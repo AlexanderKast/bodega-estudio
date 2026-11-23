@@ -7,6 +7,8 @@ Replica la edición de estos videos como plantillas del estudio: $ARGUMENTS
 
 Sigue `kb/14-plantillas.md` §0, un video a la vez salvo que pidan lote:
 
+0. Sin URLs en el pedido, mira la carpeta de referentes del equipo (`bash scripts/carpetas.sh referentes`): un
+   `.txt` con links o videos sueltos. Los videos locales se copian a `trabajo/referentes/<id>/` en vez de bajarse.
 1. **Medir**: escribe las URLs en `trabajo/urls.txt` y corre
    `scripts/host.sh run 'bash scripts/referentes/procesar.sh trabajo/urls.txt'` (en modo vps, sube antes el txt) (Instagram: `YTDLP_COOKIES=...`). Confirma que cada carpeta tiene
    `<id>.mp4`, `medicion.json` y `tiras/`. Si falla la descarga, dilo y pide el MP4.

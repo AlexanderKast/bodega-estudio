@@ -1,16 +1,21 @@
 ﻿# Instalador de Bodega Estudio para Windows (PowerShell 5.1 o 7). Se puede correr varias veces: lo que ya está, se salta.
 #
-#   powershell -ExecutionPolicy Bypass -File scripts\instalar.ps1 [-Destino <carpeta>] [-InstalarProgramas] [-SinPlugin] [-SinHumo]
+#   powershell -ExecutionPolicy Bypass -File scripts\instalar.ps1 [-Destino <carpeta>] [-Escritorio <carpeta>]
+#              [-InstalarProgramas] [-SinPlugin] [-SinHumo] [-SinModelo]
 #
 # Sin -InstalarProgramas solo revisa node, ffmpeg, python y git y dice cuáles faltan (sale con código 2).
-# Con -InstalarProgramas los instala con winget. Después clona o actualiza el estudio, instala las dependencias de
-# studio/, crea el .venv con faster-whisper, define BODEGA_ESTUDIO_HOME, conecta el plugin a Claude Code y corre
-# /bodega-doctor y la prueba de humo. El -ExecutionPolicy Bypass vale solo para esta ejecución.
+# Con -InstalarProgramas los instala con winget (y tesseract, opcional). Después clona o actualiza el estudio, instala
+# las dependencias de studio/, crea el .venv con faster-whisper y baja el modelo de Whisper, define
+# BODEGA_ESTUDIO_HOME, crea la carpeta de trabajo en el Escritorio (Bodega Estudio\01 Crudos … 05 Entregas), conecta
+# el plugin a Claude Code y corre /bodega-doctor y la prueba de humo. El -ExecutionPolicy Bypass vale solo para esta
+# ejecución. El programa vive en -Destino (fuera del Escritorio, para que OneDrive no sincronice node_modules).
 param(
   [string]$Destino = (Join-Path $HOME 'bodega-estudio'),
+  [string]$Escritorio = [Environment]::GetFolderPath('Desktop'),
   [switch]$InstalarProgramas,
   [switch]$SinPlugin,
-  [switch]$SinHumo
+  [switch]$SinHumo,
+  [switch]$SinModelo
 )
 
 $ErrorActionPreference = 'Stop'
@@ -84,7 +89,19 @@ if ($faltan.Count -gt 0) {
   }
   Refrescar-Path
 }
-if (Tiene 'tesseract') { Ok 'tesseract' } else { Write-Host '  (opcional) sin tesseract: winget install UB-Mannheim.TesseractOCR' }
+# Tesseract (opcional: el crítico lee los textos en pantalla). Se instala solo con -InstalarProgramas.
+$tesseractDir = Join-Path $env:ProgramFiles 'Tesseract-OCR'
+if (-not (Tiene 'tesseract') -and $InstalarProgramas -and (Tiene 'winget')) {
+  Write-Host '  instalando Tesseract (opcional)...'
+  & winget install --id UB-Mannheim.TesseractOCR --exact --silent --accept-package-agreements --accept-source-agreements
+}
+if (-not (Tiene 'tesseract') -and (Test-Path (Join-Path $tesseractDir 'tesseract.exe'))) {
+  # El instalador de UB-Mannheim no siempre lo agrega al PATH.
+  $u = [Environment]::GetEnvironmentVariable('Path', 'User')
+  if ($u -notlike "*$tesseractDir*") { [Environment]::SetEnvironmentVariable('Path', ($u.TrimEnd(';') + ";$tesseractDir"), 'User') }
+  Refrescar-Path
+}
+if (Tiene 'tesseract') { Ok 'tesseract' } else { Write-Host '  (opcional) sin tesseract: vuelve a correr con -InstalarProgramas o winget install UB-Mannheim.TesseractOCR' }
 Ok "node $(& node -v) · $((& ffmpeg -version | Select-Object -First 1) -replace 'ffmpeg version ', '' -replace ' Copyright.*', '') · git"
 
 # 2. Estudio ---------------------------------------------------------------------------------------------------
@@ -124,11 +141,88 @@ if (-not (Test-Path $venvPy)) {
 if ($LASTEXITCODE -ne 0) { Falla 'pip install falló'; exit 1 }
 Ok '.venv listo'
 
+if (-not $SinModelo) {
+  $modelo = (Get-Content (Join-Path $Destino 'estudio.config.json') -Raw | ConvertFrom-Json).whisper.modelo
+  if (-not $modelo) { $modelo = 'medium' }
+  Paso "Modelo de Whisper ($modelo; la primera vez baja ~1,5 GB)"
+  & $venvPy -c "from faster_whisper import WhisperModel; WhisperModel('$modelo', device='cpu', compute_type='int8')"
+  if ($LASTEXITCODE -ne 0) { Falla 'no se pudo bajar el modelo; se bajará la primera vez que transcribas' } else { Ok "modelo $modelo listo" }
+}
+
 # 5. Dónde vive el estudio ---------------------------------------------------------------------------------------
 Paso 'BODEGA_ESTUDIO_HOME'
 [Environment]::SetEnvironmentVariable('BODEGA_ESTUDIO_HOME', $Destino, 'User')
 $env:BODEGA_ESTUDIO_HOME = $Destino
 Ok $Destino
+
+# 5b. Carpeta de trabajo en el Escritorio --------------------------------------------------------------------------
+$Carpeta = Join-Path $Escritorio 'Bodega Estudio'
+Paso "Carpeta de trabajo: $Carpeta"
+$subcarpetas = [ordered]@{
+  crudos     = '01 Crudos'
+  podcast    = '02 Podcast'
+  productos  = '03 Productos'
+  referentes = '04 Referentes'
+  entregas   = '05 Entregas'
+}
+New-Item -ItemType Directory -Force -Path $Carpeta | Out-Null
+$rutas = [ordered]@{ raiz = $Carpeta }
+foreach ($k in $subcarpetas.Keys) {
+  $r = Join-Path $Carpeta $subcarpetas[$k]
+  New-Item -ItemType Directory -Force -Path $r | Out-Null
+  $rutas[$k] = $r
+}
+
+# estudio.local.json: ajustes de este computador (fuera de git). Se conserva lo que ya tenga (ejecucion, whisper…).
+$localJson = Join-Path $Destino 'estudio.local.json'
+$cfg = [pscustomobject]@{}
+if (Test-Path $localJson) {
+  try { $cfg = Get-Content $localJson -Raw | ConvertFrom-Json } catch { $cfg = [pscustomobject]@{} }
+}
+$cfg | Add-Member -NotePropertyName carpetas -NotePropertyValue ([pscustomobject]$rutas) -Force
+$utf8 = New-Object System.Text.UTF8Encoding($false)
+[IO.File]::WriteAllText($localJson, ($cfg | ConvertTo-Json -Depth 5), $utf8)
+
+$leeme = @"
+BODEGA ESTUDIO - carpeta de trabajo del equipo de Bodega de Belleza
+=================================================================
+
+Aquí va el material para el estudio de video. El programa está instalado aparte, en:
+  $Destino
+(no hace falta abrir esa carpeta).
+
+  01 Crudos      Grabaciones sin editar (de José y el equipo) para convertir en reels.
+  02 Podcast     Episodios completos del podcast.
+  03 Productos   Una carpeta por producto: fotos, descripción y, si hay, el video de referencia.
+  04 Referentes  Videos o links (en un .txt) de reels que les gustan, para copiar su edición.
+  05 Entregas    Aquí deja Claude los videos terminados, en una carpeta por fecha.
+
+Cómo se usa
+-----------
+Abre Claude Code y pídele lo que necesitas en palabras normales, por ejemplo:
+  - "Muéstrame el catálogo de plantillas"                      (/mm-catalogo)
+  - "Haz un antes y después con las fotos de 03 Productos\Serum" (/mm-plantilla)
+  - "Revisa que el estudio esté bien"                          (/bodega-doctor)
+La edición automática de crudos (/editar-crudo), del podcast (/podcast) y el video de producto (/video-producto)
+llegan en las próximas entregas; usarán estas mismas carpetas.
+
+Para actualizar el estudio: doble clic en "Actualizar Bodega Estudio.cmd".
+
+Cuidados
+--------
+- El material de Bodega no se sube a ningún lado desde el estudio; se queda en este computador
+  (o en el VPS de Bodega si así se configura).
+- Si este Escritorio se sincroniza con OneDrive, los videos de estas carpetas también se suben a esa nube.
+- Soporte: IA Master Tech.
+"@
+[IO.File]::WriteAllText((Join-Path $Carpeta 'LEEME.txt'), $leeme, (New-Object System.Text.UTF8Encoding($true)))
+
+$actualizar = "@echo off`r`nchcp 65001 >nul`r`necho Actualizando Bodega Estudio...`r`npowershell -NoProfile -ExecutionPolicy Bypass -File `"$Destino\scripts\instalar.ps1`" -Destino `"$Destino`" -Escritorio `"$Escritorio`" -SinHumo`r`necho.`r`npause`r`n"
+[IO.File]::WriteAllText((Join-Path $Carpeta 'Actualizar Bodega Estudio.cmd'), $actualizar, (New-Object System.Text.UTF8Encoding($false)))
+
+foreach ($k in $subcarpetas.Keys) { Ok $subcarpetas[$k] }
+Ok 'LEEME.txt y Actualizar Bodega Estudio.cmd'
+if ($Escritorio -like '*OneDrive*') { Write-Host '  (aviso) este Escritorio se sincroniza con OneDrive: los videos de estas carpetas también se suben a esa nube.' }
 
 # 6. Plugin de Claude Code ---------------------------------------------------------------------------------------
 if (-not $SinPlugin) {
@@ -159,6 +253,7 @@ if (-not $SinHumo -and $doctor -eq 0) {
 Write-Host ''
 if ($doctor -eq 0) {
   Write-Host 'Bodega Estudio quedó instalado.' -ForegroundColor Green
+  Write-Host "Carpeta de trabajo: $Carpeta (lee el LEEME.txt)."
   Write-Host 'Cierra y vuelve a abrir Claude Code y prueba /bodega-doctor o /mm-catalogo.'
   exit 0
 }

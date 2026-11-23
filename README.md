@@ -52,6 +52,9 @@ agents/               analista-referencias y critico-motion
 referentes/bodega/    fichas medidas del material de Bodega y de la categoría
 ops/                  Docker para el VPS de Bodega
 trabajo/              material del cliente y temporales (fuera de git)
+estudio.local.json    ajustes de este computador: carpetas del Escritorio, ejecucion (fuera de git)
+
+En el computador del equipo, el material y las entregas van en Escritorio\Bodega Estudio\ (01 Crudos … 05 Entregas).
 ```
 
 ## Instalar

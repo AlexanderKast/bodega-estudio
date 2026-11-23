@@ -20,6 +20,24 @@ Todo corre dentro del repo del estudio, aunque la sesión esté abierta en otra 
 Antes de dirigir una pieza a medida, mira si cabe en una plantilla: `catalogo/plantillas.json` dice para qué sirve
 cada una. Si cabe, es la skill `mm-plantillas` (`/mm-plantilla`), que no necesita guion ni storyboard.
 
+## Carpetas del equipo
+
+El material de Bodega y las entregas viven en la carpeta de trabajo del equipo (en Windows,
+`Escritorio\Bodega Estudio\`). Sus rutas: `bash scripts/carpetas.sh` (desde el estudio).
+
+| Carpeta | Para qué |
+|---|---|
+| `01 Crudos` (`crudos`) | Grabaciones sin editar |
+| `02 Podcast` (`podcast`) | Episodios completos |
+| `03 Productos` (`productos`) | Una subcarpeta por producto: fotos, descripción, video de referencia |
+| `04 Referentes` (`referentes`) | Videos o un `.txt` con links de reels que les gustan |
+| `05 Entregas` (`entregas`) | Piezas terminadas, una subcarpeta por fecha |
+
+- Cuando la persona nombre un archivo o producto sin ruta, búscalo primero ahí (p. ej. «las fotos del Serum» →
+  `03 Productos\Serum\`). Nunca borres ni muevas nada de esas carpetas: se copia lo que haga falta al estudio.
+- Al terminar una pieza aprobada, `bash scripts/entregar.sh <master.mp4> "<Nombre claro>"` la deja en
+  `05 Entregas\<fecha>\` y devuelve la ruta: esa es la que se le da a la persona.
+
 ## Mapa del estudio
 
 | Qué | Dónde |
@@ -54,7 +72,7 @@ Renders, Whisper, medición y lotes de stills corren donde diga `ejecucion` en `
 | 7 | **Animación** | El mismo `<Pieza>.tsx`, ahora con curvas, anotaciones y cámara que viaja | `studio/src/compositions/` |
 | 8 | **Acabado y sonido** | Blur, look, `sfx()`, cama de sonido y render | `studio/out/<pieza>-<formato>.mp4` |
 | 9 | **Crítico** | `medicion.json`, tiras y `critica.json` con veredicto | `studio/out/critica/<pieza>-<formato>/` |
-| 10 | **Entrega** · puerta 3 | Master a −14 LUFS y reporte | `studio/out/` |
+| 10 | **Entrega** · puerta 3 | Master a −14 LUFS y reporte | `studio/out/` → `05 Entregas\<fecha>\` con `scripts/entregar.sh` |
 
 `<Pieza>` es el id de la composición (`ContextoIA`); `<pieza>`, el mismo nombre en minúsculas para archivos (`contexto-ia`).
 
@@ -175,7 +193,8 @@ El umbral es un parámetro de la pieza: se puede subir para una pieza de portafo
 ### 10. Entrega (puerta 3)
 - La persona ve la pieza completa con el veredicto del crítico al lado.
 - Master con `scripts/master.sh out/<pieza>-<formato>.mp4`: −14 LUFS y −1 dBTP. Con metraje propio, `--audio original.wav` remezcla su audio sin tocarle la ganancia.
-- Entrega rutas, duración, peso, LUFS y pico, **solo con el sí de la persona**.
+- Con el sí de la persona, `bash scripts/entregar.sh <master.mp4> "<Nombre claro>"` la copia a `05 Entregas\<fecha>\`.
+  Entrega esa ruta, duración, peso, LUFS y pico.
 
 ### Notas de revisión
 Cada nota se escribe como `[m:ss] qué está mal → qué propongo`, en números ("15 % más apretado", "titular 25 % más grande", "entra 4 f antes") y diciendo qué se conserva. Se cambian parámetros; no se reescribe la escena.

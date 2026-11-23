@@ -39,8 +39,8 @@ En macOS: `brew install node ffmpeg python@3.12 git tesseract`. En Linux (Debian
 
 ## 2. Bajar el estudio
 
-El estudio vive en una carpeta propia (`bodega-estudio` en tu usuario). Ahí quedan los programas del render y la
-carpeta `trabajo/` con el material de Bodega; esa carpeta no se sube a ningún lado.
+El programa vive en una carpeta propia (`bodega-estudio` en tu usuario), fuera del Escritorio: así OneDrive no
+sincroniza sus miles de archivos. El material del equipo va en la carpeta del Escritorio del paso 2b.
 
 ```powershell
 git clone https://github.com/AlexanderKast/bodega-estudio.git $HOME\bodega-estudio
@@ -67,6 +67,36 @@ setx BODEGA_ESTUDIO_HOME "$HOME\bodega-estudio"
 ```
 
 En macOS o Linux agrega `export BODEGA_ESTUDIO_HOME=~/bodega-estudio` a `~/.zshrc` o `~/.bashrc`.
+
+## 2b. Carpeta de trabajo en el Escritorio
+
+`scripts/instalar.ps1` la crea sola. A mano: en el Escritorio, una carpeta `Bodega Estudio` con
+
+```
+01 Crudos       grabaciones sin editar
+02 Podcast      episodios completos
+03 Productos    una carpeta por producto: fotos y descripción
+04 Referentes   videos o un .txt con links de reels que les gustan
+05 Entregas     aquí deja Claude los videos terminados, por fecha
+```
+
+y, en la carpeta del estudio, un `estudio.local.json` que le dice al estudio dónde están (ejemplo en Windows):
+
+```json
+{
+  "carpetas": {
+    "raiz": "C:\\Users\\<usuario>\\Desktop\\Bodega Estudio",
+    "crudos": "C:\\Users\\<usuario>\\Desktop\\Bodega Estudio\\01 Crudos",
+    "podcast": "C:\\Users\\<usuario>\\Desktop\\Bodega Estudio\\02 Podcast",
+    "productos": "C:\\Users\\<usuario>\\Desktop\\Bodega Estudio\\03 Productos",
+    "referentes": "C:\\Users\\<usuario>\\Desktop\\Bodega Estudio\\04 Referentes",
+    "entregas": "C:\\Users\\<usuario>\\Desktop\\Bodega Estudio\\05 Entregas"
+  }
+}
+```
+
+`estudio.local.json` es solo de este computador (no está en git): ahí van también los cambios de `ejecucion` o del
+modelo de Whisper, para que `git pull` nunca choque. `bash scripts/carpetas.sh` muestra las rutas que está usando.
 
 ## 3. Conectarlo a Claude Code
 
@@ -95,20 +125,21 @@ Después, la prueba de render (5 segundos con la marca de Bodega, sale en `studi
 cd $HOME\bodega-estudio; bash scripts/humo.sh
 ```
 
-La primera vez descarga el navegador que usa el render (unos 100 MB). La primera transcripción descarga el modelo de
-Whisper (unos 1,5 GB con `medium`).
+La primera vez descarga el navegador que usa el render (unos 100 MB). El instalador ya baja el modelo de Whisper
+(unos 1,5 GB con `medium`); si lo instalaste a mano, se baja en la primera transcripción.
 
 ## 5. Usarlo
 
 En Claude Code, desde cualquier carpeta: `/mm-catalogo` para ver las plantillas, `/mm-plantilla` para hacer un video
 con una de ellas, `/master-motion` para una pieza a medida. El catálogo visual está en
 `bodega-estudio\catalogo\index.html` (ábrelo con un servidor local: `npx http-server catalogo -p 5190`).
+Los videos terminados quedan en `Escritorio\Bodega Estudio\05 Entregas\<fecha>\`.
 
 ## 6. Actualizar
 
 Cuando IA Master Tech avise de una versión nueva:
 
-Lo más simple es volver a correr el instalador (actualiza el estudio, las dependencias y el plugin):
+Lo más simple: doble clic en `Actualizar Bodega Estudio.cmd` (en la carpeta del Escritorio). Hace lo mismo que:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File $HOME\bodega-estudio\scripts\instalar.ps1 -SinHumo
@@ -123,7 +154,7 @@ cd $HOME\bodega-estudio; git pull; cd studio; npm ci
 claude plugin update bodega-estudio@bodega-estudio
 ```
 
-`git pull` no toca `trabajo/` ni los renders de `studio/out/`.
+`git pull` no toca `trabajo/`, `estudio.local.json`, los renders de `studio/out/` ni las carpetas del Escritorio.
 
 ## 7. Renderizar en el VPS de Bodega (opcional)
 
@@ -138,7 +169,7 @@ llave SSH; en el computador:
      IdentityFile ~/.ssh/<llave del VPS>
      IdentitiesOnly yes
    ```
-2. En `estudio.config.json`, cambia `"ejecucion": "local"` por `"ejecucion": "vps"`.
+2. En `estudio.local.json` (carpeta del estudio) agrega `"ejecucion": "vps"` junto a `"carpetas"`.
 3. En Claude Code: `/bodega-doctor --vps`.
 
 En el VPS el estudio está en `/opt/bodega/estudio` y corre en el contenedor `bodega-estudio`
